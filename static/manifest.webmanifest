@@ -1,0 +1,47 @@
+{
+    "scope": "/",
+    "start_url": "/",
+    "display": "standalone",
+    "icons": [
+      {
+        "sizes": "16x16",
+        "type": "image/png",
+        "src": "./img/icon-16.png"
+      },
+      {
+        "sizes": "57x57",
+        "type": "image/png",
+        "src": "./img/icon-57.png"
+      },
+      {
+        "sizes": "72x72",
+        "type": "image/png",
+        "src": "./img/icon-72.png"
+      },
+      {
+        "sizes": "114x114",
+        "type": "image/png",
+        "src": "./img/icon-114.png"
+      },
+      {
+        "sizes": "120x120",
+        "type": "image/png",
+        "src": "./img/icon-120.png"
+      },
+      {
+        "sizes": "144x144",
+        "type": "image/png",
+        "src": "./img/icon-144.png"
+      },
+      {
+        "sizes": "152x152",
+        "type": "image/png",
+        "src": "./img/icon-152.png"
+      }
+    ],
+    "name": "Afya Kwa Walimu",
+    "short_name": "Walimu Care",
+    "theme_color": "#00a3a3",
+    "background_color": "#ffffff"
+  }
+  

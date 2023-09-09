@@ -60,25 +60,26 @@ h3 {
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
-#hero {
-  position: relative;
-}
-
-#hero .slide-1 {
+#hero .carousel-inner {
   width: 100%;
   height: 100vh;
-  background-size: cover;
-  background: url("../img/hero_slide_2.png") center center;
+  border-top-left-radius: 80px;
 }
-#hero .slide-2 {
+#hero .carousel-item {
+  height: 100%;
   width: 100%;
-  height: 100vh;
-  background-size: cover;
-  background: url("../img/hero_slide_2.png") center center;
 }
 
-#hero .slide-1:before,
-#hero .slide-2:before {
+#hero .carousel-item.slide-1 {
+  background: url("../img/hero_slide_2.png") center center;
+  background-size: cover;
+}
+#hero .carousel-item.slide-2 {
+  background: url("../img/hero_slide_2.png") center center;
+  background-size: cover;
+}
+
+#hero .carousel-item:before {
   content: "";
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -105,13 +106,13 @@ h3 {
   color: #fff;
   position: absolute;
   left: 100px;
-  bottom: 10%;
+  bottom: 20%;
   z-index: 10;
 }
 
 @media (min-width: 1024px) {
-  #hero .slide-1,
-  #hero .slide-2 {
+  #hero .carousel-item.slide-1,
+  #hero .carousel-item.slide-2 {
     background-attachment: fixed;
   }
 }
@@ -126,21 +127,22 @@ h3 {
     left: 40px;
   }
 }
+
 /*--------------------------------------------------------------
   # Solutions
   --------------------------------------------------------------*/
 #solutions {
   padding: 2rem;
   padding-top: 0;
-  margin-top: -90px;
+  margin-top: -80px;
   position: relative;
-  z-index: 500;
+  z-index: 20;
 }
 
 #solutions form {
   background: #0a0037;
   height: 100%;
-  padding: 30px;
+  padding: 20px;
   border-top-right-radius: 60px;
 }
 
@@ -184,6 +186,12 @@ h3 {
   background: #0a0037;
   height: 100%;
   color: #fff;
+}
+
+@media (max-width: 768px) {
+  #solutions form h3 {
+    font-size: 22px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -278,19 +286,6 @@ h3 {
   margin: 11px 0px;
 }
 
-@media (min-width: 768px) {
-  #footer .benefits h3,
-  #footer .benefits ul li {
-    padding-left: 40px;
-  }
-}
-@media (min-width: 992px) {
-  #footer .contacts h3,
-  #footer .contacts ul li {
-    padding-left: 40px;
-  }
-}
-
 #footer ul li a {
   display: flex;
   color: #0a0037;
@@ -310,31 +305,6 @@ h3 {
 
 #footer ul li a:hover {
   color: #c3a22c;
-}
-
-@media (max-width: 768px) {
-  #footer .quick-links,
-  #footer .benefits {
-    border-bottom: 1px solid #ccc;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-  }
-}
-
-@media (min-width: 768px) {
-  #footer .quick-links {
-    border-right: 1px solid #ccc;
-    padding-right: 20px;
-    margin-right: 20px;
-  }
-}
-
-@media (min-width: 992px) {
-  #footer .benefits {
-    border-right: 1px solid #ccc;
-    padding-right: 20px;
-    margin-right: 20px;
-  }
 }
 
 #footer .contacts .contact-links i {
@@ -377,6 +347,39 @@ h3 {
   font-size: 13px;
   display: inline-block;
   align-self: center;
+}
+
+@media (min-width: 768px) {
+  #footer .quick-links {
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+    margin-right: 20px;
+  }
+  #footer .benefits h3,
+  #footer .benefits ul li {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #footer .quick-links,
+  #footer .benefits {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  #footer .benefits {
+    border-right: 1px solid #ccc;
+    padding-right: 20px;
+    margin-right: 20px;
+  }
+  #footer .contacts h3,
+  #footer .contacts ul li {
+    padding-left: 40px;
+  }
 }
 
 /*--------------------------------------------------------------
