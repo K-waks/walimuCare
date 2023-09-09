@@ -1,6 +1,6 @@
 {
-    "scope": "/",
-    "start_url": "/",
+    "scope": "https://k-waks.github.io/walimuCare/",
+    "start_url": "https://k-waks.github.io/walimuCare/",
     "display": "standalone",
     "icons": [
       {
