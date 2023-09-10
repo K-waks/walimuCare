@@ -12,7 +12,6 @@ a {
 }
 
 a:hover {
-  /* color: #00c3c3; */
   text-decoration: none;
 }
 
@@ -45,25 +44,128 @@ h3 {
 /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
+#header .container-fluid {
+  height: 95px;
+  position: relative;
+}
 
-/*--------------------------------------------------------------
-  # Navigation Menu
-  --------------------------------------------------------------*/
+#header .desktop-nav,
+#header .mobile-nav {
+  justify-content: center;
+  align-items: end;
+  height: 100%;
+  padding-bottom: 10px;
+}
+
 /**
   * Desktop Navigation 
   */
 
+#header .desktop-nav .nav {
+  font-size: 13px;
+  font-weight: 650;
+  width: 80%;
+  text-align: center;
+}
+
+#header .desktop-nav .nav a {
+  color: #0a0037;
+}
+
+#header .desktop-nav .nav a.active,
+#header .desktop-nav .nav a:hover {
+  color: #c3a22c;
+}
+
+@media (min-width: 740) and (max-width: 1080px) {
+  #header .desktop-nav .nav {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
 /**
   * Mobile Navigation 
   */
+
+#header .mobile-nav .btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #c3a22c;
+  color: #fff;
+  border: none;
+  transition: 0.4s;
+}
+
+#header .mobile-nav .btn:hover {
+  background-color: #0a0037;
+}
+
+#header .mobile-nav ul li {
+  margin: 30px 0;
+}
+
+#header .mobile-nav ul li a {
+  transition: 0.3s;
+  color: #0a0037;
+}
+
+#header .mobile-nav ul li a:hover {
+  color: #c3a22c;
+}
+
+#header .mobile-nav .mobilenav-hot-line,
+#header .hot-line {
+  color: #0a0037;
+  position: absolute;
+  top: 10px;
+  font-size: 14px;
+}
+
+#header .mobile-nav .mobilenav-hot-line i,
+#header .hot-line i {
+  display: inline-block;
+  width: 36px;
+  padding: 3px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: #c3a22c;
+  color: #fff;
+}
+
+#header .mobile-nav .mobilenav-hot-line span,
+#header .hot-line span {
+  color: #c3a22c;
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  #header .hot-line {
+    right: 240px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  #header .hot-line {
+    right: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  #header .hot-line {
+    right: 120px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
 #hero .carousel-inner {
   width: 100%;
-  height: 100vh;
-  border-top-left-radius: 80px;
+  height: calc(100vh - 95px);
+  border-top-left-radius: 60px;
 }
 #hero .carousel-item {
   height: 100%;
@@ -363,7 +465,7 @@ h3 {
 #bottom-bar {
   color: #c3a22c;
   font-size: 13px;
-  padding: 2rem 0;
+  padding: 2rem;
 }
 
 #bottom-bar .social-links a {

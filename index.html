@@ -22,8 +22,8 @@
         <meta property="og:locale" content="" />
         <title>Walimu Care</title>
         <!-- Favicons & Webmanifest -->
-        <link rel="icon" href="./static/img/favicon.png" />
-        <link rel="apple-touch-icon" href="./static/img/apple-touch-icon.png" />
+        <link rel="icon" href="./static/img/icons/favicon.png" />
+        <link rel="apple-touch-icon" href="./static/img/icons/apple-touch-icon.png" />
         <link rel="manifest" href="./static/manifest.webmanifest" />
         <!-- Google Fonts -->
         <link rel="stylesheet"
@@ -40,7 +40,80 @@
     <body>
         <!-- ======= Header ======= -->
         <header id="header">
-            <!-- <div></div> -->
+            <div class="container-fluid clearfix">
+                <img src="./static/img/logo/Afya-kwa-walimu.png"
+                     width=""
+                     height="90%"
+                     alt=""
+                     class="float-start">
+                <img src="./static/img/logo/TSC.png"
+                     width=""
+                     height="90%"
+                     alt=""
+                     class="float-end">
+                <!-- Desktop Navigation -->
+                <div class="d-none d-md-flex desktop-nav">
+                    <div class="nav d-table text-uppercase">
+                        <div class="d-table-row">
+                            <div class="d-table-cell border-end border-secondary nav-item">
+                                <a class="nav-link active py-0" aria-current="page" href="#">Home</a>
+                            </div>
+                            <div class="d-table-cell border-end border-secondary nav-item">
+                                <a class="nav-link  py-0" href="#">About Afya Kwa Walimu</a>
+                            </div>
+                            <div class="d-table-cell border-end border-secondary nav-item">
+                                <a class="nav-link  py-0" href="#">Benefits Structure</a>
+                            </div>
+                            <div class="d-table-cell nav-item">
+                                <a class="nav-link  py-0" href="#">Registration</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hot-line">
+                        Emergency hot line <i class="bi bi-telephone-fill"></i> <span>1528</span>
+                    </div>
+                </div>
+                <!-- Button to trigger the mobile navigation modal -->
+                <div class="d-flex d-md-none mobile-nav">
+                    <button type="button"
+                            class="btn btn-primary d-md-none d-inline-block"
+                            data-bs-toggle="modal"
+                            data-bs-target="#mobilenavModal">
+                        <i class="bi bi-list text-light"></i>
+                    </button>
+                    <div id="mobilenavModal" class="modal fade" tabindex="-1">
+                        <div class="modal-dialog modal-fullscreen">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <div class="mobilenav-hot-line">
+                                        Emergency hot line <i class="bi bi-telephone-fill"></i> <span>1528</span>
+                                    </div>
+                                    <button type="button"
+                                            class="btn-close"
+                                            data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <ul class="list-unstyled">
+                                        <li class="nav-item">
+                                            <a href="" class="nav-link"><i class="bi bi-caret-right-fill"></i> Home</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="" class="nav-link"><i class="bi bi-caret-right-fill"></i> About Afya Kwa Walimu</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="" class="nav-link"><i class="bi bi-caret-right-fill"></i> Benefits Structure</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="" class="nav-link"><i class="bi bi-caret-right-fill"></i> Registration</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
         <!-- ======= Main ======= -->
         <main id="main">
@@ -277,7 +350,7 @@
                             <div class="d-grid gap-4">
                                 <div>
                                     <img class="img-fluid"
-                                         src="./static/img/benefits_card_1.png"
+                                         src="./static/img/comprehensive_benefits/card_1.png"
                                          width=""
                                          height=""
                                          alt="">
@@ -291,7 +364,7 @@
                             <div class="d-grid gap-4">
                                 <div>
                                     <img class="img-fluid"
-                                         src="./static/img/benefits_card_2.png"
+                                         src="./static/img/comprehensive_benefits/card_2.png"
                                          width=""
                                          height=""
                                          alt="">
@@ -305,7 +378,7 @@
                             <div class="d-grid gap-4">
                                 <div>
                                     <img class="img-fluid"
-                                         src="./static/img/benefits_card_3.png"
+                                         src="./static/img/comprehensive_benefits/card_3.png"
                                          width=""
                                          height=""
                                          alt="">
@@ -321,7 +394,7 @@
                             <div class="d-grid gap-4">
                                 <div>
                                     <img class="img-fluid"
-                                         src="./static/img/benefits_card_4.png"
+                                         src="./static/img/comprehensive_benefits/card_4.png"
                                          width=""
                                          height=""
                                          alt="">
