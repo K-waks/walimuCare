@@ -295,7 +295,7 @@ h3 {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 768px) {
   #hero #herocarousel .carousel-item.slide-1 {
     background: url("../img/hero/slide_1_sm.png") center center;
     background-size: cover;
