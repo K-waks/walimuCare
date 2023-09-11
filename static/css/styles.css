@@ -45,7 +45,7 @@ h3 {
   # Header
   --------------------------------------------------------------*/
 #header .container-fluid {
-  height: 95px;
+  height: 87px;
   position: relative;
 }
 
@@ -54,7 +54,7 @@ h3 {
   justify-content: center;
   align-items: end;
   height: 100%;
-  padding-bottom: 10px;
+  padding-bottom: 13px;
 }
 
 /**
@@ -119,7 +119,7 @@ h3 {
 #header .hot-line {
   color: #0a0037;
   position: absolute;
-  top: 10px;
+  top: 3px;
   font-size: 14px;
 }
 
@@ -162,26 +162,81 @@ h3 {
 /*--------------------------------------------------------------
 # Hero
 --------------------------------------------------------------*/
-#hero .carousel-inner {
+#hero {
+  position: relative;
+}
+
+#hero .hero-bar {
+  position: relative;
+  top: 4px;
+  z-index: 10;
+}
+
+#hero .hero-bar div {
+  width: 25%;
+  height: 8px;
+}
+
+#hero .hero-bar #first-col {
+  background: #fcb001;
+}
+
+#hero .hero-bar #second-col {
+  background: #ef3038;
+}
+
+#hero .hero-bar #third-col {
+  background: #0a0037;
+}
+
+#hero #herocarousel .carousel-indicators {
+  position: absolute;
+  left: 80%;
+  bottom: 40%;
+}
+
+#hero #herocarousel .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+#hero #herocarousel .carousel-indicators button[data-bs-slide-to="0"] {
+  background-color: #fcb001;
+}
+
+#hero #herocarousel .carousel-indicators button[data-bs-slide-to="1"] {
+  background-color: #ef3038;
+}
+
+#hero #herocarousel .carousel-indicators button[data-bs-slide-to="2"] {
+  background-color: #0a0037;
+}
+
+#hero #herocarousel .carousel-inner {
   width: 100%;
-  height: calc(100vh - 95px);
+  height: calc(
+    100vh - 92px - 8px
+  ); /* 100vh - (height of header) - (height of hero-bar) */
   border-top-left-radius: 60px;
 }
-#hero .carousel-item {
+
+#hero #herocarousel .carousel-item {
   height: 100%;
   width: 100%;
 }
 
-#hero .carousel-item.slide-1 {
+#hero #herocarousel .carousel-item.slide-1 {
   background: url("../img/hero/slide_1.png") center center;
   background-size: cover;
 }
-#hero .carousel-item.slide-2 {
+
+#hero #herocarousel .carousel-item.slide-2 {
   background: url("../img/hero/slide_2.png") center center;
   background-size: cover;
 }
 
-#hero .carousel-item:before {
+#hero #herocarousel .carousel-item:before {
   content: "";
   background: rgba(0, 0, 0, 0.4);
   position: absolute;
@@ -191,7 +246,7 @@ h3 {
   right: 0;
 }
 
-#hero .carousel-item p {
+#hero #herocarousel .carousel-item p {
   position: absolute;
   color: #fff;
   z-index: 10;
@@ -199,7 +254,7 @@ h3 {
   margin: 100px 0 0 100px;
 }
 
-#hero .carousel-item p span {
+#hero #herocarousel .carousel-item p span {
   color: #c3a22c;
 }
 
@@ -213,18 +268,28 @@ h3 {
 }
 
 @media (min-width: 1024px) {
-  #hero .carousel-item.slide-1,
-  #hero .carousel-item.slide-2 {
+  #hero #herocarousel .carousel-item.slide-1,
+  #hero #herocarousel .carousel-item.slide-2 {
     background-attachment: fixed;
   }
 }
 
 @media (max-width: 768px) {
-  #hero .carousel-item p {
+  #hero #herocarousel .carousel-indicators {
+    left: 78%;
+  }
+
+  #hero #herocarousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  #hero #herocarousel .carousel-item p {
     font-size: 20px;
     margin: 100px 0 0 40px;
   }
-  #hero .hero-caption {
+  #hero #herocarousel .hero-caption {
     font-size: 20px;
     left: 40px;
   }
@@ -238,7 +303,7 @@ h3 {
   padding-top: 0;
   margin-top: -80px;
   position: relative;
-  z-index: 20;
+  z-index: 10;
 }
 
 #solutions form {

@@ -73,7 +73,6 @@
                         Emergency hot line <i class="bi bi-telephone-fill"></i> <span>1528</span>
                     </div>
                 </div>
-                <!-- Button to trigger the mobile navigation modal -->
                 <div class="d-flex d-md-none mobile-nav">
                     <button type="button"
                             class="btn btn-primary d-md-none d-inline-block"
@@ -118,24 +117,48 @@
         <!-- ======= Main ======= -->
         <main id="main">
             <!-- ======= Hero Section ======= -->
-            <section id="hero"
+            <section id="hero">
+                <div class="hero-bar d-flex justify-content-end">
+                    <div id="first-col"></div>
+                    <div id="second-col"></div>
+                    <div id="third-col"></div>
+                </div>
+                <div id="herocarousel"
                      class="carousel slide carousel-fade"
                      data-bs-ride="carousel"
-                     data-bs-pause="false">
-                <div class="carousel-inner">
-                    <div class="carousel-item slide-1 active">
-                        <p>
-                            Guard your daily smile with the
-                            <br>
-                            Wellness from <span>Afya Kwa Walimu</span>
-                        </p>
+                     data-bs-pause="false"
+                     data-bs-interval="6000">
+                    <div class="carousel-indicators d-flex flex-column">
+                        <button type="button"
+                                data-bs-target="#herocarousel"
+                                data-bs-slide-to="0"
+                                aria-current="true"
+                                aria-label="Slide 1"
+                                class="active"></button>
+                        <button type="button"
+                                data-bs-target="#herocarousel"
+                                data-bs-slide-to="1"
+                                aria-label="Slide 2"></button>
+                        <button type="button"
+                                data-bs-target="#herocarousel"
+                                data-bs-slide-to="2"
+                                aria-label="Slide 3"></button>
                     </div>
-                    <div class="carousel-item slide-2">
-                        <p>
-                            Protect your <span>whole family</span> with
-                            <br>
-                            <span>Afya Kwa Walimu</span> medical scheme
-                        </p>
+                    <div class="carousel-inner">
+                        <div class="carousel-item slide-1 active">
+                            <p>
+                                Guard your daily smile with the
+                                <br>
+                                Wellness from <span>Afya Kwa Walimu</span>
+                            </p>
+                        </div>
+                        <div class="carousel-item slide-2">
+                            <p>
+                                Protect your <span>whole family</span> with
+                                <br>
+                                <span>Afya Kwa Walimu</span> medical scheme
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="hero-caption">
