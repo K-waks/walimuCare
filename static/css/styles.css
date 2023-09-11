@@ -216,7 +216,7 @@ h3 {
 #hero #herocarousel .carousel-inner {
   width: 100%;
   height: calc(
-    100vh - 92px - 8px
+    100vh - 87px - 8px
   ); /* 100vh - (height of header) - (height of hero-bar) */
   border-top-left-radius: 60px;
 }
@@ -289,9 +289,21 @@ h3 {
     font-size: 20px;
     margin: 100px 0 0 40px;
   }
-  #hero #herocarousel .hero-caption {
+  #hero .hero-caption {
     font-size: 20px;
     left: 40px;
+  }
+}
+
+@media (max-width: 500px) {
+  #hero #herocarousel .carousel-item.slide-1 {
+    background: url("../img/hero/slide_1_sm.png") center center;
+    background-size: cover;
+  }
+
+  #hero #herocarousel .carousel-item.slide-2 {
+    background: url("../img/hero/slide_2_sm.png") center center;
+    background-size: cover;
   }
 }
 
