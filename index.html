@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -24,48 +23,47 @@
     <meta property="og:locale" content="" />
     <title>Walimu Care</title>
     <!-- Favicons & Webmanifest -->
-    <link rel="icon" href="{% static 'base/img/icon/favicon.png' %}" />
-    <link rel="apple-touch-icon" href="{% static 'base/img/icon/apple-touch-icon.png' %}" />
-    <link rel="manifest" href="{% static 'base/manifest.webmanifest' %}" />
+    <link rel="icon" href="static/img/icon/favicon.png" />
+    <link rel="apple-touch-icon" href="static/img/icon/apple-touch-icon.png" />
+    <link rel="manifest" href="static/manifest.webmanifest" />
     <!-- Google Fonts -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i|Sacramento" />
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <!-- Vendor CSS Files -->
-    <link rel="stylesheet" href="{% static 'base/vendor/bootstrap/bootstrap.min.css' %}" />
-    <link rel="stylesheet" href="{% static 'base/vendor/swiper/swiper-bundle.min.css' %}" />
+    <link rel="stylesheet" href="static/vendor/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="static/vendor/swiper/swiper-bundle.min.css" />
     <!-- Custom CSS File -->
-    <link rel="stylesheet" href="{% static 'base/css/style.css' %}">
+    <link rel="stylesheet" href="static/css/style.css">
     <!-- Vendor JS Files -->
-    <script src="{% static 'base/vendor/bootstrap/bootstrap.bundle.min.js' %}" defer></script>
-    <script src="{% static 'base/vendor/swiper/swiper-bundle.min.js' %}" defer></script>
+    <script src="static/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+    <script src="static/vendor/swiper/swiper-bundle.min.js" defer></script>
     <!-- Main JS File -->
-    <script src="{% static 'base/js/script.js' %}" defer></script>
+    <script src="static/js/script.js" defer></script>
 </head>
 
 <body>
     <!-- ======= Header ======= -->
     <header id="header">
         <div class="container-fluid clearfix">
-            <img src="{% static 'base/img/icon/Afya-kwa-walimu.png' %}" width="" height="90%" alt=""
-                class="float-start">
-            <img src="{% static 'base/img/icon/TSC.png' %}" width="" height="90%" alt="" class="float-end">
+            <img src="static/img/icon/Afya-kwa-walimu.png" width="" height="90%" alt="" class="float-start">
+            <img src="static/img/icon/TSC.png" width="" height="90%" alt="" class="float-end">
             <!-- Desktop Navigation -->
             <div class="d-none d-md-flex desktop-nav">
                 <div class="nav d-table text-uppercase">
                     <div class="d-table-row">
                         <div class="d-table-cell border-end border-secondary nav-item">
-                            <a class="nav-link active py-0" aria-current="page" href="{% url 'home' %}">Home</a>
+                            <a class="nav-link active py-0" aria-current="page" href="index.html">Home</a>
                         </div>
                         <div class="d-table-cell border-end border-secondary nav-item">
-                            <a class="nav-link  py-0" href="#">About Afya Kwa Walimu</a>
+                            <a class="nav-link  py-0" href="about.html">About Afya Kwa Walimu</a>
                         </div>
                         <div class="d-table-cell border-end border-secondary nav-item">
-                            <a class="nav-link  py-0" href="#">Benefits Structure</a>
+                            <a class="nav-link  py-0" href="benefits_structure.html">Benefits Structure</a>
                         </div>
                         <div class="d-table-cell nav-item">
-                            <a class="nav-link  py-0" href="#">Registration</a>
+                            <a class="nav-link  py-0" href="registration.html">Registration</a>
                         </div>
                     </div>
                 </div>
@@ -92,18 +90,18 @@
                             <div class="modal-body">
                                 <ul class="list-unstyled">
                                     <li class="nav-item">
-                                        <a href="" class="nav-link"><i class="bi bi-caret-right-fill"></i> Home</a>
+                                        <a href="index.html" class="nav-link"><i class="bi bi-caret-right-fill"></i> Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="" class="nav-link"><i class="bi bi-caret-right-fill"></i> About Afya
+                                        <a href="about.html" class="nav-link"><i class="bi bi-caret-right-fill"></i> About Afya
                                             Kwa Walimu</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="" class="nav-link"><i class="bi bi-caret-right-fill"></i> Benefits
+                                        <a href="benefits_structure.html" class="nav-link"><i class="bi bi-caret-right-fill"></i> Benefits
                                             Structure</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="" class="nav-link"><i class="bi bi-caret-right-fill"></i>
+                                        <a href="registration.html" class="nav-link"><i class="bi bi-caret-right-fill"></i>
                                             Registration</a>
                                     </li>
                                 </ul>
@@ -159,8 +157,7 @@
             <div class="container">
                 <div class="row g-4">
                     <div class="col-12 col-lg-5">
-                        <form action="{% url 'home' %}" method="post">
-                            {% csrf_token %}
+                        <form action="" method="get">
                             <h3>Search a provider near you.</h3>
                             <div class="row row-cols-2 g-4">
                                 <div class="col">
@@ -168,7 +165,7 @@
                                         <label for="county" class="form-label">County</label>
                                     </div>
                                     <div>
-                                        <select id="county" name="county" class="form-select" disabled>
+                                        <select id="county" name="county" class="form-select">
                                             <option selected>Select county</option>
                                         </select>
                                     </div>
@@ -178,7 +175,7 @@
                                         <label for="sub-county" class="form-label">Sub-county</label>
                                     </div>
                                     <div>
-                                        <select id="sub-county" name="sub-county" class="form-select" disabled>
+                                        <select id="sub-county" name="sub-county" class="form-select">
                                             <option selected>Select sub-county</option>
                                         </select>
                                     </div>
@@ -188,7 +185,7 @@
                                         <label for="town" class="form-label">Town</label>
                                     </div>
                                     <div>
-                                        <select id="town" name="town" class="form-select" disabled>
+                                        <select id="town" name="town" class="form-select">
                                             <option selected>Select town</option>
                                         </select>
                                     </div>
@@ -200,14 +197,6 @@
                                     <div>
                                         <select id="service" name="service" class="form-select">
                                             <option selected>Select service</option>
-                                            <option value="maternity">Maternity</option>
-                                            <option value="optical">Optical</option>
-                                            <option value="dental">Dental</option>
-                                            <option value="road_evacution">Road Evacuation</option>
-                                            <option value="international_travel">International Travel</option>
-                                            <option value="air_evacuation">Air Evacuation</option>
-                                            <option value="psychiatric_counselling">Psychiatric Counselling</option>
-                                            <option value="last_respects">Last Respects</option>
                                         </select>
                                     </div>
                                 </div>
@@ -223,36 +212,36 @@
                         <div class="services-icons rounded-2 user-select-none">
                             <div class="row row-cols-2 row-cols-md-4 g-3">
                                 <div class="col">
-                                    <img src="{% static 'base/img/service/Maternity.png' %}" width="" height="" alt=""
+                                    <img src="static/img/service/Maternity.png" width="" height="" alt=""
                                         class="img-fluid shadow">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'base/img/service/Optical.png' %}" width="" height="" alt=""
+                                    <img src="static/img/service/Optical.png" width="" height="" alt=""
                                         class="img-fluid shadow">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'base/img/service/Dental.png' %}" width="" height="" alt=""
+                                    <img src="static/img/service/Dental.png" width="" height="" alt=""
                                         class="img-fluid shadow">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'base/img/service/RoadEvacuation.png' %}" width="" height=""
-                                        alt="" class="img-fluid shadow">
+                                    <img src="static/img/service/RoadEvacuation.png" width="" height="" alt=""
+                                        class="img-fluid shadow">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'base/img/service/InternationalTravel.png' %}" width=""
-                                        height="" alt="" class="img-fluid shadow">
+                                    <img src="static/img/service/InternationalTravel.png" width="" height="" alt=""
+                                        class="img-fluid shadow">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'base/img/service/AirEvacuation.png' %}" width="" height=""
-                                        alt="" class="img-fluid shadow">
+                                    <img src="static/img/service/AirEvacuation.png" width="" height="" alt=""
+                                        class="img-fluid shadow">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'base/img/service/Psychiatric&Counselling.png' %}" width=""
-                                        height="" alt="" class="img-fluid shadow">
+                                    <img src="static/img/service/Psychiatric&Counselling.png" width="" height="" alt=""
+                                        class="img-fluid shadow">
                                 </div>
                                 <div class="col">
-                                    <img src="{% static 'base/img/service/LastRespects.png' %}" width="" height=""
-                                        alt="" class="img-fluid shadow">
+                                    <img src="static/img/service/LastRespects.png" width="" height="" alt=""
+                                        class="img-fluid shadow">
                                 </div>
                             </div>
                         </div>
@@ -260,42 +249,65 @@
                 </div>
             </div>
         </section>
+        <!-- ======= Service Providers Section ======= -->
+        <!-- <section id="service-providers">
+            <div class="container">
+                <table class="table table-dark table-hover">
+                    <thead>
+                        <tr>
+                            <th>County</th>
+                            <th>Sub County</th>
+                            <th>Town</th>
+                            <th>Service</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mombasa</td>
+                            <td>Nyali</td>
+                            <td>Frere Town</td>
+                            <td>Maternity, Optical, Dental</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section> -->
         <!-- ======= Clients Section ======= -->
         <section id="clients">
             <div class="container">
                 <div class="swiper">
                     <div class="swiper-wrapper align-items-center user-select-none">
                         <div class="swiper-slide">
-                            <img src="{% static 'base/img/client/minetlogo.png' %}" class="img-fluid" width="" height=""
+                            <img src="static/img/client/minetlogo.png" class="img-fluid" width="" height=""
                                 alt="Minet logo">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{% static 'base/img/client/Bliss-healthcare-logo.png' %}" class="img-fluid"
-                                width="" height="" alt="Bliss Healthcare logo">
+                            <img src="static/img/client/Bliss-healthcare-logo.png" class="img-fluid" width="" height=""
+                                alt="Bliss Healthcare logo">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{% static 'base/img/client/Pioneer-Assurance-logo.png' %}" class="img-fluid"
-                                width="" height="" alt="Pioneer Assurance logo">
+                            <img src="static/img/client/Pioneer-Assurance-logo.png" class="img-fluid" width="" height=""
+                                alt="Pioneer Assurance logo">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{% static 'base/img/client/cicinsurance-logo.png' %}" class="img-fluid" width=""
-                                height="" alt="CIC insurance logo">
+                            <img src="static/img/client/cicinsurance-logo.png" class="img-fluid" width="" height=""
+                                alt="CIC insurance logo">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{% static 'base/img/client/old-mutual-logo.png' %}" class="img-fluid" width=""
-                                height="" alt="Old Mutual logo">
+                            <img src="static/img/client/old-mutual-logo.png" class="img-fluid" width="" height=""
+                                alt="Old Mutual logo">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{% static 'base/img/client/Britam-Logo.png' %}" class="img-fluid" width=""
-                                height="" alt="Britam logo">
+                            <img src="static/img/client/Britam-Logo.png" class="img-fluid" width="" height=""
+                                alt="Britam logo">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{% static 'base/img/client/makllogo.png' %}" class="img-fluid" width="" height=""
+                            <img src="static/img/client/makllogo.png" class="img-fluid" width="" height=""
                                 alt="Medical Administrator Kenya Ltd logo">
                         </div>
                         <div class="swiper-slide">
-                            <img src="{% static 'base/img/client/star-discover-general-insurance.png' %}"
-                                class="img-fluid" width="" height="" alt="Star Discover General Insurance logo">
+                            <img src="static/img/client/star-discover-general-insurance.png" class="img-fluid" width=""
+                                height="" alt="Star Discover General Insurance logo">
                         </div>
                     </div>
                     <div class="swiper-pagination"></div>
@@ -310,8 +322,7 @@
                     <div class="col">
                         <div class="d-grid gap-4">
                             <div>
-                                <img class="img-fluid" src="{% static 'base/img/benefit/card_1.png' %}" width=""
-                                    height="" alt="">
+                                <img class="img-fluid" src="static/img/benefit/card_1.png" width="" height="" alt="">
                             </div>
                             <h3>Inpatient benefits</h3>
                             <p>
@@ -324,8 +335,7 @@
                     <div class="col">
                         <div class="d-grid gap-4">
                             <div>
-                                <img class="img-fluid" src="{% static 'base/img/benefit/card_2.png' %}" width=""
-                                    height="" alt="">
+                                <img class="img-fluid" src="static/img/benefit/card_2.png" width="" height="" alt="">
                             </div>
                             <h3>Outpatient benefits</h3>
                             <p>
@@ -338,8 +348,7 @@
                     <div class="col">
                         <div class="d-grid gap-4">
                             <div>
-                                <img class="img-fluid" src="{% static 'base/img/benefit/card_3.png' %}" width=""
-                                    height="" alt="">
+                                <img class="img-fluid" src="static/img/benefit/card_3.png" width="" height="" alt="">
                             </div>
                             <h3>Additional benefits</h3>
                             <p>
@@ -352,8 +361,7 @@
                     <div class="col">
                         <div class="d-grid gap-4">
                             <div>
-                                <img class="img-fluid" src="{% static 'base/img/benefit/card_4.png' %}" width=""
-                                    height="" alt="">
+                                <img class="img-fluid" src="static/img/benefit/card_4.png" width="" height="" alt="">
                             </div>
                             <h3>Wellness education</h3>
                             <p>

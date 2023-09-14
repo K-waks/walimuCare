@@ -37,6 +37,18 @@ h3 {
   font-weight: 650;
 }
 
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 23px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+}
+
+
 /*--------------------------------------------------------------
   # Back to top button
   --------------------------------------------------------------*/
@@ -100,6 +112,11 @@ h3 {
 
 #header .mobile-nav .btn:hover {
   background-color: #0a0037;
+}
+
+#header .mobile-nav ul {
+  text-transform: uppercase;
+  font-size: 14px;
 }
 
 #header .mobile-nav ul li {
@@ -215,9 +232,8 @@ h3 {
 
 #hero #herocarousel .carousel-inner {
   width: 100%;
-  height: calc(
-    100vh - 87px - 8px
-  ); /* 100vh - (height of header) - (height of hero-bar) */
+  height: calc(100vh - 87px - 8px);
+  /* 100vh - (height of header) - (height of hero-bar) */
   border-top-left-radius: 60px;
 }
 
@@ -268,6 +284,7 @@ h3 {
 }
 
 @media (min-width: 1024px) {
+
   #hero #herocarousel .carousel-item.slide-1,
   #hero #herocarousel .carousel-item.slide-2 {
     background-attachment: fixed;
@@ -289,6 +306,7 @@ h3 {
     font-size: 20px;
     margin: 100px 0 0 40px;
   }
+
   #hero .hero-caption {
     font-size: 20px;
     left: 40px;
@@ -306,6 +324,65 @@ h3 {
     background-size: cover;
   }
 }
+
+/*--------------------------------------------------------------
+  # Breadcrumbs
+  --------------------------------------------------------------*/
+
+#breadcrumbs {
+  position: relative;
+  height: 130px;
+
+}
+
+#breadcrumbs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#breadcrumbs .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  z-index: 10;
+}
+
+#breadcrumbs a {
+  color: #c3a22c;
+}
+
+#breadcrumbs h2 {
+  color: #c3a22c;
+}
+
+#breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+#breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+#breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  /* color: #655356; */
+  color: #9caaad;
+  content: "/";
+}
+
 
 /*--------------------------------------------------------------
   # Services
@@ -367,11 +444,6 @@ h3 {
   color: #fff;
 }
 
-@media (max-width: 768px) {
-  #services form h3 {
-    font-size: 22px;
-  }
-}
 
 /*--------------------------------------------------------------
   # Clients
@@ -430,8 +502,9 @@ h3 {
 }
 
 #comprehensive-benefits a {
-  color: #444444;
+  color: #756e6e;
   font-size: 14px;
+  font-weight: 550;
   text-transform: uppercase;
   display: block;
   position: absolute;
@@ -441,6 +514,66 @@ h3 {
 #comprehensive-benefits a:hover {
   color: #c3a22c;
 }
+
+/*--------------------------------------------------------------
+  # Benefits-structure
+  --------------------------------------------------------------*/
+#benefits-structure {
+  padding: 40px 0;
+}
+
+#benefits-structure h3 {
+  font-size: 24px;
+  margin: 30px 0 15px 0;
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+#benefits-structure h3:before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: #eef0ef;
+  bottom: 0;
+  left: 0;
+}
+
+#benefits-structure h3:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 60px;
+  height: 1px;
+  background: #c3a22c;
+  bottom: 0;
+  left: 0;
+}
+
+#benefits-structure .course-info {
+  background: #f6f7f6;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+}
+
+#benefits-structure .course-info h5 {
+  font-weight: 400;
+  font-size: 16px;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+#benefits-structure .course-info p {
+  margin: 0;
+  font-weight: 600;
+}
+
+#benefits-structure .course-info a {
+  color: #657a6d;
+}
+
 
 /*--------------------------------------------------------------
   # Footer
@@ -554,6 +687,7 @@ h3 {
 }
 
 @media (max-width: 992px) {
+
   #bottom-bar .copyright,
   #bottom-bar .social-links {
     margin-bottom: 20px;
