@@ -1,6 +1,6 @@
 {
-  "scope": "/",
-  "start_url": "/",
+  "scope": "https://wakskevin.github.io/",
+  "start_url": "https://wakskevin.github.io/",
   "display": "standalone",
   "icons": [
     {
