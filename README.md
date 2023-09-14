@@ -1,4 +1,4 @@
-![](base/static/base/img/icon/Afya-kwa-walimu.png)
+![](static/img/icon/Afya-kwa-walimu.png)
 
 
 ### Walimu Care
