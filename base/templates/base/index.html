@@ -168,24 +168,8 @@
                                         <label for="county" class="form-label">County</label>
                                     </div>
                                     <div>
-                                        <select id="county" name="county" class="form-select">
+                                        <select id="county" name="county" class="form-select" disabled>
                                             <option selected>Select county</option>
-                                            <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
-                                            <option value="option3">Option 3</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div>
-                                        <label for="town" class="form-label">Town</label>
-                                    </div>
-                                    <div>
-                                        <select id="town" name="town" class="form-select">
-                                            <option selected>Select town</option>
-                                            <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
-                                            <option value="option3">Option 3</option>
                                         </select>
                                     </div>
                                 </div>
@@ -194,11 +178,18 @@
                                         <label for="sub-county" class="form-label">Sub-county</label>
                                     </div>
                                     <div>
-                                        <select id="sub-county" name="sub-county" class="form-select">
+                                        <select id="sub-county" name="sub-county" class="form-select" disabled>
                                             <option selected>Select sub-county</option>
-                                            <option value="option1">Option 1</option>
-                                            <option value="option2">Option 2</option>
-                                            <option value="option3">Option 3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div>
+                                        <label for="town" class="form-label">Town</label>
+                                    </div>
+                                    <div>
+                                        <select id="town" name="town" class="form-select" disabled>
+                                            <option selected>Select town</option>
                                         </select>
                                     </div>
                                 </div>
@@ -275,8 +266,8 @@
                 <div class="swiper">
                     <div class="swiper-wrapper align-items-center user-select-none">
                         <div class="swiper-slide">
-                            <img src="{% static 'base/img/client/minetlogo.png' %}" class="img-fluid" width=""
-                                height="" alt="Minet logo">
+                            <img src="{% static 'base/img/client/minetlogo.png' %}" class="img-fluid" width="" height=""
+                                alt="Minet logo">
                         </div>
                         <div class="swiper-slide">
                             <img src="{% static 'base/img/client/Bliss-healthcare-logo.png' %}" class="img-fluid"
@@ -319,8 +310,8 @@
                     <div class="col">
                         <div class="d-grid gap-4">
                             <div>
-                                <img class="img-fluid" src="{% static 'base/img/benefit/card_1.png' %}"
-                                    width="" height="" alt="">
+                                <img class="img-fluid" src="{% static 'base/img/benefit/card_1.png' %}" width=""
+                                    height="" alt="">
                             </div>
                             <h3>Inpatient benefits</h3>
                             <p>
@@ -333,8 +324,8 @@
                     <div class="col">
                         <div class="d-grid gap-4">
                             <div>
-                                <img class="img-fluid" src="{% static 'base/img/benefit/card_2.png' %}"
-                                    width="" height="" alt="">
+                                <img class="img-fluid" src="{% static 'base/img/benefit/card_2.png' %}" width=""
+                                    height="" alt="">
                             </div>
                             <h3>Outpatient benefits</h3>
                             <p>
@@ -347,8 +338,8 @@
                     <div class="col">
                         <div class="d-grid gap-4">
                             <div>
-                                <img class="img-fluid" src="{% static 'base/img/benefit/card_3.png' %}"
-                                    width="" height="" alt="">
+                                <img class="img-fluid" src="{% static 'base/img/benefit/card_3.png' %}" width=""
+                                    height="" alt="">
                             </div>
                             <h3>Additional benefits</h3>
                             <p>
@@ -361,8 +352,8 @@
                     <div class="col">
                         <div class="d-grid gap-4">
                             <div>
-                                <img class="img-fluid" src="{% static 'base/img/benefit/card_4.png' %}"
-                                    width="" height="" alt="">
+                                <img class="img-fluid" src="{% static 'base/img/benefit/card_4.png' %}" width=""
+                                    height="" alt="">
                             </div>
                             <h3>Wellness education</h3>
                             <p>

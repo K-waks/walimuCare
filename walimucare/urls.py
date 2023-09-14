@@ -23,6 +23,11 @@ from base import views
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/counties/", views.CountyListView.as_view(), name="counties-list"),
+    path(
+        "api/subcounties/", views.SubCountyListView.as_view(), name="subcounties-list"
+    ),
+    path("api/towns/", views.TownListView.as_view(), name="towns-list"),
     path("", views.home, name="home"),
 ]
 
