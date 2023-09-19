@@ -1,0 +1,279 @@
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+#hero {
+    position: relative;
+  }
+  
+  #hero .hero-bar {
+    position: relative;
+    top: 4px;
+    z-index: 10;
+  }
+  
+  #hero .hero-bar div {
+    width: 25%;
+    height: 8px;
+  }
+  
+  #hero .hero-bar #first-col {
+    background: #fcb001;
+  }
+  
+  #hero .hero-bar #second-col {
+    background: #ef3038;
+  }
+  
+  #hero .hero-bar #third-col {
+    background: #0a0037;
+  }
+  
+  #hero #herocarousel .carousel-indicators {
+    position: absolute;
+    left: 80%;
+    bottom: 40%;
+  }
+  
+  #hero #herocarousel .carousel-indicators button {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+  }
+  
+  #hero #herocarousel .carousel-indicators button[data-bs-slide-to="0"] {
+    background-color: #fcb001;
+  }
+  
+  #hero #herocarousel .carousel-indicators button[data-bs-slide-to="1"] {
+    background-color: #ef3038;
+  }
+  
+  #hero #herocarousel .carousel-indicators button[data-bs-slide-to="2"] {
+    background-color: #0a0037;
+  }
+  
+  #hero #herocarousel .carousel-inner {
+    width: 100%;
+    height: calc(100vh - 87px - 8px);
+    /* 100vh - (height of header) - (height of hero-bar) */
+    border-top-left-radius: 60px;
+  }
+  
+  #hero #herocarousel .carousel-item {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #hero #herocarousel .carousel-item.slide-1 {
+    background: url("../img/hero/slide_1.png") center center;
+    background-size: cover;
+  }
+  
+  #hero #herocarousel .carousel-item.slide-2 {
+    background: url("../img/hero/slide_2.png") center center;
+    background-size: cover;
+  }
+  
+  #hero #herocarousel .carousel-item:before {
+    content: "";
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  
+  #hero #herocarousel .carousel-item p {
+    position: absolute;
+    color: #fff;
+    z-index: 10;
+    font-size: 26px;
+    margin: 100px 0 0 100px;
+  }
+  
+  #hero #herocarousel .carousel-item p span {
+    color: #c3a22c;
+  }
+  
+  #hero .hero-caption {
+    font-size: 26px;
+    color: #fff;
+    position: absolute;
+    left: 100px;
+    bottom: 20%;
+    z-index: 10;
+  }
+  
+  @media (min-width: 1024px) {
+  
+    #hero #herocarousel .carousel-item.slide-1,
+    #hero #herocarousel .carousel-item.slide-2 {
+      background-attachment: fixed;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #hero #herocarousel .carousel-indicators {
+      left: 78%;
+    }
+  
+    #hero #herocarousel .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+  
+    #hero #herocarousel .carousel-item p {
+      font-size: 20px;
+      margin: 100px 0 0 40px;
+    }
+  
+    #hero .hero-caption {
+      font-size: 20px;
+      left: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    #hero #herocarousel .carousel-item.slide-1 {
+      background: url("../img/hero/slide_1_sm.png") center center;
+      background-size: cover;
+    }
+  
+    #hero #herocarousel .carousel-item.slide-2 {
+      background: url("../img/hero/slide_2_sm.png") center center;
+      background-size: cover;
+    }
+  }
+
+/*--------------------------------------------------------------
+  # Services
+  --------------------------------------------------------------*/
+  #services {
+    padding: 2rem;
+    padding-top: 0;
+    margin-top: -80px;
+    position: relative;
+    z-index: 10;
+  }
+  
+  #services form {
+    background: #0a0037;
+    height: 100%;
+    padding: 20px;
+    border-top-right-radius: 60px;
+  }
+  
+  #services form h3 {
+    margin-bottom: 15px;
+  }
+  
+  #services form label {
+    text-transform: uppercase;
+    color: #b9b4b4;
+  }
+  
+  #services form .search-provider-btn {
+    display: flex;
+    justify-content: end;
+    margin-top: 30px;
+  }
+  
+  #services form .search-provider-btn button {
+    background: #c3a22c;
+    width: 170px;
+    padding: 5px 30px;
+    color: #fff;
+    text-transform: uppercase;
+  }
+  
+  #services form .search-provider-btn button i {
+    font-size: 13px;
+  }
+  
+  #services .services-icons {
+    background: #e0dbdc;
+    padding: 2rem;
+  }
+  
+  #services .services-icons img {
+    background: whitesmoke;
+  }
+  
+  #services .services-icons img:hover {
+    background: #0a0037;
+    height: 100%;
+    color: #fff;
+  }
+  
+  
+  /*--------------------------------------------------------------
+    # Clients
+    --------------------------------------------------------------*/
+  #clients {
+    padding: 1rem 0;
+  }
+  
+  #clients .swiper-pagination {
+    margin-top: 20px;
+    position: relative;
+  }
+  
+  #clients .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    opacity: 1;
+    border: 1px solid #c3a22c;
+  }
+  
+  #clients .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #c3a22c;
+  }
+  
+  #clients .swiper-slide img {
+    transition: all 0.4s ease-in-out;
+  }
+  
+  #clients .swiper-slide img:hover {
+    transform: scale(1.2);
+  }
+  
+  @media (max-width: 768px) {
+    #clients .swiper-slide img {
+      width: 120px;
+    }
+  }
+  
+  /*--------------------------------------------------------------
+    # Comprehensive Benefits
+    --------------------------------------------------------------*/
+  #comprehensive-benefits {
+    background: #0a0037;
+    padding: 2rem;
+  }
+  
+  #comprehensive-benefits .col {
+    padding-bottom: 50px;
+    position: relative;
+  }
+  
+  #comprehensive-benefits p {
+    color: #b9b4b4;
+    font-size: 14px;
+  }
+  
+  #comprehensive-benefits a {
+    color: #756e6e;
+    font-size: 14px;
+    font-weight: 550;
+    text-transform: uppercase;
+    display: block;
+    position: absolute;
+    bottom: 15px;
+  }
+  
+  #comprehensive-benefits a:hover {
+    color: #c3a22c;
+  }

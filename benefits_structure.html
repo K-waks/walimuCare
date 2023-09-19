@@ -34,8 +34,10 @@
     <!-- Vendor CSS Files -->
     <link rel="stylesheet" href="static/vendor/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="static/vendor/swiper/swiper-bundle.min.css" />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="static/css/main.css">
     <!-- Custom CSS File -->
-    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/benefits_structure.css">
     <!-- Vendor JS Files -->
     <script src="static/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
     <script src="static/vendor/swiper/swiper-bundle.min.js" defer></script>
@@ -54,16 +56,16 @@
                 <div class="nav d-table text-uppercase">
                     <div class="d-table-row">
                         <div class="d-table-cell border-end border-secondary nav-item">
-                            <a class="nav-link active py-0" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link py-0" aria-current="page" href="index.html">Home</a>
                         </div>
                         <div class="d-table-cell border-end border-secondary nav-item">
-                            <a class="nav-link  py-0" href="about.html">About Afya Kwa Walimu</a>
+                            <a class="nav-link py-0" href="about.html">About Afya Kwa Walimu</a>
                         </div>
                         <div class="d-table-cell border-end border-secondary nav-item">
-                            <a class="nav-link  py-0" href="benefits_structure.html">Benefits Structure</a>
+                            <a class="nav-link active py-0" href="benefits_structure.html">Benefits Structure</a>
                         </div>
                         <div class="d-table-cell nav-item">
-                            <a class="nav-link  py-0" href="registration.html">Registration</a>
+                            <a class="nav-link py-0" href="registration.html">Registration</a>
                         </div>
                     </div>
                 </div>
@@ -124,7 +126,7 @@
 
                 <ul class="list-unstyled">
                     <li>
-                        <a href="{% url 'home' %}">Home</a>
+                        <a href="index.html">Home</a>
                     </li>
                 </ul>
                 <h2>Benefits Structure</h2>
@@ -132,46 +134,174 @@
         </section>
         <section id="benefits-structure">
             <div class="container">
-                <div class="row">
-                    <div class="col-lg-8">
-                        <img src="static/img/breadcrumbs/benefits_structure.png" class="img-fluid" alt="">
-                        <h3>Inpatient Benefits</h3>
-                        <p>
-                            This benefit covers treatment that requires admission to a hospital or day-care
-                            surgery/procedure. The benefits (paid net of NHIF (National Health Insurance Fund) rebates)
-                            under this cover include but are not limited to:
-                        </p>
-                        <ul>
-                            <li>Cost of hospitalization, treatment and surgery including day cases and discharge</li>
-                            <li>Post Hospitalization benefits up to a maximum of five (5) weeks (35 days) and three (3)
-                                months for attendant therapy</li>
-                            <li>Accommodation and meals for a caretaker or parent/guardian accompanying a child of 12
-                                years and below</li>
-                            <li>Accident-related hospitalization and reconstructive surgery following an accident</li>
-                            <li>Treatment of pre-existing and chronic recurrent conditions including but not limited to
-                                hypertension, asthma, diabetes, kidney failure, cancer-related illness, arthritis, HIV/
-                                AIDS, and pre-existing surgical conditions</li>
-                            <li>Treatment for Congenital conditions and neonatal/prematurity-related conditions
-                                including defects/genetic disorders</li>
-                            <li>Dental and optical hospitalization/ ophthalmology surgery resulting from an accident
-                                (covered within the inpatient limit)</li>
-                            <li>The Inpatient optical/ eye treatment (excluding correction of refractive errors and
-                                laser treatment)</li>
-                            <li>Access to and fees for specialists including physicians, surgeons, anesthetists'</li>
-                            <li>Inpatient Psychiatric treatment</li>
-                            <li>Laboratory investigations, X-rays, ultrasound, ECG, MRI Scans, Radiology X-rays, CT scan
-                                and PET Scan</li>
-                            <li>Prescribed drugs/medicine, dressings, surgical appliances, and nursing procedures</li>
-                            <li>Radiotherapy and chemotherapy</li>
-                            <li>In-Patient Physiotherapy, Hydrotherapy and Occupational therapy</li>
-                            <li>Intensive Care Unit (ICU), High Dependency Unit (HDU) and Critical Care Unit (CCU)
-                                charges.</li>
-                            <li>Palliative or analgesic care.</li>
-                            <li>Male medical circumcision</li>
-                        </ul>
+                <div class="accordion accordion-flush" id="AccordionBenefitsStructure">
+                    <div class="accordion-item">
+                        <h3 id="flushHeadingFirst" class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flushCollapseFirst" aria-expanded="true" aria-controls="flushCollapseFirst">
+                                InPatient Benefits
+                            </button>
+                        </h3>
+                        <div id="flushCollapseFirst" class="accordion-collapse collapse"
+                            aria-labelledby="flushHeadingFirst" data-bs-parent="#AccordionBenefitsStructure">
+                            <div class="accordion-body">
+                                <p>
+                                    This benefit covers treatment that requires admission to a hospital or day-care
+                                    surgery/procedure. The benefits (paid net of NHIF (National Health Insurance Fund)
+                                    rebates)
+                                    under this cover include but are not limited to:
+                                </p>
+                                <ul>
+                                    <li>Cost of hospitalization, treatment and surgery including day cases and discharge
+                                    </li>
+                                    <li>Post Hospitalization benefits up to a maximum of five (5) weeks (35 days) and three
+                                        (3)
+                                        months for attendant therapy</li>
+                                    <li>Accommodation and meals for a caretaker or parent/guardian accompanying a child of
+                                        12
+                                        years and below</li>
+                                    <li>Accident-related hospitalization and reconstructive surgery following an accident
+                                    </li>
+                                    <li>Treatment of pre-existing and chronic recurrent conditions including but not limited
+                                        to
+                                        hypertension, asthma, diabetes, kidney failure, cancer-related illness, arthritis,
+                                        HIV/
+                                        AIDS, and pre-existing surgical conditions</li>
+                                    <li>Treatment for Congenital conditions and neonatal/prematurity-related conditions
+                                        including defects/genetic disorders</li>
+                                    <li>Dental and optical hospitalization/ ophthalmology surgery resulting from an accident
+                                        (covered within the inpatient limit)</li>
+                                    <li>The Inpatient optical/ eye treatment (excluding correction of refractive errors and
+                                        laser treatment)</li>
+                                    <li>Access to and fees for specialists including physicians, surgeons, anesthetists'
+                                    </li>
+                                    <li>Inpatient Psychiatric treatment</li>
+                                    <li>Laboratory investigations, X-rays, ultrasound, ECG, MRI Scans, Radiology X-rays, CT
+                                        scan
+                                        and PET Scan</li>
+                                    <li>Prescribed drugs/medicine, dressings, surgical appliances, and nursing procedures
+                                    </li>
+                                    <li>Radiotherapy and chemotherapy</li>
+                                    <li>In-Patient Physiotherapy, Hydrotherapy and Occupational therapy</li>
+                                    <li>Intensive Care Unit (ICU), High Dependency Unit (HDU) and Critical Care Unit (CCU)
+                                        charges.</li>
+                                    <li>Palliative or analgesic care.</li>
+                                    <li>Male medical circumcision</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="flushHeadingSecond">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flushCollapseSecond" aria-expanded="false" aria-controls="flushCollapseSecond">
+                                Outpatient Benefits
+                            </button>
+                        </h3>
+                        <div id="flushCollapseSecond" class="accordion-collapse collapse" aria-labelledby="flushHeadingSecond"
+                            data-bs-parent="#AccordionBenefitsStructure">
+                            <div class="accordion-body">
+                                <p>
+                                    This benefit covers treatment that does not require admission or day-care surgery in a
+                                    hospital. The outpatient cover caters for all routine outpatient services which include
+                                    but
+                                    are not limited to:
+                                </p>
+                                <ul>
+                                    <li>Routine outpatient consultation</li>
+                                    <li>Prescribed physiotherapy</li>
+                                    <li>Prescribed drugs and dressings</li>
+                                    <li>Maternity Pre and Post Natal care</li>
+                                    <li>Routine Immunizations: KEPI (Kenya Expanded Program of Immunization) and Baby
+                                        Friendly
+                                        Vaccines and immunizations against COVID-19</li>
+                                    <li>Staff vaccinations for recommended travel vaccines while on official duty e.g.,
+                                        yellow
+                                        fever, polio as well as other non-travel related vaccines such as Hepatitis B.</li>
+                                    <li>Psychiatric and Counselling Services</li>
+                                    <li>Family planning & fertility tests including impotence drugs</li>
+                                    <li>Testing, and treatment of HIV/AIDS including prescribed ARVs to the full family
+                                        cover
+                                        limit per annum</li>
+                                    <li>Alternative treatment i.e., acupuncture and chiropractor (on referral)</li>
+                                    <li>Treatment of pre-existing and chronic conditions including TB, Cancer, etc.</li>
+                                    <li>Annual General check-up for principal member and spouse</li>
+                                    <li>Radiology, X-ray, ultrasound, EEG, ECG Computerized Tomography (CT-SCAN), and MRI
+                                        Scans
+                                    </li>
+                                    <li>Free access to all medical Specialists upon referral</li>
+                                    <li>Cancer tests and diagnosis - PSA test (Prostate Antigen Test) for male employees and
+                                        spouses and one pap- smear test and a mammogram for female employees and spouses per
+                                        annum</li>
+                                    <li>Online health services including consultation, e-pharmacy, and e-laboratory services
+                                        (access through USSD (Unstructured Supplementary Service Data))</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h3 class="accordion-header" id="flushHeadingThird">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flushCollapseThird" aria-expanded="false" aria-controls="flushCollapseThird">
+                                Additional Covered Benefits
+                            </button>
+                        </h3>
+                        <div id="flushCollapseThird" class="accordion-collapse collapse" aria-labelledby="flushHeadingThird"
+                            data-bs-parent="#AccordionBenefitsStructure">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>Worldwide medical cover with no geographical limits (on reimbursement while on
+                                        official
+                                        duty)</li>
+                                    <li>Covers medical expenses arising from activities such as naval, military, air force
+                                        and
+                                        other security related operations, riots, strikes, civil commotions and Acts of
+                                        Terrorism where the insured is a victim</li>
+                                    <li>Benefits Portability: that is, access to empaneled medical facilities without
+                                        restrictions</li>
+                                    <li>Medical Appliances (Hearing Aids, Glucometer, Insulin delivery devices, Urine
+                                        Catheters
+                                        & Accessories etc.)</li>
+                                    <li>Medical aids including Glucometers, BP Machines, hearing aids, non-motorized
+                                        wheelchairs, frames, and crutches</li>
+                                    <li>Prescribed preventive and curative drugs/care (Including pressure stockings and
+                                        clinical
+                                        corset belt)</li>
+                                    <li>Alcoholism, drug and substance abuse treatment, counselling and rehabilitation
+                                        services
+                                        to principal member and spouse only.</li>
+                                    <li>Illnesses resulting from alcohol intoxication, including liver sclerosis, toxic
+                                        encephalopathy</li>
+                                    <li>Cost for infertility - IVF (In Vitro Fertilization)</li>
+                                    <li>Renal dialysis</li>
+                                    <li>Home based care for critically ill individuals - supplementary oxygen and nursing
+                                        care
+                                    </li>
+                                    <li>All sexually transmitted infections (STD)</li>
+                                    <li>Extreme and professional sports</li>
+                                    <li>Prosthetic devices needed as part of treatment, which include external artificial
+                                        body
+                                        parts such as a prosthetic limb or prosthetic ear
+                                    </li>
+                                    <li>Transplant services - transplant of cornea, small bowel, kidney, pancreas, liver,
+                                        heart,
+                                        lung or heart/lung transplant, skin grafting necessitated by accident or skin
+                                        diseases, where the best outcomes are scientifically offered, local or international
+                                        hospitals and doctors
+                                    </li>
+                                    <li>E-health - e-consultation, e-pharmacy and e-laboratory services, access through USSD
+                                        /360- degree communication/Application</li>
+                                    <li>Covid-19 Test for official travel</li>
+                                    <li>Medical insurance cover while travelling up to 8 weeks</li>
+                                    <li>Prescribed preventive and curative drugs/care (Including pressure stockings and
+                                        clinical
+                                        corset belt)</li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-
+                <hr>
             </div>
         </section>
     </main>
