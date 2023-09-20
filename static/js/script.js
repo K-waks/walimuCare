@@ -7,8 +7,7 @@
   */
   // Initialize GLightbox
   const glightbox = GLightbox({
-    slideNavigation: false,
-    selector: '.glightbox',
+    selector: '.glightbox-table',
     width: '85vw',
     height: '85vh',
   });
