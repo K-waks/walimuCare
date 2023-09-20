@@ -9,7 +9,7 @@
   const glightbox = GLightbox({
     selector: '.glightbox-table',
     width: '85vw',
-    height: '85vh',
+    height: '90vh',
   });
 
 
