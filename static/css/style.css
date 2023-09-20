@@ -1,0 +1,670 @@
+/* ****************************************************** GENERAL STYLES ********************************************************** */
+
+/*--------------------------------------------------------------
+  # General
+  --------------------------------------------------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  /* color: #444444; */
+}
+
+a {
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0;
+  color: #c3a22c;
+  font-family: "Nunito", sans-serif;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 26px;
+  padding: 0 0 2rem 1rem;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 650;
+}
+
+
+@media (max-width: 576px) {
+  h2 {
+    font-size: 23px;
+  }
+
+  h3 {
+    font-size: 21px;
+  }
+}
+
+
+/*--------------------------------------------------------------
+  # Back to top button
+  --------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+  # Header
+  --------------------------------------------------------------*/
+#header .container-fluid {
+  height: 87px;
+  position: relative;
+}
+
+#header .desktop-nav,
+#header .mobile-nav {
+  justify-content: center;
+  align-items: end;
+  height: 100%;
+  padding-bottom: 13px;
+}
+
+/**
+  * Desktop Navigation 
+  */
+
+#header .desktop-nav .nav {
+  font-size: 13px;
+  font-weight: 650;
+  width: 80%;
+  text-align: center;
+}
+
+#header .desktop-nav .nav a {
+  color: #0a0037;
+}
+
+#header .desktop-nav .nav a.active,
+#header .desktop-nav .nav a:hover {
+  color: #c3a22c;
+}
+
+@media (min-width: 740) and (max-width: 1080px) {
+  #header .desktop-nav .nav {
+    width: 100%;
+    font-size: 12px;
+  }
+}
+
+/**
+  * Mobile Navigation 
+  */
+
+#header .mobile-nav .btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+  background-color: #c3a22c;
+  color: #fff;
+  border: none;
+  transition: 0.4s;
+}
+
+#header .mobile-nav .btn:hover {
+  background-color: #0a0037;
+}
+
+#header .mobile-nav ul {
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+#header .mobile-nav ul li {
+  margin: 30px 0;
+}
+
+#header .mobile-nav ul li a {
+  transition: 0.3s;
+  color: #0a0037;
+}
+
+#header .mobile-nav ul li a:hover {
+  color: #c3a22c;
+}
+
+#header .mobile-nav .mobilenav-hot-line,
+#header .hot-line {
+  color: #0a0037;
+  position: absolute;
+  top: 3px;
+  font-size: 14px;
+}
+
+#header .mobile-nav .mobilenav-hot-line i,
+#header .hot-line i {
+  display: inline-block;
+  width: 36px;
+  padding: 3px;
+  text-align: center;
+  vertical-align: middle;
+  border-radius: 50%;
+  background: #c3a22c;
+  color: #fff;
+}
+
+#header .mobile-nav .mobilenav-hot-line span,
+#header .hot-line span {
+  color: #c3a22c;
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  #header .hot-line {
+    right: 240px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  #header .hot-line {
+    right: 180px;
+  }
+}
+
+@media (max-width: 576px) {
+  #header .hot-line {
+    right: 120px;
+  }
+}
+
+/*--------------------------------------------------------------
+  # Breadcrumbs
+  --------------------------------------------------------------*/
+
+#breadcrumbs {
+  position: relative;
+  height: 120px;
+
+}
+
+#breadcrumbs::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+#breadcrumbs .container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  z-index: 10;
+}
+
+#breadcrumbs a {
+  color: #c3a22c;
+}
+
+#breadcrumbs h2 {
+  color: #c3a22c;
+}
+
+#breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 10px 0;
+  margin: 0;
+  font-size: 14px;
+}
+
+#breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+#breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  /* color: #655356; */
+  color: #9caaad;
+  content: "/";
+}
+
+/*--------------------------------------------------------------
+  # Footer
+  --------------------------------------------------------------*/
+#footer {
+  background-color: #e0dbdc;
+  font-size: 14px;
+  padding: 3rem;
+}
+
+#footer h3 {
+  margin-bottom: 20px;
+}
+
+#footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer ul li {
+  margin: 11px 0px;
+}
+
+#footer ul li a {
+  display: flex;
+  color: #0a0037;
+}
+
+#footer i {
+  display: inline-block;
+  font-size: 13px;
+  align-self: center;
+  margin-right: 10px;
+}
+
+#footer ul li a span {
+  display: inline-block;
+  align-self: center;
+}
+
+#footer ul li a:hover {
+  color: #c3a22c;
+}
+
+#footer .contacts-links ul li a i {
+  background: #0a0037;
+  color: #fff;
+  vertical-align: middle;
+  text-align: center;
+  padding: 3px;
+  width: 28px;
+  border-radius: 100%;
+}
+
+#footer .contacts-links .register-btn a {
+  margin-top: 30px;
+  display: block;
+  color: #fff;
+  background: #c3a22c;
+  padding: 8px 40px;
+  text-align: center;
+}
+
+#footer .contacts-links .register-btn a:hover {
+  background: #0a0037;
+}
+
+#footer .contacts-links .register-btn a span {
+  margin-right: 10px;
+}
+
+@media (max-width: 576px) {
+  #footer .benefits-links {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 20px 0 20px 12px;
+    margin: 20px 0;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  #footer .contacts-links {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 992px) {
+  #footer .benefits-links {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+}
+
+/*--------------------------------------------------------------
+  # Bottom Bar
+  --------------------------------------------------------------*/
+
+#bottom-bar {
+  color: #c3a22c;
+  font-size: 13px;
+  padding: 2rem;
+}
+
+#bottom-bar .social-links a {
+  font-size: 18px;
+  color: #c3a22c;
+  display: inline-block;
+  width: 36px;
+  height: 30px;
+}
+
+@media (max-width: 992px) {
+
+  #bottom-bar .copyright,
+  #bottom-bar .social-links {
+    margin-bottom: 20px;
+  }
+}
+
+
+/* ****************************************************** INDEX.HTML ********************************************************** */
+
+
+/*--------------------------------------------------------------
+# Hero
+--------------------------------------------------------------*/
+#hero {
+  position: relative;
+}
+
+#hero .hero-bar {
+  position: relative;
+  top: 4px;
+  z-index: 10;
+}
+
+#hero .hero-bar div {
+  width: 25%;
+  height: 8px;
+}
+
+#hero .hero-bar #first-col {
+  background: #fcb001;
+}
+
+#hero .hero-bar #second-col {
+  background: #ef3038;
+}
+
+#hero .hero-bar #third-col {
+  background: #0a0037;
+}
+
+#hero #herocarousel .carousel-indicators {
+  position: absolute;
+  left: 80%;
+  bottom: 40%;
+}
+
+#hero #herocarousel .carousel-indicators button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+}
+
+#hero #herocarousel .carousel-indicators button[data-bs-slide-to="0"] {
+  background-color: #fcb001;
+}
+
+#hero #herocarousel .carousel-indicators button[data-bs-slide-to="1"] {
+  background-color: #ef3038;
+}
+
+#hero #herocarousel .carousel-indicators button[data-bs-slide-to="2"] {
+  background-color: #0a0037;
+}
+
+#hero #herocarousel .carousel-inner {
+  width: 100%;
+  height: calc(100vh - 87px - 8px);
+  /* 100vh - (height of header) - (height of hero-bar) */
+  border-top-left-radius: 60px;
+}
+
+#hero #herocarousel .carousel-item {
+  height: 100%;
+  width: 100%;
+}
+
+#hero #herocarousel .carousel-item.slide-1 {
+  background: url("../img/hero/slide_1.png") center center;
+  background-size: cover;
+}
+
+#hero #herocarousel .carousel-item.slide-2 {
+  background: url("../img/hero/slide_2.png") center center;
+  background-size: cover;
+}
+
+#hero #herocarousel .carousel-item:before {
+  content: "";
+  background: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#hero #herocarousel .carousel-item p {
+  position: absolute;
+  color: #fff;
+  z-index: 10;
+  font-size: 26px;
+  margin: 100px 0 0 100px;
+}
+
+#hero #herocarousel .carousel-item p span {
+  color: #c3a22c;
+}
+
+#hero .hero-caption {
+  font-size: 26px;
+  color: #fff;
+  position: absolute;
+  left: 100px;
+  bottom: 20%;
+  z-index: 10;
+}
+
+@media (min-width: 1024px) {
+
+  #hero #herocarousel .carousel-item.slide-1,
+  #hero #herocarousel .carousel-item.slide-2 {
+    background-attachment: fixed;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero #herocarousel .carousel-indicators {
+    left: 78%;
+  }
+
+  #hero #herocarousel .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+  }
+
+  #hero #herocarousel .carousel-item p {
+    font-size: 20px;
+    margin: 100px 0 0 40px;
+  }
+
+  #hero .hero-caption {
+    font-size: 20px;
+    left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  #hero #herocarousel .carousel-item.slide-1 {
+    background: url("../img/hero/slide_1_sm.png") center center;
+    background-size: cover;
+  }
+
+  #hero #herocarousel .carousel-item.slide-2 {
+    background: url("../img/hero/slide_2_sm.png") center center;
+    background-size: cover;
+  }
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+#services {
+  padding: 2rem;
+  padding-top: 0;
+  margin-top: -80px;
+  position: relative;
+  z-index: 10;
+}
+
+#services form {
+  background: #0a0037;
+  height: 100%;
+  padding: 20px;
+  border-top-right-radius: 60px;
+}
+
+#services form h3 {
+  margin-bottom: 15px;
+}
+
+#services form label {
+  text-transform: uppercase;
+  color: #b9b4b4;
+}
+
+#services form .search-provider-btn {
+  display: flex;
+  justify-content: end;
+  margin-top: 30px;
+}
+
+#services form .search-provider-btn a {
+  background: #c3a22c;
+  width: 170px;
+  padding: 5px 30px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+#services form .search-provider-btn a i {
+  font-size: 13px;
+}
+
+#services .services-icons {
+  background: #e0dbdc;
+  padding: 2rem;
+}
+
+#services .services-icons img {
+  background: whitesmoke;
+}
+
+#services .services-icons img:hover {
+  background: #0a0037;
+  height: 100%;
+  color: #fff;
+}
+
+
+/*--------------------------------------------------------------
+  # Providers
+  --------------------------------------------------------------*/
+  #providers{
+    display: none;
+  }
+
+  #providers table {
+    margin: 0 auto;
+    width: 90%; /* Adjust the width as needed */
+  }
+
+
+/*--------------------------------------------------------------
+  # Clients
+  --------------------------------------------------------------*/
+#clients {
+  padding: 1rem 0;
+}
+
+#clients .swiper-pagination {
+  margin-top: 20px;
+  position: relative;
+}
+
+#clients .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  opacity: 1;
+  border: 1px solid #c3a22c;
+}
+
+#clients .swiper-pagination .swiper-pagination-bullet-active {
+  background-color: #c3a22c;
+}
+
+#clients .swiper-slide img {
+  transition: all 0.4s ease-in-out;
+}
+
+#clients .swiper-slide img:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  #clients .swiper-slide img {
+    width: 120px;
+  }
+}
+
+/*--------------------------------------------------------------
+  # Comprehensive Benefits
+  --------------------------------------------------------------*/
+#comprehensive-benefits {
+  background: #0a0037;
+  padding: 2rem;
+}
+
+#comprehensive-benefits .col {
+  padding-bottom: 50px;
+  position: relative;
+}
+
+#comprehensive-benefits p {
+  color: #b9b4b4;
+  font-size: 14px;
+}
+
+#comprehensive-benefits a {
+  color: #756e6e;
+  font-size: 14px;
+  font-weight: 550;
+  text-transform: uppercase;
+  display: block;
+  position: absolute;
+  bottom: 15px;
+}
+
+#comprehensive-benefits a:hover {
+  color: #c3a22c;
+}
+
+
+/* ******************************************** BENEFITS_STRUCTURE.HTML ****************************************************** */
+
+
+/*--------------------------------------------------------------
+  # Benefits-structure
+  --------------------------------------------------------------*/
+#benefits-structure {
+  padding: 40px;
+}
+
+@media (min-width: 576px) {
+  #benefits-structure {
+    padding: 40px 70px;
+  }
+}

@@ -34,13 +34,13 @@
     <!-- Vendor CSS Files -->
     <link rel="stylesheet" href="static/vendor/bootstrap/bootstrap.min.css" />
     <link rel="stylesheet" href="static/vendor/swiper/swiper-bundle.min.css" />
-    <!-- Main CSS File -->
-    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/vendor/glightbox/glightbox.min.css" />
     <!-- Custom CSS File -->
-    <link rel="stylesheet" href="static/css/index.css">
+    <link rel="stylesheet" href="static/css/style.css">
     <!-- Vendor JS Files -->
     <script src="static/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
     <script src="static/vendor/swiper/swiper-bundle.min.js" defer></script>
+    <script src="static/vendor/glightbox/glightbox.min.js" defer></script>
     <!-- Main JS File -->
     <script src="static/js/script.js" defer></script>
 </head>
@@ -92,18 +92,22 @@
                             <div class="modal-body">
                                 <ul class="list-unstyled">
                                     <li class="nav-item">
-                                        <a href="index.html" class="nav-link"><i class="bi bi-caret-right-fill"></i> Home</a>
+                                        <a href="index.html" class="nav-link"><i class="bi bi-caret-right-fill"></i>
+                                            Home</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="about.html" class="nav-link"><i class="bi bi-caret-right-fill"></i> About Afya
+                                        <a href="about.html" class="nav-link"><i class="bi bi-caret-right-fill"></i>
+                                            About Afya
                                             Kwa Walimu</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="benefits_structure.html" class="nav-link"><i class="bi bi-caret-right-fill"></i> Benefits
+                                        <a href="benefits_structure.html" class="nav-link"><i
+                                                class="bi bi-caret-right-fill"></i> Benefits
                                             Structure</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="registration.html" class="nav-link"><i class="bi bi-caret-right-fill"></i>
+                                        <a href="registration.html" class="nav-link"><i
+                                                class="bi bi-caret-right-fill"></i>
                                             Registration</a>
                                     </li>
                                 </ul>
@@ -154,7 +158,7 @@
                 <p>Risk.Reinsurance.People</p>
             </div>
         </section>
-        <!-- ======= Service Section ======= -->
+        <!-- ======= Services Section ======= -->
         <section id="services">
             <div class="container">
                 <div class="row g-4">
@@ -204,9 +208,8 @@
                                 </div>
                             </div>
                             <div class="search-provider-btn">
-                                <button class="btn rounded-0" type="submit">
-                                    Search <i class="bi bi-caret-right-fill"></i>
-                                </button>
+                                <a href="#providers" class="btn rounded-0 glightbox">Search <i
+                                        class="bi bi-caret-right-fill"></i></a>
                             </div>
                         </form>
                     </div>
@@ -251,29 +254,27 @@
                 </div>
             </div>
         </section>
-        <!-- ======= Service Providers Section ======= -->
-        <!-- <section id="service-providers">
-            <div class="container">
-                <table class="table table-dark table-hover">
-                    <thead>
-                        <tr>
-                            <th>County</th>
-                            <th>Sub County</th>
-                            <th>Town</th>
-                            <th>Service</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Mombasa</td>
-                            <td>Nyali</td>
-                            <td>Frere Town</td>
-                            <td>Maternity, Optical, Dental</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </section> -->
+        <!-- ======= Providers Section ======= -->
+        <section id="providers">
+            <table class="table table-dark table-hover">
+                <thead>
+                    <tr>
+                        <th>County</th>
+                        <th>Sub County</th>
+                        <th>Town</th>
+                        <th>Service</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Mombasa</td>
+                        <td>Nyali</td>
+                        <td>Frere Town</td>
+                        <td>Maternity, Optical, Dental</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
         <!-- ======= Clients Section ======= -->
         <section id="clients">
             <div class="container">
@@ -513,6 +514,7 @@
             </div>
         </div>
     </section>
+    <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 </body>
 
 </html>
