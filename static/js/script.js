@@ -7,7 +7,7 @@
   */
   // Initialize GLightbox
   const glightbox = GLightbox({
-    selector: '.glightbox-table',
+    selector: '.glightbox',
     width: '85vw',
     height: '90vh',
   });
