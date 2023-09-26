@@ -1,0 +1,13 @@
+/*--------------------------------------------------------------
+  # Benefits-structure
+  --------------------------------------------------------------*/
+
+#benefits-structure {
+    padding: 40px;
+}
+
+@media (min-width: 576px) {
+    #benefits-structure {
+        padding: 40px 70px;
+    }
+}

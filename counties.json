@@ -1,0 +1,86 @@
+{
+    "Mombasa": {
+        "Mvita": [
+            "Tudor",
+            "Tononoka",
+            "Railway",
+            "Majengo",
+            "Mvita",
+            "Frere Town",
+            "Ganjoni",
+            "Bondeni"
+        ],
+        "Nyali": [
+            "Kongowea",
+            "Kadzandani",
+            "Kibarani",
+            "Bamburi",
+            "Jomvu Kuu",
+            "Magogoni",
+            "Shanzu",
+            "Ziwa la Ng'ombe"
+        ],
+        "Changamwe": [
+            "Port Reitz",
+            "Airport",
+            "Chaani",
+            "Jomvu",
+            "Magongo",
+            "Miritini",
+            "Kipevu"
+        ],
+        "Jomvu": [
+            "Miritini",
+            "Jomvu Kuu",
+            "Mikindani",
+            "Mtopanga",
+            "Magongo",
+            "Chaani",
+            "Mwakirunge"
+        ],
+        "Kisauni": [
+            "Mjambere",
+            "Mwandoni",
+            "Bamburi",
+            "Kisauni",
+            "Mtopanga",
+            "Mombasa Island (part of it)"
+        ]
+    },
+    "Kilifi": {
+        "Kilifi North": [
+            "Tezo",
+            "Chasimba",
+            "Mnarani",
+            "Sokoni",
+            "Watamu",
+            "Junju",
+            "Mtondia"
+        ],
+        "Kilifi South": [
+            "Dabaso",
+            "Matsangoni",
+            "Marafa",
+            "Ganda",
+            "Magarini",
+            "Malindi Town",
+            "Langobaya"
+        ],
+        "Kilifi Central": [
+            "Mnarani",
+            "Junju",
+            "Vitengeni",
+            "Malindi Town",
+            "Shimo la Tewa",
+            "Maweni"
+        ],
+        "Malindi": [
+            "Ganda",
+            "Malindi Town",
+            "Watamu",
+            "Chakama",
+            "Magarini",
+            "Marafa"
+        ]
+    }
+}

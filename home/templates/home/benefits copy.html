@@ -1,0 +1,408 @@
+{% block style %}
+
+{% endblock style %}{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+<title>
+    Walimu Care | Benefits Structure
+</title>
+{% endblock title %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'css/benefits.css' %}">
+{% endblock style %}
+{% block main %}
+<main id="main">
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li>Benefits</li>
+            </ol>
+            <h2>Benefits Structure</h2>
+        </div>
+    </section><!-- End Breadcrumbs -->
+    <section id="benefits-structure">
+        <div class="container">
+            <div class="accordion accordion-flush" id="AccordionBenefitsStructure">
+                <!-- 1. Inpatient -->
+                <div class="accordion-item">
+                    <h3 id="flushHeading1st" class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flushCollapse1st" aria-expanded="true" aria-controls="flushCollapse1st">
+                            InPatient Benefits
+                        </button>
+                    </h3>
+                    <div id="flushCollapse1st" class="accordion-collapse collapse" aria-labelledby="flushHeading1st"
+                        data-bs-parent="#AccordionBenefitsStructure">
+                        <div class="accordion-body">
+                            <p>
+                                This benefit covers treatment that requires admission to a hospital or day-care
+                                surgery/procedure. The benefits (paid net of NHIF (National Health Insurance Fund)
+                                rebates)
+                                under this cover include but are not limited to:
+                            </p>
+                            <ul>
+                                <li>Cost of hospitalization, treatment and surgery including day cases and discharge
+                                </li>
+                                <li>Post Hospitalization benefits up to a maximum of five (5) weeks (35 days) and
+                                    three
+                                    (3)
+                                    months for attendant therapy</li>
+                                <li>Accommodation and meals for a caretaker or parent/guardian accompanying a child
+                                    of
+                                    12
+                                    years and below</li>
+                                <li>Accident-related hospitalization and reconstructive surgery following an
+                                    accident
+                                </li>
+                                <li>Treatment of pre-existing and chronic recurrent conditions including but not
+                                    limited
+                                    to
+                                    hypertension, asthma, diabetes, kidney failure, cancer-related illness,
+                                    arthritis,
+                                    HIV/
+                                    AIDS, and pre-existing surgical conditions</li>
+                                <li>Treatment for Congenital conditions and neonatal/prematurity-related conditions
+                                    including defects/genetic disorders</li>
+                                <li>Dental and optical hospitalization/ ophthalmology surgery resulting from an
+                                    accident
+                                    (covered within the inpatient limit)</li>
+                                <li>The Inpatient optical/ eye treatment (excluding correction of refractive errors
+                                    and
+                                    laser treatment)</li>
+                                <li>Access to and fees for specialists including physicians, surgeons, anesthetists'
+                                </li>
+                                <li>Inpatient Psychiatric treatment</li>
+                                <li>Laboratory investigations, X-rays, ultrasound, ECG, MRI Scans, Radiology X-rays,
+                                    CT
+                                    scan
+                                    and PET Scan</li>
+                                <li>Prescribed drugs/medicine, dressings, surgical appliances, and nursing
+                                    procedures
+                                </li>
+                                <li>Radiotherapy and chemotherapy</li>
+                                <li>In-Patient Physiotherapy, Hydrotherapy and Occupational therapy</li>
+                                <li>Intensive Care Unit (ICU), High Dependency Unit (HDU) and Critical Care Unit
+                                    (CCU)
+                                    charges.</li>
+                                <li>Palliative or analgesic care.</li>
+                                <li>Male medical circumcision</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 2. Outpatient -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="flushHeading2nd">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flushCollapse2nd" aria-expanded="false" aria-controls="flushCollapse2nd">
+                            Outpatient Benefits
+                        </button>
+                    </h3>
+                    <div id="flushCollapse2nd" class="accordion-collapse collapse" aria-labelledby="flushHeading2nd"
+                        data-bs-parent="#AccordionBenefitsStructure">
+                        <div class="accordion-body">
+                            <p>
+                                This benefit covers treatment that does not require admission or day-care surgery in
+                                a
+                                hospital. The outpatient cover caters for all routine outpatient services which
+                                include
+                                but
+                                are not limited to:
+                            </p>
+                            <ul>
+                                <li>Routine outpatient consultation</li>
+                                <li>Prescribed physiotherapy</li>
+                                <li>Prescribed drugs and dressings</li>
+                                <li>Maternity Pre and Post Natal care</li>
+                                <li>Routine Immunizations: KEPI (Kenya Expanded Program of Immunization) and Baby
+                                    Friendly
+                                    Vaccines and immunizations against COVID-19</li>
+                                <li>Staff vaccinations for recommended travel vaccines while on official duty e.g.,
+                                    yellow
+                                    fever, polio as well as other non-travel related vaccines such as Hepatitis B.
+                                </li>
+                                <li>Psychiatric and Counselling Services</li>
+                                <li>Family planning & fertility tests including impotence drugs</li>
+                                <li>Testing, and treatment of HIV/AIDS including prescribed ARVs to the full family
+                                    cover
+                                    limit per annum</li>
+                                <li>Alternative treatment i.e., acupuncture and chiropractor (on referral)</li>
+                                <li>Treatment of pre-existing and chronic conditions including TB, Cancer, etc.</li>
+                                <li>Annual General check-up for principal member and spouse</li>
+                                <li>Radiology, X-ray, ultrasound, EEG, ECG Computerized Tomography (CT-SCAN), and
+                                    MRI
+                                    Scans
+                                </li>
+                                <li>Free access to all medical Specialists upon referral</li>
+                                <li>Cancer tests and diagnosis - PSA test (Prostate Antigen Test) for male employees
+                                    and
+                                    spouses and one pap- smear test and a mammogram for female employees and spouses
+                                    per
+                                    annum</li>
+                                <li>Online health services including consultation, e-pharmacy, and e-laboratory
+                                    services
+                                    (access through USSD (Unstructured Supplementary Service Data))</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3. Additional Cover -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="flushHeading3rd">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flushCollapse3rd" aria-expanded="false" aria-controls="flushCollapse3rd">
+                            Additional Covered Benefits
+                        </button>
+                    </h3>
+                    <div id="flushCollapse3rd" class="accordion-collapse collapse" aria-labelledby="flushHeading3rd"
+                        data-bs-parent="#AccordionBenefitsStructure">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Worldwide medical cover with no geographical limits (on reimbursement while on
+                                    official
+                                    duty)</li>
+                                <li>Covers medical expenses arising from activities such as naval, military, air
+                                    force
+                                    and
+                                    other security related operations, riots, strikes, civil commotions and Acts of
+                                    Terrorism where the insured is a victim</li>
+                                <li>Benefits Portability: that is, access to empaneled medical facilities without
+                                    restrictions</li>
+                                <li>Medical Appliances (Hearing Aids, Glucometer, Insulin delivery devices, Urine
+                                    Catheters
+                                    & Accessories etc.)</li>
+                                <li>Medical aids including Glucometers, BP Machines, hearing aids, non-motorized
+                                    wheelchairs, frames, and crutches</li>
+                                <li>Prescribed preventive and curative drugs/care (Including pressure stockings and
+                                    clinical
+                                    corset belt)</li>
+                                <li>Alcoholism, drug and substance abuse treatment, counselling and rehabilitation
+                                    services
+                                    to principal member and spouse only.</li>
+                                <li>Illnesses resulting from alcohol intoxication, including liver sclerosis, toxic
+                                    encephalopathy</li>
+                                <li>Cost for infertility - IVF (In Vitro Fertilization)</li>
+                                <li>Renal dialysis</li>
+                                <li>Home based care for critically ill individuals - supplementary oxygen and
+                                    nursing
+                                    care
+                                </li>
+                                <li>All sexually transmitted infections (STD)</li>
+                                <li>Extreme and professional sports</li>
+                                <li>Prosthetic devices needed as part of treatment, which include external
+                                    artificial
+                                    body
+                                    parts such as a prosthetic limb or prosthetic ear
+                                </li>
+                                <li>Transplant services - transplant of cornea, small bowel, kidney, pancreas,
+                                    liver,
+                                    heart,
+                                    lung or heart/lung transplant, skin grafting necessitated by accident or skin
+                                    diseases, where the best outcomes are scientifically offered, local or
+                                    international
+                                    hospitals and doctors
+                                </li>
+                                <li>E-health - e-consultation, e-pharmacy and e-laboratory services, access through
+                                    USSD
+                                    /360- degree communication/Application</li>
+                                <li>Covid-19 Test for official travel</li>
+                                <li>Medical insurance cover while travelling up to 8 weeks</li>
+                                <li>Prescribed preventive and curative drugs/care (Including pressure stockings and
+                                    clinical
+                                    corset belt)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 4. Maternity -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="flushHeading4th">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flushCollapse4th" aria-expanded="false" aria-controls="flushCollapse4th">
+                            Maternity Benefits
+                        </button>
+                    </h3>
+                    <div id="flushCollapse4th" class="accordion-collapse collapse" aria-labelledby="flushHeading4th"
+                        data-bs-parent="#AccordionBenefitsStructure">
+                        <div class="accordion-body">
+                            <p class="fw-bold">The benefits include but are not limited to:</p>
+                            <ol>
+                                <li>Delivery fees</li>
+                                <li>Prenatal and antenatal care</li>
+                                <li>Emergency Caesarean section</li>
+                                <li>Preterm care</li>
+                            </ol>
+                            <p>Maternity benefit available to principal member and their spouse only</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5. Optical -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="flushHeading5th">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flushCollapse5th" aria-expanded="false" aria-controls="flushCollapse5th">
+                            Optical Benefits
+                        </button>
+                    </h3>
+                    <div id="flushCollapse5th" class="accordion-collapse collapse" aria-labelledby="flushHeading5th"
+                        data-bs-parent="#AccordionBenefitsStructure">
+                        <div class="accordion-body">
+                            <p class="fw-bold">This benefit caters for expenses related to eye treatment which
+                                includes but not
+                                limited to:</p>
+                            <ol>
+                                <li>Cost of lenses and frames - members who have obtained frames will not be
+                                    entitled to a replacement within one year unless necessitated by a medical
+                                    condition and prescribed by an ophthalmologist.</li>
+                                <li>Prescription for ophthalmic treatment and eye lenses</li>
+                                <li>Ophthalmic ultrasound if prescribed by the Ophthalmologist</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- 6. Dental -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="flushHeading6th">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flushCollapse6th" aria-expanded="false" aria-controls="flushCollapse6th">
+                            Dental Benefits
+                        </button>
+                    </h3>
+                    <div id="flushCollapse6th" class="accordion-collapse collapse" aria-labelledby="flushHeading6th"
+                        data-bs-parent="#AccordionBenefitsStructure">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Dental consultation and anesthetist fees, Dental X-ray, Root canal, Fillings,
+                                    Tooth
+                                    extraction</li>
+                                <li>Accident-related Dental treatment</li>
+                                <li>Scaling necessitated by a prevailing medical condition and prescribed by a
+                                    dentist</li>
+                                <li>Dentures necessitated by an accident/ injury</li>
+                                <li>Deformation surgery</li>
+                                <li>Dental Crowns</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 7. Local Road and Air Evacuation -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="flushHeading7th">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flushCollapse7th" aria-expanded="false" aria-controls="flushCollapse7th">
+                            Local Road and Air Evacuation
+                        </button>
+                    </h3>
+                    <div id="flushCollapse7th" class="accordion-collapse collapse" aria-labelledby="flushHeading7th"
+                        data-bs-parent="#AccordionBenefitsStructure">
+                        <div class="accordion-body">
+                            <ul>
+                                <li>Emergency Road or Fix Wing rescue and evacuation in case of emergency within
+                                    East Africa;</li>
+                                <li>This shall be emergency transportation or transfer of sick/injured member or
+                                    dependant from a place of incident or facility with inadequate care to the
+                                    appropriate facility using road ambulance, fix-wing and helicopter services
+                                    within
+                                    East Africa (Kenya, Uganda, Rwanda and Tanzania).</li>
+                                <li>Air evacuation will be limited to four (4) per family per annum within the
+                                    contract
+                                    period. This is treated as a different cover from the in-patient and out-patient
+                                    cover
+                                    benefits.</li>
+                            </ul>
+                            <p class="fw-bold">For emergency cases needing evacuation please contact our hotline
+                                1528 for
+                                assistance.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 8. International Treatment -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="flushHeading8th">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flushCollapse8th" aria-expanded="false" aria-controls="flushCollapse8th">
+                            International Treatment & International Travel
+                        </button>
+                    </h3>
+                    <div id="flushCollapse8th" class="accordion-collapse collapse" aria-labelledby="flushHeading8th"
+                        data-bs-parent="#AccordionBenefitsStructure">
+                        <div class="accordion-body">
+                            <ol>
+                                <li>Overseas Treatment if not locally available where advised by a medical
+                                    practitioner
+                                    and approved by the Ministry of Health at Ksh. 2,000,000.00 and Kshs. 200,000
+                                    Air
+                                    ticket, and accommodation for the caregiver.</li>
+                                <li>This is a cover that shall be over and above the inpatient normal cover limits
+                                    specified
+                                    for the members and the person accompanying the patient.</li>
+                                <li>This will be paid out where authorization has been granted for the member to
+                                    travel
+                                    to another country for specialized treatment which is either not available
+                                    locally or the
+                                    patient has been referred for better quality medical care</li>
+                                <li>This shall be a referral to any country within East Africa, South Africa, India
+                                    and any
+                                    other international country as may be recommended by a medical doctor and
+                                    approved by by the Director, Medical Services.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!-- 9. Psychiatric and Counsellings -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="flushHeading9th">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flushCollapse9th" aria-expanded="false" aria-controls="flushCollapse9th">
+                            Psychiatric and Counsellings
+                        </button>
+                    </h3>
+                    <div id="flushCollapse9th" class="accordion-collapse collapse" aria-labelledby="flushHeading9th"
+                        data-bs-parent="#AccordionBenefitsStructure">
+                        <div class="accordion-body">
+                            <p class="fw-bold">These services are available for employees and include but are not
+                                limited to:</p>
+                            <ul>
+                                <li>Psychosocial tele-counselling services through Minet tele-counselling toll free
+                                    line 0800 720 029 available 24 hours a day, 7 days a week</li>
+                                <li>On- site counselling services in some special instances</li>
+                                <li>Referrals for face-to-face counselling by a specialist</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 10. Funeral and Last Respects -->
+                <div class="accordion-item">
+                    <h3 class="accordion-header" id="flushHeading10th">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#flushCollapse10th" aria-expanded="false" aria-controls="flushCollapse10th">
+                            Funeral and Last Respects
+                        </button>
+                    </h3>
+                    <div id="flushCollapse10th" class="accordion-collapse collapse" aria-labelledby="flushHeading10th"
+                        data-bs-parent="#AccordionBenefitsStructure">
+                        <div class="accordion-body">
+                            <p class="fw-bold">This benefit is payable to the next of kin upon the demise of a
+                                principal member. To access the Funeral Benefit, the following information should be
+                                availed to Minet at the earliest possible convenience;</p>
+                            <ul>
+                                <li>Original or a certified Copy of the Burial Permit</li>
+                                <li>ID copy of the Next of Kin
+                                </li>
+                                <li>Relationship of claimant to the deceased</li>
+                                <li>Telephone number of the next of kin.</li>
+                                <li>A copy of the ATM card, deposit slip or bank statement of the Next of Kin
+                                    indicating the account number, the account name, the bank and the branch where
+                                    the account was opened (This is to confirm the account is active).</li>
+                                <li>Duly completed Minet Bank Details form</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </section>
+</main>
+{% endblock main %}
