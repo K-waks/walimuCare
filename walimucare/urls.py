@@ -30,7 +30,13 @@ urlpatterns = [
     path("api/towns/", views.TownListView.as_view(), name="towns-list"),
     path("", views.index, name="index"),
     path("about/", views.about, name="about"),
-    path("benefits/", views.benefits, name="benefits"),
+    path("benefits-structure/", views.benefits_structure, name="benefits-structure"),
+    path("benefits-structure/inpatient/", views.inpatient, name="inpatient"),
+    path("benefits-structure/outpatient/", views.outpatient, name="inpatient"),
+    path(
+        "benefits-structure/additional-cover/", views.additional_cover, name="inpatient"
+    ),
+    path("benefits-structure/wellness/", views.wellness, name="inpatient"),
     path("register/", views.register, name="register"),
 ]
 

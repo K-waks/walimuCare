@@ -43,8 +43,24 @@ def about(request):
     return render(request, "home/about.html", {})
 
 
-def benefits(request):
-    return render(request, "home/benefits.html", {})
+def benefits_structure(request):
+    return render(request, "home/benefits-structure.html", {})
+
+
+def inpatient(request):
+    return render(request, "home/benefits/inpatient.html", {})
+
+
+def outpatient(request):
+    return render(request, "home/benefits/outpatient.html", {})
+
+
+def additional_cover(request):
+    return render(request, "home/benefits/additional-cover.html", {})
+
+
+def wellness(request):
+    return render(request, "home/benefits/wellness.html", {})
 
 
 def register(request):

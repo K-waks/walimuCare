@@ -1,23 +1,24 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}
-<title>
-    Walimu Care | Registration
-</title>
+    <title>Walimu Care | Registration</title>
 {% endblock title %}
 {% block style %}
-<link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
 {% endblock style %}
 {% block main %}
-<main id="main">
-    <section id="breadcrumbs" class="breadcrumbs">
-        <div class="container">
-            <ol>
-                <li><a href="{% url 'index' %}">Home</a></li>
-                <li>Registration</li>
-            </ol>
-            <h2>Registration</h2>
-        </div>
-    </section><!-- End Breadcrumbs -->
-</main>
+    <main id="main">
+        <section id="breadcrumbs" class="breadcrumbs">
+            <div class="container">
+                <ol>
+                    <li>
+                        <a href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li>Registration</li>
+                </ol>
+                <h2>Registration</h2>
+            </div>
+        </section>
+        <!-- End Breadcrumbs -->
+    </main>
 {% endblock main %}

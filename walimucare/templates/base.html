@@ -46,6 +46,7 @@
     <script src="{% static 'bootstrap/bootstrap.bundle.min.js' %}" defer></script>
     <script src="{% static 'swiper/swiper-bundle.min.js' %}" defer></script>
     <script src="{% static 'glightbox/glightbox.min.js' %}" defer></script>
+    <script src="https://unpkg.com/htmx.org@1.9.6" defer></script>
     <!-- Main JS File -->
     <script src="{% static 'js/main.js' %}" defer></script>
 </head>
@@ -67,7 +68,7 @@
                             <a class="nav-link py-0" href="{% url 'about' %}">About Afya Kwa Walimu</a>
                         </div>
                         <div class="d-table-cell border-end border-secondary nav-item">
-                            <a class="nav-link py-0" href="{% url 'benefits' %}">Benefits Structure</a>
+                            <a class="nav-link py-0" href="{% url 'benefits-structure' %}">Benefits Structure</a>
                         </div>
                         <div class="d-table-cell nav-item">
                             <a class="nav-link py-0" href="{% url 'register' %}">Registration</a>
@@ -108,7 +109,7 @@
                                             Kwa Walimu</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a href="{% url 'benefits' %}" class="nav-link"><i
+                                        <a href="{% url 'benefits-structure' %}" class="nav-link"><i
                                                 class="bi bi-caret-right-fill"></i> Benefits
                                             Structure</a>
                                     </li>
@@ -143,11 +144,12 @@
                                         explained</span></a>
                             </li>
                             <li>
-                                <a href="{% url 'benefits' %}"><i class="bi bi-caret-right-fill"></i><span>Benefits
+                                <a href="{% url 'benefits-structure' %}"><i
+                                        class="bi bi-caret-right-fill"></i><span>Benefits
                                         Structure</span></a>
                             </li>
                             <li>
-                                <a href="{% url 'benefits' %}#eligibility"><i
+                                <a href="{% url 'benefits-structure' %}#eligibility"><i
                                         class="bi bi-caret-right-fill"></i><span>Eligibility</span></a>
                             </li>
                             <li>
@@ -155,7 +157,7 @@
                                         class="bi bi-caret-right-fill"></i><span>Registration</span></a>
                             </li>
                             <li>
-                                <a href="{% url 'benefits' %}#exclusions"><i
+                                <a href="{% url 'benefits-structure' %}#exclusions"><i
                                         class="bi bi-caret-right-fill"></i><span>Exclusions</span></a>
                             </li>
                         </ul>

@@ -119,6 +119,46 @@
 
 
   /**
+   * Benefits Structure
+   */
+  if (window.location.pathname === "/benefits-structure/") {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('benefits')) {
+      const benefitsContainer = document.querySelector('#benefits');
+      const benefits = urlParams.get('benefits');
+      if (benefits == 'inpatient') {
+        fetch('/benefits-structure/inpatient/')
+          .then(response => response.text())
+          .then(content => {
+            benefitsContainer.outerHTML = content;
+          });
+      }
+      else if (benefits == 'outpatient') {
+        fetch('/benefits-structure/outpatient/')
+          .then(response => response.text())
+          .then(content => {
+            benefitsContainer.outerHTML = content;
+          });
+      }
+      else if (benefits == 'additional-cover') {
+        fetch('/benefits-structure/additional-cover/')
+          .then(response => response.text())
+          .then(content => {
+            benefitsContainer.outerHTML = content;
+          });
+      }
+      else if (benefits == 'wellness') {
+        fetch('/benefits-structure/wellness/')
+          .then(response => response.text())
+          .then(content => {
+            benefitsContainer.outerHTML = content;
+          });
+      }
+    }
+  };
+
+
+  /**
    * Animation on scroll
    */
   window.addEventListener("load", () => {
@@ -129,5 +169,5 @@
       mirror: false,
     });
   });
-  
+
 })();

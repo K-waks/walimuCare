@@ -11,3 +11,97 @@
         padding: 40px 70px;
     }
 }
+
+
+/*--------------------------------------------------------------
+# Benefits-table
+--------------------------------------------------------------*/
+
+#benefits-structure .benefits-table button {
+    background: #c3a22c;
+    border-color: #c3a22c;
+    border-radius: 0;
+}
+
+#benefits-structure .benefits-table button i {
+    font-size: 14px;
+}
+
+#benefits-structure .benefits-table .table .tb-cell {
+    background: #0a0037 !important;
+    color: #fff !important;
+}
+
+#benefits-structure .benefits-table .table td,
+#benefits-structure .benefits-table .table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/*--------------------------------------------------------------
+# Benefits
+--------------------------------------------------------------*/
+#benefits-structure .course-item {
+    border-radius: 5px;
+    border: 1px solid #eef0ef;
+}
+
+#benefits-structure .course-content {
+    padding: 15px;
+}
+
+#benefits-structure .course-content h3 {
+    font-weight: 700;
+    font-size: 20px;
+}
+
+#benefits-structure .course-content h3 a {
+    color: #37423b;
+    transition: 0.3s;
+}
+
+#benefits-structure .course-content h3 a:hover {
+    color: #c3a22c;
+}
+
+#benefits-structure .course-content p {
+    font-size: 14px;
+    color: #777777;
+}
+
+#benefits-structure .course-content h4 {
+    font-size: 14px;
+    background: #c3a22c;
+    padding: 7px 14px;
+    color: #fff;
+    margin: 0;
+}
+
+#benefits-structure .course-content .price {
+    margin: 0;
+    font-weight: 700;
+    font-size: 18px;
+    color: #37423b;
+}
+
+#benefits-structure .trainer {
+    padding-top: 15px;
+    border-top: 1px solid #eef0ef;
+}
+
+#benefits-structure .trainer .trainer-profile img {
+    max-width: 50px;
+    border-radius: 50px;
+}
+
+#benefits-structure .trainer .trainer-profile span {
+    padding-left: 10px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #5a6c60;
+}
+
+#benefits-structure .trainer .trainer-rank {
+    font-size: 18px;
+    color: #657a6d;
+}
