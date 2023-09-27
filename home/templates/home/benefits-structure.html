@@ -1,308 +1,295 @@
-{% extends 'base.html' %}
+{% extends 'home/base.html' %}
 {% load static %}
 {% block title %}
-    <title>Walimu Care | Benefits Structure</title>
+    Benefits Structure
 {% endblock title %}
-{% block style %}
-    <link rel="stylesheet" href="{% static 'css/benefits.css' %}">
-{% endblock style %}
 {% block main %}
-    <main id="main">
-        <section id="breadcrumbs">
-            <div class="container">
-                <ol>
-                    <li>
-                        <a href="{% url 'index' %}">Home</a>
-                    </li>
-                    <li>Benefits</li>
-                </ol>
-                <h2>Benefits Structure</h2>
+    <!-- Breadcrumbs -->
+    <section id="breadcrumbs">
+        <div class="container">
+            <ol>
+                <li>
+                    <a href="{% url 'index' %}">Home</a>
+                </li>
+                <li>Benefits</li>
+            </ol>
+            <h2>Benefits Structure</h2>
+        </div>
+    </section>
+    <!-- Benefits-table -->
+    <section id="benefits-table" data-aos="fade-up">
+        <div class="container">
+            <h3>Benefits Table</h3>
+            <p>
+                The Unlimited Benefits For Both Inpatient And Outpatient For Job Group B5 - C3 Shall Apply In Government Hospitals, Faith Based Hospitals (Mission Hospitals)
+                And Private Hospitals Owned By The Capitation Provider. However, Teachers In This Category Who Wish To Seek Medical Services From Alternative Empaneled
+                Hospitals Shall Be Free To Do So Under The Above Limits.
+            </p>
+            <div class="table-responsive mt-4">
+                <table class="table table-bordered border-light table-striped">
+                    <thead>
+                        <tr>
+                            <th class="tb-cell">Job Group</th>
+                            <th class="tb-cell">Inpatient</th>
+                            <th class="tb-cell">Outpatient</th>
+                            <th class="tb-cell">Dental</th>
+                            <th class="tb-cell">Optical</th>
+                            <th class="tb-cell">Maternity</th>
+                            <th class="tb-cell">Funeral Cover</th>
+                            <th class="tb-cell">Evacuation</th>
+                            <th class="tb-cell">International Treatment & Travel</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tb-cell" rowspan="2">B5</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td rowspan="2">450000</td>
+                            <td rowspan="2">60000</td>
+                            <td rowspan="2">120000</td>
+                            <td rowspan="2">300000</td>
+                            <td rowspan="15">
+                                Air (Fix-wing and
+                                Helicopter) at four (4)
+                                per family per annum
+                            </td>
+                            <td rowspan="15">
+                                KShs 2,000,000 for
+                                International treatment and
+                                KShs 200,000 for
+                                international travel for the
+                                patient and one person
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1000000</td>
+                            <td>150000</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-cell" rowspan="2">C1</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td rowspan="2">450000</td>
+                            <td rowspan="2">60000</td>
+                            <td rowspan="2">120000</td>
+                            <td rowspan="2">300000</td>
+                        </tr>
+                        <tr>
+                            <td>1000000</td>
+                            <td>150000</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-cell" rowspan="2">C2</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td rowspan="2">450000</td>
+                            <td rowspan="2">60000</td>
+                            <td rowspan="2">120000</td>
+                            <td rowspan="2">300000</td>
+                        </tr>
+                        <tr>
+                            <td>1000000</td>
+                            <td>150000</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-cell" rowspan="2">C3</td>
+                            <td>Unlimited</td>
+                            <td>Unlimited</td>
+                            <td rowspan="2">450000</td>
+                            <td rowspan="2">60000</td>
+                            <td rowspan="2">120000</td>
+                            <td rowspan="2">300000</td>
+                        </tr>
+                        <tr>
+                            <td>1300000</td>
+                            <td>200000</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-cell">C4</td>
+                            <td>1500000</td>
+                            <td>225000</td>
+                            <td>45000</td>
+                            <td>60000</td>
+                            <td>120000</td>
+                            <td>300000</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-cell">C5</td>
+                            <td>1800000</td>
+                            <td>250000</td>
+                            <td>45000</td>
+                            <td>60000</td>
+                            <td>200000</td>
+                            <td>300000</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-cell">D1</td>
+                            <td>2000000</td>
+                            <td>300000</td>
+                            <td>45000</td>
+                            <td>60000</td>
+                            <td>200000</td>
+                            <td>300000</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-cell">D2</td>
+                            <td>2200000</td>
+                            <td>325000</td>
+                            <td>45000</td>
+                            <td>60000</td>
+                            <td>200000</td>
+                            <td>300000</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-cell">D3</td>
+                            <td>2500000</td>
+                            <td>325000</td>
+                            <td>45000</td>
+                            <td>60000</td>
+                            <td>250000</td>
+                            <td>300000</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-cell">D4</td>
+                            <td>2800000</td>
+                            <td>400000</td>
+                            <td>45000</td>
+                            <td>60000</td>
+                            <td>250000</td>
+                            <td>300000</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-cell">D5</td>
+                            <td>3000000</td>
+                            <td>450000</td>
+                            <td>45000</td>
+                            <td>60000</td>
+                            <td>300000</td>
+                            <td>300000</td>
+                        </tr>
+                        <tr>
+                            <td class="tb-cell" colspan="9"></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-        </section>
-        <!-- End Breadcrumbs -->
-        <section id="benefits-structure">
-            <div class="container-fluid">
-                <div class="benefits-table mb-5" data-aos="fade-up">
-                    <h3>Benefits Table</h3>
-                    <p>
-                        The Unlimited Benefits For Both Inpatient And Outpatient For Job Group B5 - C3 Shall Apply In Government Hospitals, Faith Based Hospitals (Mission Hospitals)
-                        And Private Hospitals Owned By The Capitation Provider. However, Teachers In This Category Who Wish To Seek Medical Services From Alternative Empaneled
-                        Hospitals Shall Be Free To Do So Under The Above Limits.
-                    </p>
-                    <button class="btn btn-info text-white"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target=".table-responsive"
-                            aria-expanded="false"
-                            aria-controls="table-responsive"
-                            data-bs-delay="1000">
-                        View Table <i class="bi bi-caret-down-fill"></i>
-                    </button>
-                    <div class="collapse table-responsive mt-4">
-                        <table class="table table-bordered border-light table-striped">
-                            <thead>
-                                <tr>
-                                    <th class="tb-cell">Job Group</th>
-                                    <th class="tb-cell">Inpatient</th>
-                                    <th class="tb-cell">Outpatient</th>
-                                    <th class="tb-cell">Dental</th>
-                                    <th class="tb-cell">Optical</th>
-                                    <th class="tb-cell">Maternity</th>
-                                    <th class="tb-cell">Funeral Cover</th>
-                                    <th class="tb-cell">Evacuation</th>
-                                    <th class="tb-cell">International Treatment & Travel</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td class="tb-cell" rowspan="2">B5</td>
-                                    <td>Unlimited</td>
-                                    <td>Unlimited</td>
-                                    <td rowspan="2">450000</td>
-                                    <td rowspan="2">60000</td>
-                                    <td rowspan="2">120000</td>
-                                    <td rowspan="2">300000</td>
-                                    <td rowspan="15">
-                                        Air (Fix-wing and
-                                        Helicopter) at four (4)
-                                        per family per annum
-                                    </td>
-                                    <td rowspan="15">
-                                        KShs 2,000,000 for
-                                        International treatment and
-                                        KShs 200,000 for
-                                        international travel for the
-                                        patient and one person
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>1000000</td>
-                                    <td>150000</td>
-                                </tr>
-                                <tr>
-                                    <td class="tb-cell" rowspan="2">C1</td>
-                                    <td>Unlimited</td>
-                                    <td>Unlimited</td>
-                                    <td rowspan="2">450000</td>
-                                    <td rowspan="2">60000</td>
-                                    <td rowspan="2">120000</td>
-                                    <td rowspan="2">300000</td>
-                                </tr>
-                                <tr>
-                                    <td>1000000</td>
-                                    <td>150000</td>
-                                </tr>
-                                <tr>
-                                    <td class="tb-cell" rowspan="2">C2</td>
-                                    <td>Unlimited</td>
-                                    <td>Unlimited</td>
-                                    <td rowspan="2">450000</td>
-                                    <td rowspan="2">60000</td>
-                                    <td rowspan="2">120000</td>
-                                    <td rowspan="2">300000</td>
-                                </tr>
-                                <tr>
-                                    <td>1000000</td>
-                                    <td>150000</td>
-                                </tr>
-                                <tr>
-                                    <td class="tb-cell" rowspan="2">C3</td>
-                                    <td>Unlimited</td>
-                                    <td>Unlimited</td>
-                                    <td rowspan="2">450000</td>
-                                    <td rowspan="2">60000</td>
-                                    <td rowspan="2">120000</td>
-                                    <td rowspan="2">300000</td>
-                                </tr>
-                                <tr>
-                                    <td>1300000</td>
-                                    <td>200000</td>
-                                </tr>
-                                <tr>
-                                    <td class="tb-cell">C4</td>
-                                    <td>1500000</td>
-                                    <td>225000</td>
-                                    <td>45000</td>
-                                    <td>60000</td>
-                                    <td>120000</td>
-                                    <td>300000</td>
-                                </tr>
-                                <tr>
-                                    <td class="tb-cell">C5</td>
-                                    <td>1800000</td>
-                                    <td>250000</td>
-                                    <td>45000</td>
-                                    <td>60000</td>
-                                    <td>200000</td>
-                                    <td>300000</td>
-                                </tr>
-                                <tr>
-                                    <td class="tb-cell">D1</td>
-                                    <td>2000000</td>
-                                    <td>300000</td>
-                                    <td>45000</td>
-                                    <td>60000</td>
-                                    <td>200000</td>
-                                    <td>300000</td>
-                                </tr>
-                                <tr>
-                                    <td class="tb-cell">D2</td>
-                                    <td>2200000</td>
-                                    <td>325000</td>
-                                    <td>45000</td>
-                                    <td>60000</td>
-                                    <td>200000</td>
-                                    <td>300000</td>
-                                </tr>
-                                <tr>
-                                    <td class="tb-cell">D3</td>
-                                    <td>2500000</td>
-                                    <td>325000</td>
-                                    <td>45000</td>
-                                    <td>60000</td>
-                                    <td>250000</td>
-                                    <td>300000</td>
-                                </tr>
-                                <tr>
-                                    <td class="tb-cell">D4</td>
-                                    <td>2800000</td>
-                                    <td>400000</td>
-                                    <td>45000</td>
-                                    <td>60000</td>
-                                    <td>250000</td>
-                                    <td>300000</td>
-                                </tr>
-                                <tr>
-                                    <td class="tb-cell">D5</td>
-                                    <td>3000000</td>
-                                    <td>450000</td>
-                                    <td>45000</td>
-                                    <td>60000</td>
-                                    <td>300000</td>
-                                    <td>300000</td>
-                                </tr>
-                                <tr>
-                                    <td class="tb-cell" colspan="9"></td>
-                                </tr>
-                            </tbody>
-                        </table>
+        </div>
+    </section>
+    <!-- Benefits-Structure -->
+    <section id="benefits-structure" class="container">
+        <div id="benefits-list" data-aos="fade-up">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                    <div class="course-item">
+                        <img src="{% static 'img/benefit/card_1.png' %}"
+                             class="img-fluid"
+                             width=""
+                             height=""
+                             alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Inpatient benefits</h4>
+                            </div>
+                            <h3>
+                                <a href=""
+                                   data-hx-get="/benefits-structure/inpatient/"
+                                   data-hx-trigger="click"
+                                   data-hx-target="#benefits-structure"
+                                   data-hx-swap="innerHTML">Inpatient benefits</a>
+                            </h3>
+                            <p>
+                                This benefit covers treatment that requires admission to a hospital or day care
+                                surgery/procedure.
+                            </p>
+                        </div>
                     </div>
                 </div>
-                <div id="benefits" class="benefits">
-                    <div class="row" data-aos="fade-up" data-aos-delay="100">
-                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                            <div class="course-item">
-                                <img src="{% static 'img/benefit/card_1.png' %}"
-                                     class="img-fluid"
-                                     width=""
-                                     height=""
-                                     alt="...">
-                                <div class="course-content">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h4>Inpatient benefits</h4>
-                                    </div>
-                                    <h3>
-                                        <a href=""
-                                           hx-get="/benefits-structure/inpatient/"
-                                           hx-trigger="click"
-                                           hx-target="#benefits"
-                                           hx-swap="outerHTML">Inpatient benefits</a>
-                                    </h3>
-                                    <p>
-                                        This benefit covers treatment that requires admission to a hospital or day care
-                                        surgery/procedure.
-                                    </p>
-                                </div>
+                <!-- End Course Item-->
+                <div class=" col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
+                    <div class="course-item">
+                        <img src="{% static 'img/benefit/card_2.png' %}"
+                             class="img-fluid"
+                             width=""
+                             height=""
+                             alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Outpatient benefits</h4>
                             </div>
+                            <h3>
+                                <a href=""
+                                   data-hx-get="/benefits-structure/outpatient/"
+                                   data-hx-trigger="click"
+                                   data-hx-target="#benefits-structure"
+                                   data-hx-swap="innerHTML">Outpatient benefits</a>
+                            </h3>
+                            <p>
+                                This benefit covers treatment that requires admission to a hospital
+                                or day care
+                                surgery/procedure.
+                            </p>
                         </div>
-                        <!-- End Course Item-->
-                        <div class=" col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                            <div class="course-item">
-                                <img src="{% static 'img/benefit/card_2.png' %}"
-                                     class="img-fluid"
-                                     width=""
-                                     height=""
-                                     alt="...">
-                                <div class="course-content">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h4>Outpatient benefits</h4>
-                                    </div>
-                                    <h3>
-                                        <a href=""
-                                           hx-get="/benefits-structure/outpatient/"
-                                           hx-trigger="click"
-                                           hx-target="#benefits"
-                                           hx-swap="outerHTML">Outpatient benefits</a>
-                                    </h3>
-                                    <p>
-                                        This benefit covers treatment that requires admission to a hospital
-                                        or day care
-                                        surgery/procedure.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Course Item-->
-                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                            <div class="course-item">
-                                <img src="{% static 'img/benefit/card_3.png' %}"
-                                     class="img-fluid"
-                                     width=""
-                                     height=""
-                                     alt="...">
-                                <div class="course-content">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h4>Additional benefits</h4>
-                                    </div>
-                                    <h3>
-                                        <a href=""
-                                           hx-get="/benefits-structure/additional-cover/"
-                                           hx-trigger="click"
-                                           hx-target="#benefits"
-                                           hx-swap="outerHTML">Additional benefits</a>
-                                    </h3>
-                                    <p>
-                                        Beyond outpatient and in-patient services, Afya kwa walimu extends to
-                                        world wide
-                                        cover
-                                        that also allows for treatment of chronic illnesses.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Course Item-->
-                        <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                            <div class="course-item">
-                                <img src="{% static 'img/benefit/card_4.png' %}"
-                                     class="img-fluid"
-                                     width=""
-                                     height=""
-                                     alt="...">
-                                <div class="course-content">
-                                    <div class="d-flex justify-content-between align-items-center mb-3">
-                                        <h4>Wellness education</h4>
-                                    </div>
-                                    <h3>
-                                        <a href=""
-                                           hx-get="/benefits-structure/wellness/"
-                                           hx-trigger="click"
-                                           hx-target="#benefits"
-                                           hx-swap="outerHTML">Wellness education</a>
-                                    </h3>
-                                    <p>
-                                        The ultimate shield of protection for you and your family will always be
-                                        wellness.
-                                        Let's
-                                        show you how to keep yourself well.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- End Course Item-->
                     </div>
                 </div>
+                <!-- End Course Item-->
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="course-item">
+                        <img src="{% static 'img/benefit/card_3.png' %}"
+                             class="img-fluid"
+                             width=""
+                             height=""
+                             alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Additional benefits</h4>
+                            </div>
+                            <h3>
+                                <a href=""
+                                   data-hx-get="/benefits-structure/additional-cover/"
+                                   data-hx-trigger="click"
+                                   data-hx-target="#benefits-structure"
+                                   data-hx-swap="innerHTML">Additional benefits</a>
+                            </h3>
+                            <p>
+                                Beyond outpatient and in-patient services, Afya kwa walimu extends to
+                                world wide
+                                cover
+                                that also allows for treatment of chronic illnesses.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Course Item-->
+                <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+                    <div class="course-item">
+                        <img src="{% static 'img/benefit/card_4.png' %}"
+                             class="img-fluid"
+                             width=""
+                             height=""
+                             alt="...">
+                        <div class="course-content">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h4>Wellness education</h4>
+                            </div>
+                            <h3>
+                                <a href=""
+                                   data-hx-get="/benefits-structure/wellness-education/"
+                                   data-hx-trigger="click"
+                                   data-hx-target="#benefits-structure"
+                                   data-hx-swap="innerHTML">Wellness education</a>
+                            </h3>
+                            <p>
+                                The ultimate shield of protection for you and your family will always be
+                                wellness.
+                                Let's
+                                show you how to keep yourself well.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- End Course Item-->
             </div>
-        </section>
-        <!-- End Benefits-structure Section -->
-    </main>
+        </div>
+    </section>
 {% endblock main %}

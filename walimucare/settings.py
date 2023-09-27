@@ -61,7 +61,7 @@ ROOT_URLCONF = "walimucare.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / "walimucare/templates"],
+        "DIRS": [],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -129,7 +129,7 @@ USE_TZ = True
 STATIC_URL = "static/"
 
 STATICFILES_DIRS = [
-    BASE_DIR / "walimucare/vendors",
+    BASE_DIR / "home/vendors",
     BASE_DIR / "home/static",
 ]
 

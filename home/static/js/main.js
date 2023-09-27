@@ -1,16 +1,14 @@
 (function () {
   "use strict";
 
-
   /**
-  * Initialize GLightbox
-  */
+   * Initialize GLightbox
+   */
   const glightbox = GLightbox({
-    selector: '.glightbox',
-    width: '85vw',
-    height: '90vh',
+    selector: ".glightbox",
+    width: "85vw",
+    height: "90vh",
   });
-
 
   /**
    * Back to top button
@@ -26,13 +24,12 @@
     };
     window.addEventListener("load", toggleBacktotop);
     window.addEventListener("scroll", toggleBacktotop);
-  };
-
+  }
 
   /**
    * Service Provider Search Form
    */
-  if (window.location.pathname === "/" || window.location.pathname === "/#") {
+  if (window.location.pathname === "/") {
     document.addEventListener("DOMContentLoaded", function () {
       const countySelect = document.getElementById("county");
       const subCountySelect = document.getElementById("sub-county");
@@ -80,7 +77,6 @@
     });
   }
 
-
   /**
    * Clients Slider
    */
@@ -117,46 +113,43 @@
     },
   });
 
-
   /**
    * Benefits Structure
    */
   if (window.location.pathname === "/benefits-structure/") {
     const urlParams = new URLSearchParams(window.location.search);
-    if (urlParams.has('benefits')) {
-      const benefitsContainer = document.querySelector('#benefits');
-      const benefits = urlParams.get('benefits');
-      if (benefits == 'inpatient') {
-        fetch('/benefits-structure/inpatient/')
-          .then(response => response.text())
-          .then(content => {
-            benefitsContainer.outerHTML = content;
+    if (urlParams.has("benefits")) {
+      const benefitsContainer = document.querySelector("#benefits-structure");
+      const benefits = urlParams.get("benefits");
+      if (benefits == "inpatient") {
+        fetch("/benefits-structure/inpatient/")
+          .then((response) => response.text())
+          .then((content) => {
+            benefitsContainer.innerHTML = content;
+          });
+      } else if (benefits == "outpatient") {
+        fetch("/benefits-structure/outpatient/")
+          .then((response) => response.text())
+          .then((content) => {
+            benefitsContainer.innerHTML = content;
+          });
+      } else if (benefits == "additional-cover") {
+        fetch("/benefits-structure/additional-cover/")
+          .then((response) => response.text())
+          .then((content) => {
+            benefitsContainer.innerHTML = content;
+          });
+      } else if (benefits == "wellness") {
+        fetch("/benefits-structure/wellness-education/")
+          .then((response) => response.text())
+          .then((content) => {
+            benefitsContainer.innerHTML = content;
           });
       }
-      else if (benefits == 'outpatient') {
-        fetch('/benefits-structure/outpatient/')
-          .then(response => response.text())
-          .then(content => {
-            benefitsContainer.outerHTML = content;
-          });
-      }
-      else if (benefits == 'additional-cover') {
-        fetch('/benefits-structure/additional-cover/')
-          .then(response => response.text())
-          .then(content => {
-            benefitsContainer.outerHTML = content;
-          });
-      }
-      else if (benefits == 'wellness') {
-        fetch('/benefits-structure/wellness/')
-          .then(response => response.text())
-          .then(content => {
-            benefitsContainer.outerHTML = content;
-          });
-      }
+      history.replaceState(null, null, window.location.pathname);
+      window.location.hash = "#benefits-structure";
     }
-  };
-
+  }
 
   /**
    * Animation on scroll
@@ -169,5 +162,4 @@
       mirror: false,
     });
   });
-
 })();

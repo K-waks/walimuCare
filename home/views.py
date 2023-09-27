@@ -47,11 +47,11 @@ def benefits_structure(request):
     return render(request, "home/benefits-structure.html", {})
 
 
-def inpatient(request):
+def inpatient_benefits(request):
     return render(request, "home/benefits/inpatient.html", {})
 
 
-def outpatient(request):
+def outpatient_benefits(request):
     return render(request, "home/benefits/outpatient.html", {})
 
 
@@ -59,7 +59,7 @@ def additional_cover(request):
     return render(request, "home/benefits/additional-cover.html", {})
 
 
-def wellness(request):
+def wellness_education(request):
     return render(request, "home/benefits/wellness.html", {})
 
 

@@ -1,343 +1,338 @@
-{% extends 'base.html' %}
+{% extends 'home/base.html' %}
 {% load static %}
 {% block title %}
-    <title>Walimu Care | Home</title>
+    Home
 {% endblock title %}
-{% block style %}
-    <link rel="stylesheet" href="{% static 'css/index.css' %}">
-{% endblock style %}
 {% block main %}
-    <main id="main">
-        <!-- ======= Hero Section ======= -->
-        <section id="hero">
-            <div class="hero-bar d-flex justify-content-end">
-                <div id="first-col"></div>
-                <div id="second-col"></div>
-                <div id="third-col"></div>
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-bar d-flex justify-content-end">
+            <div id="first-col"></div>
+            <div id="second-col"></div>
+            <div id="third-col"></div>
+        </div>
+        <div id="herocarousel"
+             class="carousel slide carousel-fade"
+             data-bs-ride="carousel"
+             data-bs-pause="false"
+             data-bs-interval="6000">
+            <div class="carousel-indicators d-flex flex-column">
+                <button type="button"
+                        data-bs-target="#herocarousel"
+                        data-bs-slide-to="0"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                        class="active"></button>
+                <button type="button"
+                        data-bs-target="#herocarousel"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button"
+                        data-bs-target="#herocarousel"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
             </div>
-            <div id="herocarousel"
-                 class="carousel slide carousel-fade"
-                 data-bs-ride="carousel"
-                 data-bs-pause="false"
-                 data-bs-interval="6000">
-                <div class="carousel-indicators d-flex flex-column">
-                    <button type="button"
-                            data-bs-target="#herocarousel"
-                            data-bs-slide-to="0"
-                            aria-current="true"
-                            aria-label="Slide 1"
-                            class="active"></button>
-                    <button type="button"
-                            data-bs-target="#herocarousel"
-                            data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                    <button type="button"
-                            data-bs-target="#herocarousel"
-                            data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+            <div class="carousel-inner">
+                <div class="carousel-item slide-1 active">
+                    <p>
+                        Guard your daily smile with the
+                        <br>
+                        Wellness from <span>Afya Kwa Walimu</span>
+                    </p>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item slide-1 active">
+                <div class="carousel-item slide-2">
+                    <p>
+                        Protect your <span>whole family</span> with
+                        <br>
+                        <span>Afya Kwa Walimu</span> medical scheme
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-caption">
+            <p>Risk.Reinsurance.People</p>
+        </div>
+    </section>
+    <!-- ======= Services Section ======= -->
+    <section id="services">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-lg-5">
+                    <form action="" method="get">
+                        <h3>Search a provider near you.</h3>
+                        <div class="row row-cols-2 g-4">
+                            <div class="col">
+                                <div>
+                                    <label for="county" class="form-label">County</label>
+                                </div>
+                                <div>
+                                    <select id="county" name="county" class="form-select" disabled>
+                                        <option selected>Select county</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <label for="sub-county" class="form-label">Sub-county</label>
+                                </div>
+                                <div>
+                                    <select id="sub-county" name="sub-county" class="form-select" disabled>
+                                        <option selected>Select sub-county</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <label for="town" class="form-label">Town</label>
+                                </div>
+                                <div>
+                                    <select id="town" name="town" class="form-select" disabled>
+                                        <option selected>Select town</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div>
+                                    <label for="service" class="form-label">Services</label>
+                                </div>
+                                <div>
+                                    <select id="service" name="service" class="form-select">
+                                        <option selected>Select service</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-provider-btn">
+                            <a href="#providers" class="btn rounded-0 glightbox">Search <i class="bi bi-caret-right-fill"></i></a>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-12 col-lg-7">
+                    <div class="services-icons rounded-2 user-select-none">
+                        <div class="row row-cols-2 row-cols-md-4 g-3">
+                            <div class="col">
+                                <img src="{% static 'img/service/Maternity.png' %}"
+                                     width=""
+                                     height=""
+                                     alt=""
+                                     class="img-fluid shadow">
+                            </div>
+                            <div class="col">
+                                <img src="{% static 'img/service/Optical.png' %}"
+                                     width=""
+                                     height=""
+                                     alt=""
+                                     class="img-fluid shadow">
+                            </div>
+                            <div class="col">
+                                <img src="{% static 'img/service/Dental.png' %}"
+                                     width=""
+                                     height=""
+                                     alt=""
+                                     class="img-fluid shadow">
+                            </div>
+                            <div class="col">
+                                <img src="{% static 'img/service/RoadEvacuation.png' %}"
+                                     width=""
+                                     height=""
+                                     alt=""
+                                     class="img-fluid shadow">
+                            </div>
+                            <div class="col">
+                                <img src="{% static 'img/service/InternationalTravel.png' %}"
+                                     width=""
+                                     height=""
+                                     alt=""
+                                     class="img-fluid shadow">
+                            </div>
+                            <div class="col">
+                                <img src="{% static 'img/service/AirEvacuation.png' %}"
+                                     width=""
+                                     height=""
+                                     alt=""
+                                     class="img-fluid shadow">
+                            </div>
+                            <div class="col">
+                                <img src="{% static 'img/service/Psychiatric&Counselling.png' %}"
+                                     width=""
+                                     height=""
+                                     alt=""
+                                     class="img-fluid shadow">
+                            </div>
+                            <div class="col">
+                                <img src="{% static 'img/service/LastRespects.png' %}"
+                                     width=""
+                                     height=""
+                                     alt=""
+                                     class="img-fluid shadow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= Providers Section ======= -->
+    <section id="providers">
+        <table class="table table-dark table-hover">
+            <thead>
+                <tr>
+                    <th>County</th>
+                    <th>Sub County</th>
+                    <th>Town</th>
+                    <th>Service</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mombasa</td>
+                    <td>Nyali</td>
+                    <td>Frere Town</td>
+                    <td>Maternity, Optical, Dental</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    <!-- ======= Clients Section ======= -->
+    <section id="clients">
+        <div class="container">
+            <div class="swiper">
+                <div class="swiper-wrapper align-items-center user-select-none">
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/client/minetlogo.png' %}"
+                             class="img-fluid"
+                             width=""
+                             height=""
+                             alt="Minet logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/client/Bliss-healthcare-logo.png' %}"
+                             class="img-fluid"
+                             width=""
+                             height=""
+                             alt="Bliss Healthcare logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/client/Pioneer-Assurance-logo.png' %}"
+                             class="img-fluid"
+                             width=""
+                             height=""
+                             alt="Pioneer Assurance logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/client/cicinsurance-logo.png' %}"
+                             class="img-fluid"
+                             width=""
+                             height=""
+                             alt="CIC insurance logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/client/old-mutual-logo.png' %}"
+                             class="img-fluid"
+                             width=""
+                             height=""
+                             alt="Old Mutual logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/client/Britam-Logo.png' %}"
+                             class="img-fluid"
+                             width=""
+                             height=""
+                             alt="Britam logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/client/makllogo.png' %}"
+                             class="img-fluid"
+                             width=""
+                             height=""
+                             alt="Medical Administrator Kenya Ltd logo">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="{% static 'img/client/star-discover-general-insurance.png' %}"
+                             class="img-fluid"
+                             width=""
+                             height=""
+                             alt="Star Discover General Insurance logo">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <!-- ======= Comprehensive Benefits Section ======= -->
+    <section id="comprehensive-benefits">
+        <div class="container">
+            <h2>Comprehensive Benefits</h2>
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <div class="d-grid gap-4">
+                        <div>
+                            <img class="img-fluid"
+                                 src="{% static 'img/benefit/card_1.png' %}"
+                                 width=""
+                                 height=""
+                                 alt="">
+                        </div>
+                        <h3>Inpatient benefits</h3>
                         <p>
-                            Guard your daily smile with the
-                            <br>
-                            Wellness from <span>Afya Kwa Walimu</span>
+                            This benefit covers treatment that requires admission to a hospital or day care
+                            surgery/procedure.
                         </p>
                     </div>
-                    <div class="carousel-item slide-2">
+                    <a href="{% url 'benefits-structure' %}?benefits=inpatient">Read More <i class="bi bi-chevron-right"></i></a>
+                </div>
+                <div class="col">
+                    <div class="d-grid gap-4">
+                        <div>
+                            <img class="img-fluid"
+                                 src="{% static 'img/benefit/card_2.png' %}"
+                                 width=""
+                                 height=""
+                                 alt="">
+                        </div>
+                        <h3>Outpatient benefits</h3>
                         <p>
-                            Protect your <span>whole family</span> with
-                            <br>
-                            <span>Afya Kwa Walimu</span> medical scheme
+                            This benefit covers treatment that requires admission to a hospital or day care
+                            surgery/procedure.
                         </p>
                     </div>
+                    <a href="{% url 'benefits-structure' %}?benefits=outpatient">Read More <i class="bi bi-chevron-right"></i></a>
+                </div>
+                <div class="col">
+                    <div class="d-grid gap-4">
+                        <div>
+                            <img class="img-fluid"
+                                 src="{% static 'img/benefit/card_3.png' %}"
+                                 width=""
+                                 height=""
+                                 alt="">
+                        </div>
+                        <h3>Additional benefits</h3>
+                        <p>
+                            Beyond outpatient and in-patient services, Afya kwa walimu extends to world wide cover
+                            that also allows for treatment of chronic illnesses.
+                        </p>
+                    </div>
+                    <a href="{% url 'benefits-structure' %}?benefits=additional-cover">Read More <i class="bi bi-chevron-right"></i></a>
+                </div>
+                <div class="col">
+                    <div class="d-grid gap-4">
+                        <div>
+                            <img class="img-fluid"
+                                 src="{% static 'img/benefit/card_4.png' %}"
+                                 width=""
+                                 height=""
+                                 alt="">
+                        </div>
+                        <h3>Wellness education</h3>
+                        <p>
+                            The ultimate shield of protection for you and your family will always be wellness. Let's
+                            show you how to keep yourself well.
+                        </p>
+                    </div>
+                    <a href="{% url 'benefits-structure' %}?benefits=wellness">Read More <i class="bi bi-chevron-right"></i></a>
                 </div>
             </div>
-            <div class="hero-caption">
-                <p>Risk.Reinsurance.People</p>
-            </div>
-        </section>
-        <!-- ======= Services Section ======= -->
-        <section id="services">
-            <div class="container">
-                <div class="row g-4">
-                    <div class="col-12 col-lg-5">
-                        <form action="" method="get">
-                            <h3>Search a provider near you.</h3>
-                            <div class="row row-cols-2 g-4">
-                                <div class="col">
-                                    <div>
-                                        <label for="county" class="form-label">County</label>
-                                    </div>
-                                    <div>
-                                        <select id="county" name="county" class="form-select" disabled>
-                                            <option selected>Select county</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div>
-                                        <label for="sub-county" class="form-label">Sub-county</label>
-                                    </div>
-                                    <div>
-                                        <select id="sub-county" name="sub-county" class="form-select" disabled>
-                                            <option selected>Select sub-county</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div>
-                                        <label for="town" class="form-label">Town</label>
-                                    </div>
-                                    <div>
-                                        <select id="town" name="town" class="form-select" disabled>
-                                            <option selected>Select town</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div>
-                                        <label for="service" class="form-label">Services</label>
-                                    </div>
-                                    <div>
-                                        <select id="service" name="service" class="form-select">
-                                            <option selected>Select service</option>
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="search-provider-btn">
-                                <a href="#providers" class="btn rounded-0 glightbox">Search <i class="bi bi-caret-right-fill"></i></a>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="col-12 col-lg-7">
-                        <div class="services-icons rounded-2 user-select-none">
-                            <div class="row row-cols-2 row-cols-md-4 g-3">
-                                <div class="col">
-                                    <img src="{% static 'img/service/Maternity.png' %}"
-                                         width=""
-                                         height=""
-                                         alt=""
-                                         class="img-fluid shadow">
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'img/service/Optical.png' %}"
-                                         width=""
-                                         height=""
-                                         alt=""
-                                         class="img-fluid shadow">
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'img/service/Dental.png' %}"
-                                         width=""
-                                         height=""
-                                         alt=""
-                                         class="img-fluid shadow">
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'img/service/RoadEvacuation.png' %}"
-                                         width=""
-                                         height=""
-                                         alt=""
-                                         class="img-fluid shadow">
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'img/service/InternationalTravel.png' %}"
-                                         width=""
-                                         height=""
-                                         alt=""
-                                         class="img-fluid shadow">
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'img/service/AirEvacuation.png' %}"
-                                         width=""
-                                         height=""
-                                         alt=""
-                                         class="img-fluid shadow">
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'img/service/Psychiatric&Counselling.png' %}"
-                                         width=""
-                                         height=""
-                                         alt=""
-                                         class="img-fluid shadow">
-                                </div>
-                                <div class="col">
-                                    <img src="{% static 'img/service/LastRespects.png' %}"
-                                         width=""
-                                         height=""
-                                         alt=""
-                                         class="img-fluid shadow">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- ======= Providers Section ======= -->
-        <section id="providers">
-            <table class="table table-dark table-hover">
-                <thead>
-                    <tr>
-                        <th>County</th>
-                        <th>Sub County</th>
-                        <th>Town</th>
-                        <th>Service</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Mombasa</td>
-                        <td>Nyali</td>
-                        <td>Frere Town</td>
-                        <td>Maternity, Optical, Dental</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <!-- ======= Clients Section ======= -->
-        <section id="clients">
-            <div class="container">
-                <div class="swiper">
-                    <div class="swiper-wrapper align-items-center user-select-none">
-                        <div class="swiper-slide">
-                            <img src="{% static 'img/client/minetlogo.png' %}"
-                                 class="img-fluid"
-                                 width=""
-                                 height=""
-                                 alt="Minet logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="{% static 'img/client/Bliss-healthcare-logo.png' %}"
-                                 class="img-fluid"
-                                 width=""
-                                 height=""
-                                 alt="Bliss Healthcare logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="{% static 'img/client/Pioneer-Assurance-logo.png' %}"
-                                 class="img-fluid"
-                                 width=""
-                                 height=""
-                                 alt="Pioneer Assurance logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="{% static 'img/client/cicinsurance-logo.png' %}"
-                                 class="img-fluid"
-                                 width=""
-                                 height=""
-                                 alt="CIC insurance logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="{% static 'img/client/old-mutual-logo.png' %}"
-                                 class="img-fluid"
-                                 width=""
-                                 height=""
-                                 alt="Old Mutual logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="{% static 'img/client/Britam-Logo.png' %}"
-                                 class="img-fluid"
-                                 width=""
-                                 height=""
-                                 alt="Britam logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="{% static 'img/client/makllogo.png' %}"
-                                 class="img-fluid"
-                                 width=""
-                                 height=""
-                                 alt="Medical Administrator Kenya Ltd logo">
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="{% static 'img/client/star-discover-general-insurance.png' %}"
-                                 class="img-fluid"
-                                 width=""
-                                 height=""
-                                 alt="Star Discover General Insurance logo">
-                        </div>
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
-            </div>
-        </section>
-        <!-- ======= Comprehensive Benefits Section ======= -->
-        <section id="comprehensive-benefits">
-            <div class="container">
-                <h2>Comprehensive Benefits</h2>
-                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-                    <div class="col">
-                        <div class="d-grid gap-4">
-                            <div>
-                                <img class="img-fluid"
-                                     src="{% static 'img/benefit/card_1.png' %}"
-                                     width=""
-                                     height=""
-                                     alt="">
-                            </div>
-                            <h3>Inpatient benefits</h3>
-                            <p>
-                                This benefit covers treatment that requires admission to a hospital or day care
-                                surgery/procedure.
-                            </p>
-                        </div>
-                        <a href="{% url 'benefits-structure' %}?benefits=inpatient">Read More <i class="bi bi-chevron-right"></i></a>
-                    </div>
-                    <div class="col">
-                        <div class="d-grid gap-4">
-                            <div>
-                                <img class="img-fluid"
-                                     src="{% static 'img/benefit/card_2.png' %}"
-                                     width=""
-                                     height=""
-                                     alt="">
-                            </div>
-                            <h3>Outpatient benefits</h3>
-                            <p>
-                                This benefit covers treatment that requires admission to a hospital or day care
-                                surgery/procedure.
-                            </p>
-                        </div>
-                        <a href="{% url 'benefits-structure' %}?benefits=outpatient">Read More <i class="bi bi-chevron-right"></i></a>
-                    </div>
-                    <div class="col">
-                        <div class="d-grid gap-4">
-                            <div>
-                                <img class="img-fluid"
-                                     src="{% static 'img/benefit/card_3.png' %}"
-                                     width=""
-                                     height=""
-                                     alt="">
-                            </div>
-                            <h3>Additional benefits</h3>
-                            <p>
-                                Beyond outpatient and in-patient services, Afya kwa walimu extends to world wide cover
-                                that also allows for treatment of chronic illnesses.
-                            </p>
-                        </div>
-                        <a href="{% url 'benefits-structure' %}?benefits=additional-cover">Read More <i class="bi bi-chevron-right"></i></a>
-                    </div>
-                    <div class="col">
-                        <div class="d-grid gap-4">
-                            <div>
-                                <img class="img-fluid"
-                                     src="{% static 'img/benefit/card_4.png' %}"
-                                     width=""
-                                     height=""
-                                     alt="">
-                            </div>
-                            <h3>Wellness education</h3>
-                            <p>
-                                The ultimate shield of protection for you and your family will always be wellness. Let's
-                                show you how to keep yourself well.
-                            </p>
-                        </div>
-                        <a href="{% url 'benefits-structure' %}?benefits=wellness">Read More <i class="bi bi-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 {% endblock main %}
