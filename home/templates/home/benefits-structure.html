@@ -6,7 +6,7 @@
 {% block main %}
     <!-- Breadcrumbs -->
     <section id="breadcrumbs">
-        <div class="container">
+        <div class="container-fluid px-5 py-4">
             <ol>
                 <li>
                     <a href="{% url 'index' %}">Home</a>
@@ -17,8 +17,8 @@
         </div>
     </section>
     <!-- Benefits-table -->
-    <section id="benefits-table" data-aos="fade-up">
-        <div class="container">
+    <section id="benefits-table">
+        <div class="container-fluid px-5 py-4" data-aos="fade-up">
             <h3>Benefits Table</h3>
             <p>
                 The Unlimited Benefits For Both Inpatient And Outpatient For Job Group B5 - C3 Shall Apply In Government Hospitals, Faith Based Hospitals (Mission Hospitals)
@@ -177,17 +177,17 @@
         </div>
     </section>
     <!-- Benefits-Structure -->
-    <section id="benefits-structure" class="container">
-        <div id="benefits-list" data-aos="fade-up">
+    <section id="benefits-structure">
+        <div id="benefits" class="container-fluid px-5 py-4" data-aos="fade-up">
             <div class="row">
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                    <div class="course-item">
+                    <div class="card-item">
                         <img src="{% static 'img/benefit/card_1.png' %}"
                              class="img-fluid"
                              width=""
                              height=""
                              alt="...">
-                        <div class="course-content">
+                        <div class="card-content">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h4>Inpatient benefits</h4>
                             </div>
@@ -195,7 +195,7 @@
                                 <a href=""
                                    data-hx-get="/benefits-structure/inpatient/"
                                    data-hx-trigger="click"
-                                   data-hx-target="#benefits-structure"
+                                   data-hx-target="#benefits"
                                    data-hx-swap="innerHTML">Inpatient benefits</a>
                             </h3>
                             <p>
@@ -205,15 +205,15 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Course Item-->
+                <!-- End card Item-->
                 <div class=" col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0">
-                    <div class="course-item">
+                    <div class="card-item">
                         <img src="{% static 'img/benefit/card_2.png' %}"
                              class="img-fluid"
                              width=""
                              height=""
                              alt="...">
-                        <div class="course-content">
+                        <div class="card-content">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h4>Outpatient benefits</h4>
                             </div>
@@ -221,7 +221,7 @@
                                 <a href=""
                                    data-hx-get="/benefits-structure/outpatient/"
                                    data-hx-trigger="click"
-                                   data-hx-target="#benefits-structure"
+                                   data-hx-target="#benefits"
                                    data-hx-swap="innerHTML">Outpatient benefits</a>
                             </h3>
                             <p>
@@ -232,15 +232,15 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Course Item-->
+                <!-- End card Item-->
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="course-item">
+                    <div class="card-item">
                         <img src="{% static 'img/benefit/card_3.png' %}"
                              class="img-fluid"
                              width=""
                              height=""
                              alt="...">
-                        <div class="course-content">
+                        <div class="card-content">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h4>Additional benefits</h4>
                             </div>
@@ -248,7 +248,7 @@
                                 <a href=""
                                    data-hx-get="/benefits-structure/additional-cover/"
                                    data-hx-trigger="click"
-                                   data-hx-target="#benefits-structure"
+                                   data-hx-target="#benefits"
                                    data-hx-swap="innerHTML">Additional benefits</a>
                             </h3>
                             <p>
@@ -260,15 +260,15 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Course Item-->
+                <!-- End card Item-->
                 <div class="col-lg-3 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
-                    <div class="course-item">
+                    <div class="card-item">
                         <img src="{% static 'img/benefit/card_4.png' %}"
                              class="img-fluid"
                              width=""
                              height=""
                              alt="...">
-                        <div class="course-content">
+                        <div class="card-content">
                             <div class="d-flex justify-content-between align-items-center mb-3">
                                 <h4>Wellness education</h4>
                             </div>
@@ -276,7 +276,7 @@
                                 <a href=""
                                    data-hx-get="/benefits-structure/wellness-education/"
                                    data-hx-trigger="click"
-                                   data-hx-target="#benefits-structure"
+                                   data-hx-target="#benefits"
                                    data-hx-swap="innerHTML">Wellness education</a>
                             </h3>
                             <p>
@@ -288,7 +288,7 @@
                         </div>
                     </div>
                 </div>
-                <!-- End Course Item-->
+                <!-- End card Item-->
             </div>
         </div>
     </section>

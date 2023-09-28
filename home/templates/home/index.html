@@ -32,7 +32,7 @@
                         data-bs-slide-to="2"
                         aria-label="Slide 3"></button>
             </div>
-            <div class="carousel-inner">
+            <div class="carousel-inner" data-aos="fade-in">
                 <div class="carousel-item slide-1 active">
                     <p>
                         Guard your daily smile with the
@@ -49,13 +49,11 @@
                 </div>
             </div>
         </div>
-        <div class="hero-caption">
-            <p>Risk.Reinsurance.People</p>
-        </div>
+        <p class="hero-caption">Risk.Reinsurance.People</p>
     </section>
     <!-- ======= Services Section ======= -->
     <section id="services">
-        <div class="container">
+        <div class="container-fluid px-5 py-4">
             <div class="row g-4">
                 <div class="col-12 col-lg-5">
                     <form action="" method="get">
@@ -103,63 +101,63 @@
                             </div>
                         </div>
                         <div class="search-provider-btn">
-                            <a href="#providers" class="btn rounded-0 glightbox">Search <i class="bi bi-caret-right-fill"></i></a>
+                            <a href="#providers-table" class="btn rounded-0 glightbox">Search <i class="bi bi-caret-right-fill"></i></a>
                         </div>
                     </form>
                 </div>
                 <div class="col-12 col-lg-7">
                     <div class="services-icons rounded-2 user-select-none">
-                        <div class="row row-cols-2 row-cols-md-4 g-3">
-                            <div class="col">
+                        <div class="row row-cols-2 row-cols-sm-4 g-3">
+                            <div class="col" data-aos="flip-left">
                                 <img src="{% static 'img/service/Maternity.png' %}"
                                      width=""
                                      height=""
                                      alt=""
                                      class="img-fluid shadow">
                             </div>
-                            <div class="col">
+                            <div class="col" data-aos="flip-left" data-aos-delay="100">
                                 <img src="{% static 'img/service/Optical.png' %}"
                                      width=""
                                      height=""
                                      alt=""
                                      class="img-fluid shadow">
                             </div>
-                            <div class="col">
+                            <div class="col" data-aos="flip-left" data-aos-delay="200">
                                 <img src="{% static 'img/service/Dental.png' %}"
                                      width=""
                                      height=""
                                      alt=""
                                      class="img-fluid shadow">
                             </div>
-                            <div class="col">
+                            <div class="col" data-aos="flip-left" data-aos-delay="300">
                                 <img src="{% static 'img/service/RoadEvacuation.png' %}"
                                      width=""
                                      height=""
                                      alt=""
                                      class="img-fluid shadow">
                             </div>
-                            <div class="col">
+                            <div class="col" data-aos="flip-left" data-aos-delay="400">
                                 <img src="{% static 'img/service/InternationalTravel.png' %}"
                                      width=""
                                      height=""
                                      alt=""
                                      class="img-fluid shadow">
                             </div>
-                            <div class="col">
+                            <div class="col" data-aos="flip-left" data-aos-delay="500">
                                 <img src="{% static 'img/service/AirEvacuation.png' %}"
                                      width=""
                                      height=""
                                      alt=""
                                      class="img-fluid shadow">
                             </div>
-                            <div class="col">
+                            <div class="col" data-aos="flip-left" data-aos-delay="600">
                                 <img src="{% static 'img/service/Psychiatric&Counselling.png' %}"
                                      width=""
                                      height=""
                                      alt=""
                                      class="img-fluid shadow">
                             </div>
-                            <div class="col">
+                            <div class="col" data-aos="flip-left" data-aos-delay="700">
                                 <img src="{% static 'img/service/LastRespects.png' %}"
                                      width=""
                                      height=""
@@ -168,35 +166,34 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> 
+            </div>
+            <div id="providers-table" class="d-none">
+                <table class="table table-dark table-hover w-100">
+                    <thead>
+                        <tr>
+                            <th>County</th>
+                            <th>Sub County</th>
+                            <th>Town</th>
+                            <th>Service</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Mombasa</td>
+                            <td>Nyali</td>
+                            <td>Frere Town</td>
+                            <td>Maternity, Optical, Dental</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </div>
     </section>
-    <!-- ======= Providers Section ======= -->
-    <section id="providers">
-        <table class="table table-dark table-hover">
-            <thead>
-                <tr>
-                    <th>County</th>
-                    <th>Sub County</th>
-                    <th>Town</th>
-                    <th>Service</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Mombasa</td>
-                    <td>Nyali</td>
-                    <td>Frere Town</td>
-                    <td>Maternity, Optical, Dental</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
     <!-- ======= Clients Section ======= -->
     <section id="clients">
-        <div class="container">
-            <div class="swiper">
+        <div class="container-fluid px-5 py-4">
+            <div class="swiper" data-aos="zoom-in">
                 <div class="swiper-wrapper align-items-center user-select-none">
                     <div class="swiper-slide">
                         <img src="{% static 'img/client/minetlogo.png' %}"
@@ -261,10 +258,10 @@
     </section>
     <!-- ======= Comprehensive Benefits Section ======= -->
     <section id="comprehensive-benefits">
-        <div class="container">
+        <div class="container-fluid px-5 py-4">
             <h2>Comprehensive Benefits</h2>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
-                <div class="col">
+                <div class="col" data-aos="fade-up">
                     <div class="d-grid gap-4">
                         <div>
                             <img class="img-fluid"
@@ -281,7 +278,7 @@
                     </div>
                     <a href="{% url 'benefits-structure' %}?benefits=inpatient">Read More <i class="bi bi-chevron-right"></i></a>
                 </div>
-                <div class="col">
+                <div class="col" data-aos="fade-up" data-aos-delay="100">
                     <div class="d-grid gap-4">
                         <div>
                             <img class="img-fluid"
@@ -298,7 +295,7 @@
                     </div>
                     <a href="{% url 'benefits-structure' %}?benefits=outpatient">Read More <i class="bi bi-chevron-right"></i></a>
                 </div>
-                <div class="col">
+                <div class="col" data-aos="fade-up" data-aos-delay="200">
                     <div class="d-grid gap-4">
                         <div>
                             <img class="img-fluid"
@@ -315,7 +312,7 @@
                     </div>
                     <a href="{% url 'benefits-structure' %}?benefits=additional-cover">Read More <i class="bi bi-chevron-right"></i></a>
                 </div>
-                <div class="col">
+                <div class="col" data-aos="fade-up" data-aos-delay="300">
                     <div class="d-grid gap-4">
                         <div>
                             <img class="img-fluid"
