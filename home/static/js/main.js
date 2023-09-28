@@ -119,7 +119,7 @@
   if (window.location.pathname === "/benefits-structure/") {
     const urlParams = new URLSearchParams(window.location.search);
     if (urlParams.has("benefits")) {
-      const benefitsContainer = document.querySelector("#benefits-structure");
+      const benefitsContainer = document.querySelector("#benefits");
       const benefits = urlParams.get("benefits");
       if (benefits == "inpatient") {
         fetch("/benefits-structure/inpatient/")
