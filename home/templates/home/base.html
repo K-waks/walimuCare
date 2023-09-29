@@ -38,22 +38,24 @@
         <link rel="stylesheet" href="{% static 'css/style.css' %}">
         <!-- Vendor JS Files -->
         <script src="{% static 'aos/aos.js' %}" defer></script>
-        <script src="{% static 'bootstrap/bootstrap.bundle.min.js' %}" defer></script>
         <script src="{% static 'swiper/swiper-bundle.min.js' %}" defer></script>
         <script src="{% static 'glightbox/glightbox.min.js' %}" defer></script>
         <script src="{% static 'htmx/htmx.min.js' %}" defer></script>
         <!-- Main JS File -->
         <script src="{% static 'js/main.js' %}" defer></script>
+        <script src="{% static 'bootstrap/bootstrap.bundle.min.js' %}" defer></script>
     </head>
     <body>
         <!-- ======= Header ======= -->
         <header id="header">
             <div class="container-fluid clearfix h-100 position-relative">
-                <img src="{% static 'img/icon/Afya-kwa-walimu.png' %}"
-                     width=""
-                     height="90%"
-                     alt=""
-                     class="float-start">
+                <a href="{% url 'index' %}">
+                    <img src="{% static 'img/icon/Afya-kwa-walimu.png' %}"
+                         width=""
+                         height="90%"
+                         alt=""
+                         class="float-start">
+                </a>
                 <img src="{% static 'img/icon/TSC.png' %}"
                      width=""
                      height="90%"
@@ -132,7 +134,7 @@
         </main>
         <!-- ======= Footer ======= -->
         <footer id="footer">
-            <div class="container-fluid content-padding">
+            <div class="container-fluid section-padding">
                 <div class="row">
                     <div class="quick-links col-12 col-sm-6 col-md-4 d-flex justify-content-md-start">
                         <div>
@@ -153,7 +155,7 @@
                                     <a href="{% url 'register' %}"><i class="bi bi-caret-right-fill"></i><span>Registration</span></a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'benefits-structure' %}#exclusions"><i class="bi bi-caret-right-fill"></i><span>Exclusions</span></a>
+                                    <a href="{% url 'benefits-structure' %}#scheme-exclusions"><i class="bi bi-caret-right-fill"></i><span>Exclusions</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -163,38 +165,34 @@
                             <h3>Benefits</h3>
                             <ul class="text-uppercase">
                                 <li>
-                                    <a href=""><i class="bi bi-caret-right-fill"></i><span>Inpatient</span></a>
+                                    <a href="{% url 'benefits-structure' %}?benefits=inpatient"><i class="bi bi-caret-right-fill"></i><span>Inpatient</span></a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="bi bi-caret-right-fill"></i><span>Outpatient</span></a>
+                                    <a href="{% url 'benefits-structure' %}?benefits=outpatient"><i class="bi bi-caret-right-fill"></i><span>Outpatient</span></a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="bi bi-caret-right-fill"></i><span>Additional cover</span></a>
+                                    <a href="{% url 'benefits-structure' %}?benefits=additional-cover"><i class="bi bi-caret-right-fill"></i><span>Additional cover</span></a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="bi bi-caret-right-fill"></i><span>Maternity</span></a>
+                                    <a href="{% url 'benefits-structure' %}?benefits=wellness&category=maternity"><i class="bi bi-caret-right-fill"></i><span>Maternity</span></a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="bi bi-caret-right-fill"></i><span>Optical</span></a>
+                                    <a href="{% url 'benefits-structure' %}?benefits=wellness&category=optical"><i class="bi bi-caret-right-fill"></i><span>Optical</span></a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="bi bi-caret-right-fill"></i><span>Dental</span></a>
+                                    <a href="{% url 'benefits-structure' %}?benefits=wellness&category=dental"><i class="bi bi-caret-right-fill"></i><span>Dental</span></a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="bi bi-caret-right-fill"></i><span>Local Road and Air
-                                    Evacuation</span></a>
+                                    <a href="{% url 'benefits-structure' %}?benefits=wellness&category=evacuation"><i class="bi bi-caret-right-fill"></i><span>Local Road and Air Evacuation</span></a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="bi bi-caret-right-fill"></i><span>International
-                                    Treatment</span></a>
+                                    <a href="{% url 'benefits-structure' %}?benefits=wellness&category=international-treatment"><i class="bi bi-caret-right-fill"></i><span>International Treatment</span></a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="bi bi-caret-right-fill"></i><span>Psychiatric and
-                                    Counsellings</span></a>
+                                    <a href="{% url 'benefits-structure' %}?benefits=wellness&category=psychiatric-counsellings"><i class="bi bi-caret-right-fill"></i><span>Psychiatric and  Counsellings</span></a>
                                 </li>
                                 <li>
-                                    <a href=""><i class="bi bi-caret-right-fill"></i><span>Funeral and Last
-                                    Respects</span></a>
+                                    <a href="{% url 'benefits-structure' %}?benefits=wellness&category=last-respects"><i class="bi bi-caret-right-fill"></i><span>Funeral and Last Respects</span></a>
                                 </li>
                             </ul>
                         </div>
@@ -218,7 +216,7 @@
                                         <a href="tel:*202*07#"><i class="bi bi-hash"></i><span>USSD *202*07#</span></a>
                                     </li>
                                     <li>
-                                        <a href="https://minet.com/Kenya"><i class="bi bi-globe"></i><span>minet.com/Kenya</span></a>
+                                        <a href="https://minet.com/Kenya" target="_blank"><i class="bi bi-globe"></i><span>minet.com/Kenya</span></a>
                                     </li>
                                     <li>
                                         <a href="#"><i class="bi bi-phone-landscape"></i><span>WalimuCare App</span></a>
@@ -239,10 +237,12 @@
         </footer>
         <!-- ======= Bottom Bar ======= -->
         <section id="bottom-bar">
-            <div class="container-fluid content-padding">
+            <div class="container-fluid section-padding">
                 <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
                     <div class="col">
-                        <div class="copyright text-center text-lg-start pe-xl-5">All rights reserved ©️ Minet Group 2023</div>
+                        <div class="copyright text-center text-lg-start pe-xl-5">
+                            <p>All rights reserved ©️ Minet Group 2023</p>
+                        </div>
                     </div>
                     <div class="col">
                         <div class="social-links d-flex justify-content-evenly">
@@ -258,7 +258,9 @@
                         </div>
                     </div>
                     <div class="col col-md-12 col-lg-4">
-                        <div class="slogan text-center text-lg-end text-uppercase ps-xl-5">Risk.Reinsurance.People</div>
+                        <div class="slogan text-center text-lg-end text-uppercase ps-xl-5">
+                            <p>Risk.Reinsurance.People</p>
+                        </div>
                     </div>
                 </div>
             </div>

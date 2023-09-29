@@ -121,33 +121,41 @@
     if (urlParams.has("benefits")) {
       const benefitsContainer = document.querySelector("#benefits");
       const benefits = urlParams.get("benefits");
-      if (benefits == "inpatient") {
-        fetch("/benefits-structure/inpatient/")
+      const category = urlParams.get("category");
+      if (benefits !== null) {
+        fetch(`/benefits-structure/${benefits}/`)
           .then((response) => response.text())
           .then((content) => {
-            benefitsContainer.innerHTML = content;
-          });
-      } else if (benefits == "outpatient") {
-        fetch("/benefits-structure/outpatient/")
-          .then((response) => response.text())
-          .then((content) => {
-            benefitsContainer.innerHTML = content;
-          });
-      } else if (benefits == "additional-cover") {
-        fetch("/benefits-structure/additional-cover/")
-          .then((response) => response.text())
-          .then((content) => {
-            benefitsContainer.innerHTML = content;
-          });
-      } else if (benefits == "wellness") {
-        fetch("/benefits-structure/wellness-education/")
-          .then((response) => response.text())
-          .then((content) => {
-            benefitsContainer.innerHTML = content;
+            if (benefits === "wellness" && category !== null) {
+              // If benefits is "wellness," perform additional DOM manipulations
+              // Create a temporary container to hold the fetched content
+              const tempContainer = document.createElement("div");
+              tempContainer.innerHTML = content;
+              // Update the button
+              const button = tempContainer.querySelector(`#${category} .accordion-button`);
+              console.log(button);
+              if (button) {
+                button.classList.remove("collapsed");
+              }
+              // Update the accordion-collapse
+              const accordionBody = tempContainer.querySelector(`#${category} .accordion-collapse`);
+              console.log(accordionBody);
+              if (accordionBody) {
+                accordionBody.classList.add("show");
+              }
+              // Replace the content in benefitsContainer with the modified content
+              benefitsContainer.innerHTML = tempContainer.innerHTML;
+              // history.replaceState(null, null, window.location.pathname);
+              window.location.hash = `#${category}`;
+
+            } else {
+              // For other cases, just update the content
+              benefitsContainer.innerHTML = content;
+              // history.replaceState(null, null, window.location.pathname);
+              window.location.hash = "#benefits-structure";
+            }
           });
       }
-      history.replaceState(null, null, window.location.pathname);
-      window.location.hash = "#benefits-structure";
     }
   }
 

@@ -53,7 +53,7 @@
     </section>
     <!-- ======= Services Section ======= -->
     <section id="services">
-        <div class="container-fluid content-padding">
+        <div class="container-fluid section-padding">
             <div class="row g-4">
                 <div class="col-12 col-lg-5">
                     <form action="" method="get">
@@ -109,90 +109,108 @@
                     <div class="services-icons rounded-2 user-select-none">
                         <div class="row row-cols-2 row-cols-sm-4 g-3">
                             <div class="col" data-aos="flip-left">
-                                <img src="{% static 'img/service/Maternity.png' %}"
-                                     width=""
-                                     height=""
-                                     alt=""
-                                     class="img-fluid shadow">
+                                <a href="{% url 'benefits-structure' %}?benefits=wellness&category=maternity">
+                                    <img src="{% static 'img/service/Maternity.png' %}"
+                                         width=""
+                                         height=""
+                                         alt=""
+                                         class="img-fluid shadow">
+                                </a>
                             </div>
                             <div class="col" data-aos="flip-left" data-aos-delay="100">
-                                <img src="{% static 'img/service/Optical.png' %}"
-                                     width=""
-                                     height=""
-                                     alt=""
-                                     class="img-fluid shadow">
+                                <a href="{% url 'benefits-structure' %}?benefits=wellness&category=optical">
+                                    <img src="{% static 'img/service/Optical.png' %}"
+                                         width=""
+                                         height=""
+                                         alt=""
+                                         class="img-fluid shadow">
+                                </a>
                             </div>
                             <div class="col" data-aos="flip-left" data-aos-delay="200">
-                                <img src="{% static 'img/service/Dental.png' %}"
-                                     width=""
-                                     height=""
-                                     alt=""
-                                     class="img-fluid shadow">
+                                <a href="{% url 'benefits-structure' %}?benefits=wellness&category=dental">
+                                    <img src="{% static 'img/service/Dental.png' %}"
+                                         width=""
+                                         height=""
+                                         alt=""
+                                         class="img-fluid shadow">
+                                </a>
                             </div>
                             <div class="col" data-aos="flip-left" data-aos-delay="300">
-                                <img src="{% static 'img/service/RoadEvacuation.png' %}"
-                                     width=""
-                                     height=""
-                                     alt=""
-                                     class="img-fluid shadow">
+                                <a href="{% url 'benefits-structure' %}?benefits=wellness&category=evacuation">
+                                    <img src="{% static 'img/service/RoadEvacuation.png' %}"
+                                         width=""
+                                         height=""
+                                         alt=""
+                                         class="img-fluid shadow">
+                                </a>
                             </div>
                             <div class="col" data-aos="flip-left" data-aos-delay="400">
-                                <img src="{% static 'img/service/InternationalTravel.png' %}"
-                                     width=""
-                                     height=""
-                                     alt=""
-                                     class="img-fluid shadow">
+                                <a href="{% url 'benefits-structure' %}?benefits=wellness&category=international-treatment">
+                                    <img src="{% static 'img/service/InternationalTravel.png' %}"
+                                         width=""
+                                         height=""
+                                         alt=""
+                                         class="img-fluid shadow">
+                                </a>
                             </div>
                             <div class="col" data-aos="flip-left" data-aos-delay="500">
-                                <img src="{% static 'img/service/AirEvacuation.png' %}"
-                                     width=""
-                                     height=""
-                                     alt=""
-                                     class="img-fluid shadow">
+                                <a href="{% url 'benefits-structure' %}?benefits=wellness&category=evacuation">
+                                    <img src="{% static 'img/service/AirEvacuation.png' %}"
+                                         width=""
+                                         height=""
+                                         alt=""
+                                         class="img-fluid shadow">
+                                </a>
                             </div>
                             <div class="col" data-aos="flip-left" data-aos-delay="600">
-                                <img src="{% static 'img/service/Psychiatric&Counselling.png' %}"
-                                     width=""
-                                     height=""
-                                     alt=""
-                                     class="img-fluid shadow">
+                                <a href="{% url 'benefits-structure' %}?benefits=wellness&category=psychiatric-counsellings">
+                                    <img src="{% static 'img/service/Psychiatric&Counselling.png' %}"
+                                         width=""
+                                         height=""
+                                         alt=""
+                                         class="img-fluid shadow">
+                                </a>
                             </div>
                             <div class="col" data-aos="flip-left" data-aos-delay="700">
-                                <img src="{% static 'img/service/LastRespects.png' %}"
-                                     width=""
-                                     height=""
-                                     alt=""
-                                     class="img-fluid shadow">
+                                <a href="{% url 'benefits-structure' %}?benefits=wellness&category=last-respects">
+                                    <img src="{% static 'img/service/LastRespects.png' %}"
+                                         width=""
+                                         height=""
+                                         alt=""
+                                         class="img-fluid shadow">
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div id="providers-table" class="d-none">
-                <table class="table table-dark table-hover w-100">
-                    <thead>
-                        <tr>
-                            <th>County</th>
-                            <th>Sub County</th>
-                            <th>Town</th>
-                            <th>Service</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Mombasa</td>
-                            <td>Nyali</td>
-                            <td>Frere Town</td>
-                            <td>Maternity, Optical, Dental</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table table-dark table-hover w-100">
+                        <thead>
+                            <tr>
+                                <th>County</th>
+                                <th>Sub County</th>
+                                <th>Town</th>
+                                <th>Service</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Mombasa</td>
+                                <td>Nyali</td>
+                                <td>Frere Town</td>
+                                <td>Maternity, Optical, Dental</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </section>
     <!-- ======= Clients Section ======= -->
     <section id="clients">
-        <div class="container-fluid content-padding">
+        <div class="container-fluid section-padding">
             <div class="swiper" data-aos="zoom-in">
                 <div class="swiper-wrapper align-items-center user-select-none">
                     <div class="swiper-slide">
@@ -257,8 +275,8 @@
         </div>
     </section>
     <!-- ======= Comprehensive Benefits Section ======= -->
-    <section id="comprehensive-benefits">
-        <div class="container-fluid content-padding">
+    <section id="comprehensive-benefits" class="section-bg">
+        <div class="container-fluid section-padding">
             <h2>Comprehensive Benefits</h2>
             <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4">
                 <div class="col" data-aos="fade-up">

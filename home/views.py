@@ -59,7 +59,7 @@ def additional_cover(request):
     return render(request, "home/benefits/additional-cover.html", {})
 
 
-def wellness_education(request):
+def wellness(request):
     return render(request, "home/benefits/wellness.html", {})
 
 

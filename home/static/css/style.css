@@ -51,6 +51,12 @@ h3 {
   margin-bottom: 15px;
 }
 
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 576px) {
   h2 {
     font-size: 21px;
@@ -59,18 +65,39 @@ h3 {
   h3 {
     font-size: 19px;
   }
+
+  h4 {
+    font-size: 17px;
+  }
 }
 
-p {
-  font-size: 13px;
+p,
+li {
+  font-size: 14px;
 }
 
-.content-padding {
+.section-bg {
+  background-color: #0a0037;
+  color: #eef0ef;
+}
+
+.section-bg-img {
+  background: url("../img/breadcrumbs.jpg") no-repeat center / cover;
+  background-attachment: fixed;
+}
+
+.breadcrumbs-padding {
   padding: 2rem 5rem;
 }
 
+.section-padding {
+  padding: 3rem 5rem;
+}
+
 @media (max-width: 768px) {
-  .content-padding {
+
+  .breadcrumbs-padding,
+  .section-padding {
     padding: 2rem 2rem;
   }
 }
@@ -129,7 +156,7 @@ p {
   */
 
 #header .desktop-nav .nav {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 650;
   width: 80%;
   text-align: center;
@@ -171,7 +198,7 @@ p {
 
 #header .mobile-nav ul {
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 #header .mobile-nav ul li {
@@ -192,7 +219,7 @@ p {
   color: #0a0037;
   position: absolute;
   top: 3px;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 #header .mobile-nav .mobilenav-hot-line i,
@@ -246,7 +273,7 @@ p {
   padding: 0 0 10px 0;
   margin: 0;
   color: #c3a22c;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 #breadcrumbs ol a {
@@ -257,11 +284,11 @@ p {
   color: #d4d448;
 }
 
-#breadcrumbs ol li + li {
+#breadcrumbs ol li+li {
   padding-left: 10px;
 }
 
-#breadcrumbs ol li + li::before {
+#breadcrumbs ol li+li::before {
   display: inline-block;
   padding-right: 10px;
   color: #635551;
@@ -273,7 +300,12 @@ p {
   --------------------------------------------------------------*/
 #footer {
   background-color: #e0dbdc;
-  font-size: 12px;
+}
+
+#footer .quick-links,
+#footer .benefits-links,
+#footer .contacts-links {
+  margin: 20px 0;
 }
 
 #footer ul {
@@ -293,7 +325,7 @@ p {
 
 #footer i {
   display: inline-block;
-  font-size: 13px;
+  font-size: 14px;
   align-self: center;
   margin-right: 10px;
 }
@@ -321,6 +353,7 @@ p {
   margin-top: 30px;
   display: block;
   color: #eef0ef;
+  font-size: 14px;
   background: #c3a22c;
   padding: 8px 40px;
   text-align: center;
@@ -362,11 +395,10 @@ p {
 
 #bottom-bar {
   color: #c3a22c;
-  font-size: 12px;
 }
 
 #bottom-bar .social-links a {
-  font-size: 16px;
+  font-size: 18px;
   color: #c3a22c;
   display: inline-block;
   width: 36px;
@@ -378,6 +410,7 @@ p {
 }
 
 @media (max-width: 992px) {
+
   #bottom-bar .copyright,
   #bottom-bar .social-links {
     margin-bottom: 20px;
@@ -499,6 +532,7 @@ p {
 }
 
 @media (min-width: 1024px) {
+
   #hero #herocarousel .carousel-item.slide-1,
   #hero #herocarousel .carousel-item.slide-2 {
     background-attachment: fixed;
@@ -557,13 +591,13 @@ p {
 }
 
 #services form label {
-  font-size: 13px;
+  font-size: 14px;
   text-transform: uppercase;
   color: #b9b4b4;
 }
 
 #services form select {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 #services form .search-provider-btn {
@@ -573,7 +607,7 @@ p {
 }
 
 #services form .search-provider-btn a {
-  font-size: 13px;
+  font-size: 14px;
   background: #c3a22c;
   width: 150px;
   padding: 5px 30px;
@@ -635,23 +669,14 @@ p {
   # Comprehensive Benefits
   --------------------------------------------------------------*/
 
-#comprehensive-benefits {
-  background: #0a0037;
-}
-
 #comprehensive-benefits .col {
   padding-bottom: 50px;
   position: relative;
 }
 
-#comprehensive-benefits p {
-  color: #eef0ef;
-  font-size: 13px;
-}
-
 #comprehensive-benefits a {
   color: #756e6e;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 550;
   text-transform: uppercase;
   display: block;
@@ -733,7 +758,7 @@ p {
 #about .icon-box .description {
   margin-left: 85px;
   line-height: 24px;
-  font-size: 13px;
+  font-size: 14px;
 }
 
 #about .video-box {
@@ -832,7 +857,7 @@ p {
 --------------------------------------------------------------*/
 
 #benefits-table {
-  font-size: 13px;
+  font-size: 14px;
 }
 
 #benefits-table .table .tb-cell {
@@ -850,51 +875,42 @@ p {
 # Benefits-structure
 --------------------------------------------------------------*/
 
-#benefits-structure {
-  background: #0a0037;
+#benefits-structure .benefits-bar ul li {
+  margin: 12px;
+  width: 100%;
+  height: 48px;
 }
 
-#benefits-structure .card-item {
-  border-radius: 5px;
-  /* border: 1px solid #eef0ef; */
-  border: 1px solid #c3a22c;
+#benefits-structure .benefits-bar ul li button {
+  background: #c3a22c;
+  color: #eef0ef;
+  font-size: 14px;
+  font-weight: 600;
 }
 
-#benefits-structure .card-content {
-  padding: 15px;
+#benefits-structure .benefits-bar ul li button:hover {
+  background: #d4d448;
 }
 
-#benefits-structure .card-content h3 a {
-  /* color: #37423b; */
-  color: #c3a22c;
+
+#benefits-structure #benefits ul li {
+  font-size: 14px;
+  margin: 11px 0;
+}
+
+.accordion-button {
+  font-weight: bold;
+  font-size: 16px;
   transition: 0.3s;
 }
 
-#benefits-structure .card-content h3 a:hover {
-  color: #d4d448;
-}
-
-#benefits-structure .card-content p {
-  font-size: 13px;
-  /* color: #777777; */
-  color: #eef0ef;
-}
-
-#benefits-structure .card-content h4 {
-  font-size: 13px;
-  background: #c3a22c;
-  padding: 7px 14px;
-  color: #eef0ef;
-  margin: 0;
-}
-
-#benefits-structure #benefits {
-  color: #eef0ef;
-}
-
-#benefits-structure ul li {
-  font-size: 13px;
-  margin: 11px 0;
+.accordion-button:not(.collapsed),
+.accordion-button:focus {
+  font-weight: bold;
+  background-color: white;
+  font-size: 20px;
+  color: #c3a22c;
+  box-shadow: #d4d448;
 }
 
 /*

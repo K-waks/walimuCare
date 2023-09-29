@@ -29,9 +29,9 @@ urlpatterns = [
         name="additional-cover",
     ),
     path(
-        "benefits-structure/wellness-education/",
-        views.wellness_education,
-        name="wellness-education",
+        "benefits-structure/wellness/",
+        views.wellness,
+        name="wellness",
     ),
     path("register/", views.register, name="register"),
 ]

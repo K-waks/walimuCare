@@ -6,7 +6,7 @@
 {% block main %}
     <!-- Breadcrumbs -->
     <section id="breadcrumbs">
-        <div class="container-fluid content-padding">
+        <div class="container-fluid breadcrumbs-padding">
             <ol>
                 <li>
                     <a href="{% url 'index' %}">Home</a>
@@ -18,7 +18,7 @@
     </section>
     <!-- Benefits-table -->
     <section id="benefits-table">
-        <div class="container-fluid content-padding" data-aos="fade-up">
+        <div class="container-fluid section-padding" data-aos="fade-up">
             <h3>Benefits Table</h3>
             <p>
                 The Unlimited Benefits For Both Inpatient And Outpatient For Job Group B5 - C3 Shall Apply In Government Hospitals, Faith Based Hospitals (Mission Hospitals)
@@ -177,56 +177,133 @@
         </div>
     </section>
     <!-- Benefits-Structure -->
-    <section id="benefits-structure">
-        <div class="container-fluid content-padding">
+    <section id="benefits-structure" class="section-bg-img">
+        <div class="container-fluid section-padding">
             <div class="row">
-                <div class="col-12 col-md-3 order-md-1">
-                    <div>
-                        <ul>
+                <div class="col-12 col-md-3 order-md-2">
+                    <div class="benefits-bar position-sticky top-0">
+                        <ul class="list-unstyled d-flex flex-column justify-content-evenly align-items-center">
                             <li>
-                                <a href=""
-                                   data-hx-get="/benefits-structure/inpatient/"
-                                   data-hx-trigger="click"
-                                   data-hx-target="#benefits"
-                                   data-hx-swap="innerHTML">Inpatient benefits</a>
+                                <button class="btn rounded-0 w-100 h-100"
+                                        data-hx-get="/benefits-structure/inpatient/"
+                                        data-hx-trigger="click"
+                                        data-hx-target="#benefits"
+                                        data-hx-swap="innerHTML">Inpatient benefits</button>
                             </li>
                             <li>
-                                <a href=""
-                                   data-hx-get="/benefits-structure/outpatient/"
-                                   data-hx-trigger="click"
-                                   data-hx-target="#benefits"
-                                   data-hx-swap="innerHTML">Outpatient benefits</a>
+                                <button class="btn rounded-0 w-100 h-100"
+                                        data-hx-get="/benefits-structure/outpatient/"
+                                        data-hx-trigger="click"
+                                        data-hx-target="#benefits"
+                                        data-hx-swap="innerHTML">Outpatient benefits</button>
                             </li>
                             <li>
-                                <a href=""
-                                   data-hx-get="/benefits-structure/additional-cover/"
-                                   data-hx-trigger="click"
-                                   data-hx-target="#benefits"
-                                   data-hx-swap="innerHTML">Additional benefits</a>
+                                <button class="btn rounded-0 w-100 h-100"
+                                        data-hx-get="/benefits-structure/additional-cover/"
+                                        data-hx-trigger="click"
+                                        data-hx-target="#benefits"
+                                        data-hx-swap="innerHTML">Additional benefits</button>
                             </li>
                             <li>
-                                <a href=""
-                                   data-hx-get="/benefits-structure/wellness-education/"
-                                   data-hx-trigger="click"
-                                   data-hx-target="#benefits"
-                                   data-hx-swap="innerHTML">Wellness education</a>
+                                <button class="btn rounded-0 w-100 h-100"
+                                        data-hx-get="/benefits-structure/wellness/"
+                                        data-hx-trigger="click"
+                                        data-hx-target="#benefits"
+                                        data-hx-swap="innerHTML">Wellness education</button>
                             </li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-12 col-md-9 order-md-2">
+                <div class="col-12 col-md-9 order-md-1">
                     <div id="benefits">
-                        <!-- * 
+                        <!-- *
                              * Benefits container that will be filled with content
                              *
                          -->
+                        <div id="benefitscarousel"
+                             class="carousel slide"
+                             data-bs-ride="carousel"
+                             data-bs-pause="false">
+                            <div class="carousel-inner">
+                                <div class="carousel-item slide-1 active">
+                                    <img src="{% static 'img/benefit/bn_slide_1.jpg' %}"
+                                         class="img-fluid d-block mx-auto"
+                                         width="500px"
+                                         height=""
+                                         alt="">
+                                </div>
+                                <div class="carousel-item slide-2">
+                                    <img src="{% static 'img/benefit/bn_slide_2.jpg' %}"
+                                         class="img-fluid d-block mx-auto"
+                                         width="500px"
+                                         height=""
+                                         alt="">
+                                </div>
+                                <div class="carousel-item slide-3">
+                                    <img src="{% static 'img/benefit/bn_slide_3.jpg' %}"
+                                         class="img-fluid d-block mx-auto"
+                                         width="500px"
+                                         height=""
+                                         alt="">
+                                </div>
+                                <div class="carousel-item slide-4">
+                                    <img src="{% static 'img/benefit/bn_slide_4.jpg' %}"
+                                         class="img-fluid d-block mx-auto"
+                                         width="500px"
+                                         height=""
+                                         alt="">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev"
+                                    type="button"
+                                    data-bs-target="#benefitscarousel"
+                                    data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next"
+                                    type="button"
+                                    data-bs-target="#benefitscarousel"
+                                    data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
                     </div>
-                    <div class="d-flex text-white">
-                        <div>Inpatient</div>
-                        <div>Outpatient</div>
-                        <div>Additional Cover</div>
-                        <div>Wellness</div>
-                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid section-padding">
+            <div class="row g-4">
+                <!-- Scheme exclusions -->
+                <div id="scheme-exclusions" class="col-12 col-md-6" data-aos="fade-up">
+                    <h3>Scheme Exclusions</h3>
+                    <p class="fw-bold">Expenses for the following will not be covered for under the scheme:</p>
+                    <ol>
+                        <li>Cosmetic Treatments</li>
+                        <li>Self-prescribed treatment</li>
+                        <li>Experimental treatment</li>
+                        <li>Costs already catered for by another insurance company</li>
+                        <li>Maternity for child dependants</li>
+                        <li>Reimbursement without prior approval from the insurance which should be notified within 24 hrs</li>
+                    </ol>
+                </div>
+                <!-- Eligibility -->
+                <div id="eligibility" class="col-12 col-md-6" data-aos="fade-up">
+                    <h3>Eligibility</h3>
+                    <ul>
+                        <li>
+                            All teachers employed by TSC and actively in service from eighteen (18) years to the
+                            mandatory retirement age.
+                        </li>
+                        <li>One (1) legal spouse to the teacher.</li>
+                        <li>
+                            Four (4) dependent children (biological/legally adopted) from birth till the age of eighteen (18) years or to the age of 25 (twenty five) years if residing with their parents and are enrolled in a post-secondary institution.
+                        </li>
+                        <li>No age limit applies to child dependants with a disability.</li>
+                    </ul>
                 </div>
             </div>
         </div>
