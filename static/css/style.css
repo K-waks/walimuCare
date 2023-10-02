@@ -120,7 +120,7 @@ table {
   opacity: 0;
   right: 15px;
   bottom: 15px;
-  z-index: 996;
+  z-index: 10;
   background: #c3a22c;
   width: 40px;
   height: 40px;
@@ -148,12 +148,22 @@ table {
   # Header
   --------------------------------------------------------------*/
 
-#header {
+/* Style the header */
+#header .header-nav{
   height: 87px;
+  position: fixed;
+  top: 0;
+  z-index: 20;
+}
+
+/* The translucent class is added to the header with JS when it reaches its scroll position */
+.header-onscroll {
+  background-color: rgba(255,255,255, 0.9);
+  border-bottom: 1px solid #e0dbdc; /* 2px width, solid style, and #756e6e color */
 }
 
 #header .desktop-nav,
-#header .mobile-nav {
+#header .mobile-nav-btn {
   justify-content: center;
   align-items: end;
   height: 100%;
@@ -191,7 +201,7 @@ table {
   * Mobile Navigation 
   */
 
-#header .mobile-nav .btn {
+#header .mobile-nav-btn .btn {
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 20px;
@@ -201,7 +211,7 @@ table {
   transition: 0.4s;
 }
 
-#header .mobile-nav .btn:hover {
+#header .mobile-nav-btn .btn:hover {
   background-color: #0a0037;
 }
 
@@ -265,43 +275,6 @@ table {
   #header .hot-line {
     right: 120px;
   }
-}
-
-/*--------------------------------------------------------------
-  # Breadcrumbs
-  --------------------------------------------------------------*/
-
-#breadcrumbs {
-  background: url("../img/breadcrumbs.jpg") no-repeat center / cover;
-}
-
-#breadcrumbs ol {
-  display: flex;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0 0 10px 0;
-  margin: 0;
-  color: #c3a22c;
-  font-size: 14px;
-}
-
-#breadcrumbs ol a {
-  color: #c3a22c;
-}
-
-#breadcrumbs ol a:hover {
-  color: #d4d448;
-}
-
-#breadcrumbs ol li+li {
-  padding-left: 10px;
-}
-
-#breadcrumbs ol li+li::before {
-  display: inline-block;
-  padding-right: 10px;
-  color: #635551;
-  content: "/";
 }
 
 /*--------------------------------------------------------------
@@ -426,6 +399,44 @@ table {
   }
 }
 
+/*--------------------------------------------------------------
+  # Breadcrumbs
+  --------------------------------------------------------------*/
+
+  #breadcrumbs {
+    margin-top: 87px;
+    background: url("../img/breadcrumbs.jpg") no-repeat center / cover;
+  }
+  
+  #breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0 0 10px 0;
+    margin: 0;
+    color: #c3a22c;
+    font-size: 14px;
+  }
+  
+  #breadcrumbs ol a {
+    color: #c3a22c;
+  }
+  
+  #breadcrumbs ol a:hover {
+    color: #d4d448;
+  }
+  
+  #breadcrumbs ol li+li {
+    padding-left: 10px;
+  }
+  
+  #breadcrumbs ol li+li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #635551;
+    content: "/";
+  }
+
 /*
  *
  * index.html
@@ -437,6 +448,7 @@ table {
 --------------------------------------------------------------*/
 
 #hero {
+  margin-top: 87px;
   position: relative;
 }
 
@@ -799,7 +811,7 @@ table {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-left: 15px solid #eef0ef;
-  z-index: 100;
+  z-index: 10;
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
@@ -838,7 +850,7 @@ table {
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
   border-left: 15px solid #eef0ef;
-  z-index: 200;
+  z-index: 20;
   animation: none;
   border-radius: 0;
 }
