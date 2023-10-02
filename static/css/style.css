@@ -404,7 +404,7 @@ table {
   --------------------------------------------------------------*/
 
   #breadcrumbs {
-    margin-top: 87px;
+    margin-top: 87px; /* size of #header .header-nav */
     background: url("../img/breadcrumbs.jpg") no-repeat center / cover;
   }
   
@@ -448,7 +448,7 @@ table {
 --------------------------------------------------------------*/
 
 #hero {
-  margin-top: 87px;
+  margin-top: 87px; /* size of #header .header-nav */
   position: relative;
 }
 
@@ -891,6 +891,11 @@ table {
 /*--------------------------------------------------------------
 # Benefits-structure
 --------------------------------------------------------------*/
+
+#benefits-structure .benefits-bar {
+  position: sticky;
+  top: 87px; /* size of #header .header-nav */
+}
 
 #benefits-structure .benefits-bar li {
   margin: 12px;
