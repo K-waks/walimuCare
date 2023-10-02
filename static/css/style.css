@@ -72,7 +72,8 @@ h4 {
 }
 
 p,
-li {
+li,
+table {
   font-size: 14px;
 }
 
@@ -92,6 +93,14 @@ li {
 
 .section-padding {
   padding: 3rem 5rem;
+}
+
+.custom-link {
+  color: #c3a22c
+}
+
+.custom-link:hover {
+  color: #0a0037;
 }
 
 @media (max-width: 768px) {
@@ -856,10 +865,6 @@ li {
 # Benefits-table
 --------------------------------------------------------------*/
 
-#benefits-table {
-  font-size: 14px;
-}
-
 #benefits-table .table .tb-cell {
   background: #0a0037;
   color: #eef0ef;
@@ -875,25 +880,25 @@ li {
 # Benefits-structure
 --------------------------------------------------------------*/
 
-#benefits-structure .benefits-bar ul li {
+#benefits-structure .benefits-bar li {
   margin: 12px;
   width: 100%;
   height: 48px;
 }
 
-#benefits-structure .benefits-bar ul li button {
+#benefits-structure .benefits-bar li button {
   background: #c3a22c;
   color: #eef0ef;
   font-size: 14px;
   font-weight: 600;
 }
 
-#benefits-structure .benefits-bar ul li button:hover {
+#benefits-structure .benefits-bar li button:hover {
   background: #d4d448;
 }
 
 
-#benefits-structure #benefits ul li {
+#benefits-structure #benefits li {
   font-size: 14px;
   margin: 11px 0;
 }
@@ -911,6 +916,20 @@ li {
   font-size: 20px;
   color: #c3a22c;
   box-shadow: #d4d448;
+}
+
+/*
+ *
+ * register.html
+ *
+ */
+
+/*--------------------------------------------------------------
+# Registration
+--------------------------------------------------------------*/
+
+#registration li {
+  margin: 11px 0;
 }
 
 /*
