@@ -43,52 +43,57 @@
   /**
    * Service Provider Search Form
    */
-  // document.addEventListener("DOMContentLoaded", function () {
-  //   const countySelect = document.getElementById("county");
-  //   const subCountySelect = document.getElementById("sub-county");
-  //   const townSelect = document.getElementById("town");
+  document.addEventListener("DOMContentLoaded", function () {
+    const countySelect = document.getElementById("county");
+    const subCountySelect = document.getElementById("sub-county");
+    const townSelect = document.getElementById("town");
 
-  //   function populateCountyDropdown() {
-  //     fetch(`/api/counties/`)
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         data.forEach(function (county) {
-  //           countySelect.innerHTML += `<option value="${county.name}">${county.name}</option>`;
-  //         });
-  //         countySelect.disabled = false;
-  //       });
-  //   }
+    let counties = {};
+    let subcounties = {};
+    let towns = {};
 
-  //   // Call the function to populate the County dropdown initially
-  //   populateCountyDropdown();
+    function populateCountyDropdown() {
+      return fetch("static/json/counties.json")
+        .then((response) => response.json())
+        .then((jsonData) => {
+          counties = jsonData;
+          Object.keys(counties).forEach(function (county_name) {
+            countySelect.innerHTML += `<option value="${county_name}">${county_name}</option>`;
+          });
+          countySelect.disabled = false;
+        });
+    }
+    // Call the function to populate the County dropdown initially
+    populateCountyDropdown();
 
-  //   countySelect.addEventListener("change", function () {
-  //     const selectedCounty = countySelect.value;
-  //     // Send a GET request to the DRF endpoint for sub-counties
-  //     fetch(`/api/subcounties/?parent_county=${selectedCounty}`)
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         data.forEach(function (subcounty) {
-  //           subCountySelect.innerHTML += `<option value="${subcounty.name}">${subcounty.name}</option>`;
-  //         });
-  //         subCountySelect.disabled = false;
-  //       });
-  //   });
+    countySelect.addEventListener("change", function () {
+      const selectedCounty = countySelect.value;
+      subcounties = counties[selectedCounty];
 
-  //   subCountySelect.addEventListener("change", function () {
-  //     const selectedSubCounty = subCountySelect.value;
-  //     // Send a GET request to the DRF endpoint for towns
-  //     fetch(`/api/towns/?parent_subcounty=${selectedSubCounty}`)
-  //       .then((response) => response.json())
-  //       .then((data) => {
-  //         data.forEach(function (town) {
-  //           townSelect.innerHTML += `<option value="${town.name}">${town.name}</option>`;
-  //         });
-  //         townSelect.disabled = false;
-  //       });
-  //   });
-  // });
+      // Clear the sub-county and town dropdown lists
+      subCountySelect.innerHTML = "<option selected>Select sub-county</option>";
+      townSelect.innerHTML = "<option selected>Select town</option>";
 
+      Object.keys(subcounties).forEach(function (subcounty_name) {
+        subCountySelect.innerHTML += `<option value="${subcounty_name}">${subcounty_name}</option>`;
+      });
+      subCountySelect.disabled = false;
+    });
+  
+    subCountySelect.addEventListener("change", function () {
+      const selectedSubCounty = subCountySelect.value;
+      towns = subcounties[selectedSubCounty];
+
+      // Clear the town dropdown list
+      townSelect.innerHTML = "<option selected>Select town</option>";
+
+      // Iterate over the towns array and add options to the town dropdown list
+      towns.forEach(function (town_name) {
+        townSelect.innerHTML += `<option value="${town_name}">${town_name}</option>`;
+      });
+      townSelect.disabled = false;
+    });
+  });
 
   /**
    * Clients Slider
