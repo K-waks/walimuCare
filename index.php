@@ -16,36 +16,36 @@
         <meta property="og:locale" content="" />
         <title>Walimu Care | Home</title>
         <!-- Favicons & Webmanifest -->
-        <link rel="icon" href="static/img/icon/favicon.png" />
-        <link rel="apple-touch-icon" href="static/img/icon/apple-touch-icon.png" />
-        <link rel="manifest" href="static/manifest.webmanifest" />
+        <link rel="icon" href="/static/img/icon/favicon.png" />
+        <link rel="apple-touch-icon" href="/static/img/icon/apple-touch-icon.png" />
+        <link rel="manifest" href="/static/manifest.webmanifest" />
         <!-- Google Fonts -->
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" />
         <!-- Vendor CSS Files -->
-        <link rel="stylesheet" href="vendor/aos/aos.css" />
-        <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="/static/vendors/aos/aos.css" />
+        <link rel="stylesheet" href="/static/vendors/bootstrap/bootstrap.min.css" />
         <link rel="stylesheet"
-              href="vendor/bootstrap-icons/bootstrap-icons.min.css" />
-        <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css" />
+              href="/static/vendors/bootstrap-icons/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="/static/vendors/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/static/vendors/glightbox/glightbox.min.css" />
         <!-- Main CSS File -->
-        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="/static/css/style.css">
         <!-- Vendor JS Files -->
-        <script src="vendor/aos/aos.js" defer></script>
-        <script src="vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
-        <script src="vendor/swiper/swiper-bundle.min.js" defer></script>
-        <script src="vendor/glightbox/glightbox.min.js" defer></script>
-        <script src="vendor/htmx/htmx.min.js" defer></script>
+        <script src="/static/vendors/aos/aos.js" defer></script>
+        <script src="/static/vendors/bootstrap/bootstrap.bundle.min.js" defer></script>
+        <script src="/static/vendors/swiper/swiper-bundle.min.js" defer></script>
+        <script src="/static/vendors/glightbox/glightbox.min.js" defer></script>
+        <script src="/static/vendors/htmx/htmx.min.js" defer></script>
         <!-- Main JS File -->
-        <script src="static/js/main.js" defer></script>
+        <script src="/static/js/main.js" defer></script>
     </head>
     <body>
         <!-- ======= Header ======= -->
         <header id="header">
             <div class="container-fluid header-nav">
                 <div class="clearfix position-relative h-100">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="static/img/icon/Afya-kwa-walimu.png"
                              width=""
                              height="90%"
@@ -62,7 +62,7 @@
                         <div class="nav d-table text-uppercase">
                             <div class="d-table-row">
                                 <div class="d-table-cell border-end border-secondary nav-item">
-                                    <a class="nav-link active py-0" aria-current="page" href="index.html">Home</a>
+                                    <a class="nav-link active py-0" aria-current="page" href="index.php">Home</a>
                                 </div>
                                 <div class="d-table-cell border-end border-secondary nav-item">
                                     <a class="nav-link py-0" href="about.html">About Afya Kwa Walimu</a>
@@ -105,7 +105,7 @@
                         <div class="modal-body">
                             <ul class="list-unstyled">
                                 <li class="nav-item">
-                                    <a href="index.html" class="nav-link"><i class="bi bi-caret-right-fill"></i> Home</a>
+                                    <a href="index.php" class="nav-link"><i class="bi bi-caret-right-fill"></i> Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="about.html" class="nav-link"><i class="bi bi-caret-right-fill"></i> About Afya Kwa Walimu</a>
@@ -176,7 +176,7 @@
                 <div class="container-fluid section-padding py-0">
                     <div class="row g-4">
                         <div class="col-12 col-lg-5">
-                            <form action="" method="get">
+                            <form id="search-provider-form" action="" method="get">
                                 <h3>Search a provider near you.</h3>
                                 <div class="row row-cols-2 g-4">
                                     <div class="col">
@@ -184,18 +184,18 @@
                                             <label for="county" class="form-label">County</label>
                                         </div>
                                         <div>
-                                            <select id="county" name="county" class="form-select" disabled>
-                                                <option selected>Select county</option>
+                                            <select id="county" name="county" class="form-select" disabled required>
+                                                <option>Select county</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div>
-                                            <label for="sub-county" class="form-label">Sub-county</label>
+                                            <label for="subcounty" class="form-label">Sub-county</label>
                                         </div>
                                         <div>
-                                            <select id="sub-county" name="sub-county" class="form-select" disabled>
-                                                <option selected>Select sub-county</option>
+                                            <select id="subcounty" name="subcounty" class="form-select" disabled required>
+                                                <option>Select sub-county</option>
                                             </select>
                                         </div>
                                     </div>
@@ -204,8 +204,8 @@
                                             <label for="town" class="form-label">Town</label>
                                         </div>
                                         <div>
-                                            <select id="town" name="town" class="form-select" disabled>
-                                                <option selected>Select town</option>
+                                            <select id="town" name="town" class="form-select" disabled required>
+                                                <option>Select town</option>
                                             </select>
                                         </div>
                                     </div>
@@ -214,21 +214,21 @@
                                             <label for="service" class="form-label">Services</label>
                                         </div>
                                         <div>
-                                            <select id="service" name="service" class="form-select">
-                                                <option selected>Select service</option>
-                                                <option value="maternity">Maternity</option>
-                                                <option value="optical">Optical</option>
-                                                <option value="dental">Dental</option>
-                                                <option value="evacuation">Local Road and Air Evacuation</option>
-                                                <option value="international-treatment">International Treatment</option>
-                                                <option value="psychiatric-counsellings">Psychiatric and Counsellings</option>
-                                                <option value="last-respects">Funeral and last Respects</option>
+                                            <select id="service" name="service" class="form-select" required>
+                                                <option>Select service</option>
+                                                <option value="Maternity">Maternity</option>
+                                                <option value="Optical">Optical</option>
+                                                <option value="Dental">Dental</option>
+                                                <option value="Local Road and Air Evacuation">Local Road and Air Evacuation</option>
+                                                <option value="International Treatment">International Treatment</option>
+                                                <option value="Psychiatric and Counsellings">Psychiatric and Counsellings</option>
+                                                <option value="Funeral and last Respects">Funeral and last Respects</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="search-provider-btn">
-                                    <a href="#providers-table" class="btn rounded-0 glightbox">Search <i class="bi bi-caret-right-fill"></i></a>
+                                    <button type="submit" class="btn btn-primary rounded-0 disabled">Search <i class="bi bi-caret-right-fill"></i></button>
                                 </div>
                             </form>
                         </div>
@@ -311,29 +311,71 @@
                             </div>
                         </div>
                     </div>
-                    <div id="providers-table" class="d-none">
-                        <div class="table-responsive">
-                            <table class="table table-dark table-hover w-100">
-                                <thead>
-                                    <tr>
-                                        <th>County</th>
-                                        <th>Sub County</th>
-                                        <th>Town</th>
-                                        <th>Service</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>Mombasa</td>
-                                        <td>Nyali</td>
-                                        <td>Frere Town</td>
-                                        <td>Maternity, Optical, Dental</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
                 </div>
+            </section>
+              <!-- ======= Service Providers Table ======= -->
+            <section id="providers-table" class="d-none">
+                <a href="#providers-table" class="glightbox d-none"></a>
+                <?php
+                    // Set up database connection
+                    $user = "postgres";
+                    $password = "postgres";
+                    $database = "walimucare";
+                    $table = "serviceprovider";
+            
+                    try {
+                        // $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+                        $conn = new PDO("pgsql:host=localhost;dbname=$database", $user, $password);
+            
+                        // Retrieve search query from GET request
+                        $county = $_GET['county'];
+                        $subcounty = $_GET['subcounty'];
+                        $town = $_GET['town'];
+                        $service = $_GET['service'];
+            
+                        // Prepare SQL statement
+                        $sql = "SELECT * FROM $table WHERE county LIKE :county AND subcounty LIKE :subcounty AND town LIKE :town AND services LIKE :service";
+            
+                        $stmt = $conn->prepare($sql);
+                        $stmt->bindParam(':county', $county);
+                        $stmt->bindParam(':subcounty', $subcounty);
+                        $stmt->bindParam(':town', $town);
+                        $stmt->bindParam(':service', $service);
+                        $stmt->execute();
+            
+                        // Fetch results
+                        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            
+                        // Output results
+                        echo "<div class=\"table-responsive\">";
+                        echo "<table class=\"table table-dark table-hover w-100\">";
+                        echo "<thead>";
+                        echo "<tr>";
+                        echo "<th>County</th>";
+                        echo "<th>Sub County</th>";
+                        echo "<th>Town</th>";
+                        echo "<th>Service</th>";
+                        echo "</tr>";
+                        echo "</thead>";
+                        echo "<tbody>";
+                        foreach ($results as $row) {
+                            echo "<tr>";
+                            echo "<td>" . $row['county'] . "</td>";
+                            echo "<td>" . $row['subcounty'] . "</td>";
+                            echo "<td>" . $row['town'] . "</td>";
+                            echo "<td>" . $row['services'] . "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</tbody>";
+                        echo "</table>";
+                        echo "</div>";
+            
+                    } 
+                    catch (PDOException $e) {
+                        echo 'Connection failed: ' . $e->getMessage();
+                        die();
+                    }
+                ?>
             </section>
             <!-- ======= Clients Section ======= -->
             <section id="clients">
@@ -611,6 +653,8 @@
                 </div>
             </div>
         </section>
+        <!-- ======= Preloader ======= -->
+        <div id="preloader"></div>   
         <!-- ======= Back To Top Arrow ======= -->
         <a href="#"
            class="back-to-top d-flex align-items-center justify-content-center">

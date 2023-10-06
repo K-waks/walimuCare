@@ -1,33 +1,22 @@
 (function () {
   "use strict";
 
-  /**
-   * Initialize GLightbox
-   */
-  const glightbox = GLightbox({
-    selector: ".glightbox",
-    width: "85vw",
-    height: "90vh",
-  });
 
   /**
-   * Tranluscent header on scroll
+   * Preloader
    */
-  let header = document.querySelector("#header .header-nav");
-  let offset = header.offsetTop;
-  const toggleTranslucentHeader = () => {
-    if (window.scrollY > offset) {
-      header.classList.add("header-onscroll");
-    } else {
-      header.classList.remove("header-onscroll");
-    };
+  let preloader = document.getElementById('preloader');
+  if (preloader) {
+    window.addEventListener('load', () => {
+      preloader.remove()
+    });
   }
-  window.addEventListener("scroll", toggleTranslucentHeader);
+
 
   /**
    * Back to top button
    */
-  let backtotop = document.querySelector(".back-to-top");
+  const backtotop = document.querySelector(".back-to-top");
   if (backtotop) {
     const toggleBacktotop = () => {
       if (window.scrollY > 100) {
@@ -40,28 +29,67 @@
     window.addEventListener("scroll", toggleBacktotop);
   }
 
+
+  /**
+   * Animation on scroll
+   */
+  window.addEventListener("load", () => {
+    AOS.init({
+      duration: 1000,
+      easing: "ease-in-out",
+      once: true,
+      mirror: false,
+    });
+  });
+
+
+  /**
+   * Scroll making header translucent
+   */
+  const header = document.querySelector("#header .header-nav");
+  const offset = header.offsetTop;
+  const toggleTranslucentHeader = () => {
+    if (window.scrollY > offset) {
+      header.classList.add("header-onscroll");
+    } else {
+      header.classList.remove("header-onscroll");
+    };
+  }
+  window.addEventListener("scroll", toggleTranslucentHeader);
+
+
+  /**
+   * Initialize GLightbox
+   */
+  const glightbox = GLightbox({
+    selector: ".glightbox",
+    width: "85vw",
+    height: "90vh",
+  });
+
+
   /**
    * Service Provider Search Form
    */
   document.addEventListener("DOMContentLoaded", function () {
     const countySelect = document.getElementById("county");
-    const subCountySelect = document.getElementById("sub-county");
+    const subCountySelect = document.getElementById("subcounty");
     const townSelect = document.getElementById("town");
+    const serviceSelect = document.getElementById("service");
+    const searchButton = document.querySelector("#services form button");
 
     let counties = {};
     let subcounties = {};
     let towns = {};
 
-    function populateCountyDropdown() {
-      return fetch("static/json/counties.json")
-        .then((response) => response.json())
-        .then((jsonData) => {
-          counties = jsonData;
-          Object.keys(counties).forEach(function (county_name) {
-            countySelect.innerHTML += `<option value="${county_name}">${county_name}</option>`;
-          });
-          countySelect.disabled = false;
-        });
+    async function populateCountyDropdown() {
+      const response = await fetch("static/json/counties.json");
+      const jsonData = await response.json();
+      counties = jsonData;
+      Object.keys(counties).forEach(function (county_name) {
+        countySelect.innerHTML += `<option value="${county_name}">${county_name}</option>`;
+      });
+      countySelect.disabled = false;
     }
     // Call the function to populate the County dropdown initially
     populateCountyDropdown();
@@ -79,7 +107,7 @@
       });
       subCountySelect.disabled = false;
     });
-  
+
     subCountySelect.addEventListener("change", function () {
       const selectedSubCounty = subCountySelect.value;
       towns = subcounties[selectedSubCounty];
@@ -93,7 +121,30 @@
       });
       townSelect.disabled = false;
     });
+
+    // Enable Search button
+    function enableSearchButton() {
+      searchButton.classList.remove('disabled');
+    }
+
+    serviceSelect.addEventListener("change", function () {
+      if (townSelect.value && serviceSelect.value) {
+        enableSearchButton();
+      }
+    });
   });
+
+
+  /**
+  * Providers Table
+  */
+  const button = document.querySelector('#providers-table .glightbox');
+  const searchProvidersFormParams = new URLSearchParams(window.location.search);
+  if (searchProvidersFormParams.get('county') && searchProvidersFormParams.get('subcounty') && searchProvidersFormParams.get('town') && searchProvidersFormParams.get('service')) {
+    button.click();
+    // history.replaceState(null, null, window.location.pathname);
+  };
+
 
   /**
    * Clients Slider
@@ -131,14 +182,15 @@
     },
   });
 
+
   /**
    * Benefits Structure
    */
-  const urlParams = new URLSearchParams(window.location.search);
-  if (urlParams.has("benefits")) {
+  const benefitsParams = new URLSearchParams(window.location.search);
+  if (benefitsParams.has("benefits")) {
     const benefitsContainer = document.querySelector("#benefits");
-    const benefits = urlParams.get("benefits");
-    const category = urlParams.get("category");
+    const benefits = benefitsParams.get("benefits");
+    const category = benefitsParams.get("category");
     if (benefits !== null) {
       // NOTE: use the path that starts from the root directory and not like this - ../templates
       fetch(`static/templates/${benefits}.html`)
@@ -170,15 +222,4 @@
     }
   }
 
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener("load", () => {
-    AOS.init({
-      duration: 1000,
-      easing: "ease-in-out",
-      once: true,
-      mirror: false,
-    });
-  });
 })();

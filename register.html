@@ -14,38 +14,38 @@
         <meta property="og:type" content="" />
         <meta property="og:image" content="" />
         <meta property="og:locale" content="" />
-        <title>Walimu Care | Registration</title>
+        <title>Walimu Care | Home</title>
         <!-- Favicons & Webmanifest -->
-        <link rel="icon" href="static/img/icon/favicon.png" />
-        <link rel="apple-touch-icon" href="static/img/icon/apple-touch-icon.png" />
-        <link rel="manifest" href="static/manifest.webmanifest" />
+        <link rel="icon" href="/static/img/icon/favicon.png" />
+        <link rel="apple-touch-icon" href="/static/img/icon/apple-touch-icon.png" />
+        <link rel="manifest" href="/static/manifest.webmanifest" />
         <!-- Google Fonts -->
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" />
         <!-- Vendor CSS Files -->
-        <link rel="stylesheet" href="vendor/aos/aos.css" />
-        <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="/static/vendors/aos/aos.css" />
+        <link rel="stylesheet" href="/static/vendors/bootstrap/bootstrap.min.css" />
         <link rel="stylesheet"
-              href="vendor/bootstrap-icons/bootstrap-icons.min.css" />
-        <link rel="stylesheet" href="vendor/swiper/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="vendor/glightbox/glightbox.min.css" />
+              href="/static/vendors/bootstrap-icons/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="/static/vendors/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/static/vendors/glightbox/glightbox.min.css" />
         <!-- Main CSS File -->
-        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="/static/css/style.css">
         <!-- Vendor JS Files -->
-        <script src="vendor/aos/aos.js" defer></script>
-        <script src="vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
-        <script src="vendor/swiper/swiper-bundle.min.js" defer></script>
-        <script src="vendor/glightbox/glightbox.min.js" defer></script>
-        <script src="vendor/htmx/htmx.min.js" defer></script>
+        <script src="/static/vendors/aos/aos.js" defer></script>
+        <script src="/static/vendors/bootstrap/bootstrap.bundle.min.js" defer></script>
+        <script src="/static/vendors/swiper/swiper-bundle.min.js" defer></script>
+        <script src="/static/vendors/glightbox/glightbox.min.js" defer></script>
+        <script src="/static/vendors/htmx/htmx.min.js" defer></script>
         <!-- Main JS File -->
-        <script src="static/js/main.js" defer></script>
+        <script src="/static/js/main.js" defer></script>
     </head>
     <body>
         <!-- ======= Header ======= -->
         <header id="header">
             <div class="container-fluid header-nav">
                 <div class="clearfix position-relative h-100">
-                    <a href="index.html">
+                    <a href="index.php">
                         <img src="static/img/icon/Afya-kwa-walimu.png"
                              width=""
                              height="90%"
@@ -62,7 +62,7 @@
                         <div class="nav d-table text-uppercase">
                             <div class="d-table-row">
                                 <div class="d-table-cell border-end border-secondary nav-item">
-                                    <a class="nav-link active py-0" aria-current="page" href="index.html">Home</a>
+                                    <a class="nav-link active py-0" aria-current="page" href="index.php">Home</a>
                                 </div>
                                 <div class="d-table-cell border-end border-secondary nav-item">
                                     <a class="nav-link py-0" href="about.html">About Afya Kwa Walimu</a>
@@ -105,7 +105,7 @@
                         <div class="modal-body">
                             <ul class="list-unstyled">
                                 <li class="nav-item">
-                                    <a href="index.html" class="nav-link"><i class="bi bi-caret-right-fill"></i> Home</a>
+                                    <a href="index.php" class="nav-link"><i class="bi bi-caret-right-fill"></i> Home</a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="about.html" class="nav-link"><i class="bi bi-caret-right-fill"></i> About Afya Kwa Walimu</a>
@@ -128,7 +128,7 @@
                 <div class="container-fluid breadcrumbs-padding">
                     <ol>
                         <li>
-                            <a href="index.html">Home</a>
+                            <a href="index.php">Home</a>
                         </li>
                         <li>Registration</li>
                     </ol>
@@ -469,6 +469,8 @@
                 </div>
             </div>
         </section>
+        <!-- ======= Preloader ======= -->
+        <div id="preloader"></div>
         <!-- ======= Back To Top Arrow ======= -->
         <a href="#"
            class="back-to-top d-flex align-items-center justify-content-center">
