@@ -15,30 +15,36 @@
         <meta property="og:image" content="" />
         <meta property="og:locale" content="" />
         <title>Walimu Care | Home</title>
+
         <!-- Favicons & Webmanifest -->
-        <link rel="icon" href="/static/img/icon/favicon.png" />
-        <link rel="apple-touch-icon" href="/static/img/icon/apple-touch-icon.png" />
-        <link rel="manifest" href="/static/manifest.webmanifest" />
+        <link rel="icon" href="static/img/icon/favicon.png" />
+        <link rel="apple-touch-icon" href="static/img/icon/apple-touch-icon.png" />
+        <link rel="manifest" href="static/manifest.webmanifest" />
+
         <!-- Google Fonts -->
         <link rel="stylesheet"
               href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" />
+
         <!-- Vendor CSS Files -->
-        <link rel="stylesheet" href="/static/vendors/aos/aos.css" />
-        <link rel="stylesheet" href="/static/vendors/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="static/vendor/aos/aos.css" />
+        <link rel="stylesheet" href="static/vendor/bootstrap/bootstrap.min.css" />
         <link rel="stylesheet"
-              href="/static/vendors/bootstrap-icons/bootstrap-icons.min.css" />
-        <link rel="stylesheet" href="/static/vendors/swiper/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="/static/vendors/glightbox/glightbox.min.css" />
+              href="static/vendor/bootstrap-icons/bootstrap-icons.min.css" />
+        <link rel="stylesheet" href="static/vendor/swiper/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="static/vendor/glightbox/glightbox.min.css" />
+
         <!-- Main CSS File -->
-        <link rel="stylesheet" href="/static/css/style.css">
+        <link rel="stylesheet" href="static/css/style.css">
+
         <!-- Vendor JS Files -->
-        <script src="/static/vendors/aos/aos.js" defer></script>
-        <script src="/static/vendors/bootstrap/bootstrap.bundle.min.js" defer></script>
-        <script src="/static/vendors/swiper/swiper-bundle.min.js" defer></script>
-        <script src="/static/vendors/glightbox/glightbox.min.js" defer></script>
-        <script src="/static/vendors/htmx/htmx.min.js" defer></script>
+        <script src="static/vendor/aos/aos.js" defer></script>
+        <script src="static/vendor/bootstrap/bootstrap.bundle.min.js" defer></script>
+        <script src="static/vendor/swiper/swiper-bundle.min.js" defer></script>
+        <script src="static/vendor/glightbox/glightbox.min.js" defer></script>
+        <script src="static/vendor/htmx/htmx.min.js" defer></script>
+
         <!-- Main JS File -->
-        <script src="/static/js/main.js" defer></script>
+        <script src="static/js/script.js" defer></script>
     </head>
     <body>
         <!-- ======= Header ======= -->
@@ -181,54 +187,52 @@
                                 <div class="row row-cols-2 g-4">
                                     <div class="col">
                                         <div>
-                                            <label for="county" class="form-label">County</label>
+                                            <label for="County" class="form-label">County</label>
                                         </div>
                                         <div>
-                                            <select id="county" name="county" class="form-select" disabled required>
-                                                <option>Select county</option>
+                                            <select id="County" name="County" class="form-select">
+                                                <option value="" selected>Select county</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div>
-                                            <label for="subcounty" class="form-label">Sub-county</label>
+                                            <label for="Town" class="form-label">Town</label>
                                         </div>
                                         <div>
-                                            <select id="subcounty" name="subcounty" class="form-select" disabled required>
-                                                <option>Select sub-county</option>
+                                            <select id="Town" name="Town" class="form-select">
+                                                <option value="" selected>Select town</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div>
-                                            <label for="town" class="form-label">Town</label>
+                                            <label for="SubCounty" class="form-label">Sub-county</label>
                                         </div>
                                         <div>
-                                            <select id="town" name="town" class="form-select" disabled required>
-                                                <option>Select town</option>
+                                            <select id="SubCounty" name="SubCounty" class="form-select">
+                                                <option value="" selected>Select sub-county</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div>
-                                            <label for="service" class="form-label">Services</label>
+                                            <label for="Service" class="form-label">Services</label>
                                         </div>
                                         <div>
-                                            <select id="service" name="service" class="form-select" required>
-                                                <option>Select service</option>
-                                                <option value="Maternity">Maternity</option>
+                                            <select id="Service" name="Service" class="form-select">
+                                                <option value="" selected>Select service</option>
+                                                <option value="Inpatient">Inpatient</option>
+                                                <option value="Outpatient">Outpatient</option>
                                                 <option value="Optical">Optical</option>
                                                 <option value="Dental">Dental</option>
-                                                <option value="Local Road and Air Evacuation">Local Road and Air Evacuation</option>
-                                                <option value="International Treatment">International Treatment</option>
-                                                <option value="Psychiatric and Counsellings">Psychiatric and Counsellings</option>
-                                                <option value="Funeral and last Respects">Funeral and last Respects</option>
+                                                <option value="Maternity">Maternity</option>
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="search-provider-btn">
-                                    <button type="submit" class="btn btn-primary rounded-0 disabled">Search <i class="bi bi-caret-right-fill"></i></button>
+                                    <button type="submit" class="btn btn-primary rounded-0">Search <i class="bi bi-caret-right-fill"></i></button>
                                 </div>
                             </form>
                         </div>
@@ -313,70 +317,6 @@
                     </div>
                 </div>
             </section>
-              <!-- ======= Service Providers Table ======= -->
-            <section id="providers-table" class="d-none">
-                <a href="#providers-table" class="glightbox d-none"></a>
-                <?php
-                    // Set up database connection
-                    $user = "postgres";
-                    $password = "postgres";
-                    $database = "walimucare";
-                    $table = "serviceprovider";
-            
-                    try {
-                        // $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-                        $conn = new PDO("pgsql:host=localhost;dbname=$database", $user, $password);
-            
-                        // Retrieve search query from GET request
-                        $county = $_GET['county'];
-                        $subcounty = $_GET['subcounty'];
-                        $town = $_GET['town'];
-                        $service = $_GET['service'];
-            
-                        // Prepare SQL statement
-                        $sql = "SELECT * FROM $table WHERE county LIKE :county AND subcounty LIKE :subcounty AND town LIKE :town AND services LIKE :service";
-            
-                        $stmt = $conn->prepare($sql);
-                        $stmt->bindParam(':county', $county);
-                        $stmt->bindParam(':subcounty', $subcounty);
-                        $stmt->bindParam(':town', $town);
-                        $stmt->bindParam(':service', $service);
-                        $stmt->execute();
-            
-                        // Fetch results
-                        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-            
-                        // Output results
-                        echo "<div class=\"table-responsive\">";
-                        echo "<table class=\"table table-dark table-hover w-100\">";
-                        echo "<thead>";
-                        echo "<tr>";
-                        echo "<th>County</th>";
-                        echo "<th>Sub County</th>";
-                        echo "<th>Town</th>";
-                        echo "<th>Service</th>";
-                        echo "</tr>";
-                        echo "</thead>";
-                        echo "<tbody>";
-                        foreach ($results as $row) {
-                            echo "<tr>";
-                            echo "<td>" . $row['county'] . "</td>";
-                            echo "<td>" . $row['subcounty'] . "</td>";
-                            echo "<td>" . $row['town'] . "</td>";
-                            echo "<td>" . $row['services'] . "</td>";
-                            echo "</tr>";
-                        }
-                        echo "</tbody>";
-                        echo "</table>";
-                        echo "</div>";
-            
-                    } 
-                    catch (PDOException $e) {
-                        echo 'Connection failed: ' . $e->getMessage();
-                        die();
-                    }
-                ?>
-            </section>
             <!-- ======= Clients Section ======= -->
             <section id="clients">
                 <div class="container-fluid section-padding">
@@ -452,7 +392,7 @@
                             <div class="d-grid gap-4">
                                 <div>
                                     <img class="img-fluid"
-                                         src="static/img/benefit/card_1.png"
+                                         src="static/img/benefit_card_1.png"
                                          width=""
                                          height=""
                                          alt="">
@@ -469,7 +409,7 @@
                             <div class="d-grid gap-4">
                                 <div>
                                     <img class="img-fluid"
-                                         src="static/img/benefit/card_2.png"
+                                         src="static/img/benefit_card_2.png"
                                          width=""
                                          height=""
                                          alt="">
@@ -486,7 +426,7 @@
                             <div class="d-grid gap-4">
                                 <div>
                                     <img class="img-fluid"
-                                         src="static/img/benefit/card_3.png"
+                                         src="static/img/benefit_card_3.png"
                                          width=""
                                          height=""
                                          alt="">
@@ -503,7 +443,7 @@
                             <div class="d-grid gap-4">
                                 <div>
                                     <img class="img-fluid"
-                                         src="static/img/benefit/card_4.png"
+                                         src="static/img/benefit_card_4.png"
                                          width=""
                                          height=""
                                          alt="">
@@ -652,6 +592,157 @@
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- ======= Service Providers Table ======= -->
+        <section id="providers-table" class="d-none">
+            <a href="#providers-table" class="glightbox d-none"></a>
+            <?php
+                // Set up database connection
+                $user = "mariadb";
+                $password = "mariadb";
+                $database = "minetkedb";
+        
+                try {
+                    $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+        
+                    // Retrieve search query from form submit GET request
+                    $county = $_GET['County'];
+                    $subcounty = $_GET['SubCounty'];
+                    $town = $_GET['Town'];
+                    $service = $_GET['Service'];
+
+                    // if only Service is selected
+                    if ($county == "" && $subcounty == "" && $town == "" && $service != "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE Services LIKE :Services AND Active != 'NO'";
+                    }
+                    // else if only Town is selected
+                    else if ($county == "" && $subcounty == "" && $town != "" && $service == "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE Town LIKE :Town AND Active != 'NO'";
+                    }
+                    // else if only SubCounty is selected
+                    else if ($county == "" && $subcounty != "" && $town == "" && $service == "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE SubCounty LIKE :SubCounty AND Active != 'NO'";
+                    }
+                    // else if only County is selected
+                    else if ($county != "" && $subcounty == "" && $town == "" && $service == "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND Active != 'NO'";
+                    }
+                    // else if only Town and Service are selected
+                    else if ($county == "" && $subcounty == "" && $town != "" && $service != "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE Town LIKE :Town AND Services LIKE :Services AND Active != 'NO'";
+                    }
+                    // else if only SubCounty and Service are selected
+                    else if ($county == "" && $subcounty != "" && $town == "" && $service != "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE SubCounty LIKE :SubCounty AND Services LIKE :Services AND Active != 'NO'";
+                    }
+                    // else if only County and Service are selected
+                    else if ($county != "" && $subcounty == "" && $town == "" && $service != "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND Services LIKE :Services AND Active != 'NO'";
+                    }
+                    // else if only SubCounty and Town are selected
+                    else if ($county == "" && $subcounty != "" && $town != "" && $service == "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE SubCounty LIKE :SubCounty AND Town LIKE :Town AND Active != 'NO'";
+                    }
+                    // else if only County and Town are selected
+                    else if ($county != "" && $subcounty == "" && $town != "" && $service == "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND Town LIKE :Town AND Active != 'NO'";
+                    }
+                    // else if only County and SubCounty are selected
+                    else if ($county != "" && $subcounty != "" && $town == "" && $service == "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND SubCounty LIKE :SubCounty AND Active != 'NO'";
+                    }
+                    // else if only SubCounty, Town and Service are selected
+                    else if ($county == "" && $subcounty != "" && $town != "" && $service != "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE SubCounty LIKE :SubCounty AND Town LIKE :Town AND Services LIKE :Services AND Active != 'NO'";
+                    }
+                    // else if only County, Town and Service are selected
+                    else if ($county != "" && $subcounty == "" && $town != "" && $service != "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND Town LIKE :Town AND Services LIKE :Services AND Active != 'NO'";
+                    }
+                    // else if only County, SubCounty and Service are selected
+                    else if ($county != "" && $subcounty != "" && $town == "" && $service != "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND SubCounty LIKE :SubCounty AND Services LIKE :Services AND Active != 'NO'";
+                    }
+                    // else if only County, SubCounty and Town are selected
+                    else if ($county != "" && $subcounty != "" && $town != "" && $service == "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND SubCounty LIKE :SubCounty AND Town LIKE :Town AND Active != 'NO'";
+                    }
+                    // if County, Sub County, Town and Service are all selected
+                    else if ($county != "" && $subcounty != "" && $town != "" && $service != "") {
+                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND SubCounty LIKE :SubCounty AND Town LIKE :Town AND Services LIKE :Services AND Active != 'NO'";
+                    }
+                    // else if all are None return all service providers
+                    else {
+                        $sql = "SELECT * FROM serviceprovider WHERE Active != 'NO'";
+                    }
+
+                    // Prepare statement
+                    $stmt = $conn->prepare($sql);
+
+                    echo "<h2>Service Providers</h2>";
+                    echo "<h3>Showing results for:</h3>";
+                    echo "<ul>";
+
+                    // Bind parameters
+                    if ($county != "") {
+                        $stmt->bindParam(":County", $county);
+                        echo "<li class='text-capitalize'>" . $county . " County</li>";
+                    }
+                    if ($subcounty != "") {
+                        $stmt->bindParam(":SubCounty", $subcounty);
+                        echo " <li class='text-capitalize'>" . $subcounty . " Sub-County</li>";
+                    }
+                    if ($town != "") {
+                        $stmt->bindParam(":Town", $town);
+                        echo "<li class='text-capitalize'>" . $town . " Town</li>";
+                    }
+                    if ($service != "") {
+                        $stmt->bindParam(":Services", $service);
+                        echo "<li class='text-capitalize'>" . $service . " Service</li>";
+                    }
+                    if ($county == "" && $subcounty == "" && $town == "" && $service == "") {
+                        echo "<li class='text-capitalize'>All service locations</li>";
+                    }
+                    echo "</ul>";
+
+                    // Execute statement
+                    $stmt->execute();
+        
+                    // Fetch results
+                    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                    if (count($results) == 0) {
+                        echo "<h3>No results found.</h3>";
+                    }
+                    else {
+                        // Output table
+                        echo "<div class='table-responsive'>";
+                        echo "<table class='table table-dark table-bordered table-striped table-hover w-100'>";
+                        echo "<thead>";
+                        echo "<tr>";
+                        echo "<th>Type</th>";
+                        echo "<th>Access</th>";
+                        echo "<th>Facility Name</th>";
+                        echo "</tr>";
+                        echo "</thead>";
+                        echo "<tbody>";
+                        foreach ($results as $row) {
+                            echo "<tr>";
+                            echo "<td>" . $row['Type'] . "</td>";
+                            echo "<td>" . $row['Access'] . "</td>";
+                            echo "<td>" . $row['FacilityName'] . "</td>";
+                            echo "</tr>";
+                        }
+                        echo "</tbody>";
+                        echo "</table>";
+                        echo "</div>";
+                    }
+                } 
+                catch (PDOException $e) {
+                    echo 'Connection failed: ' . $e->getMessage();
+                    die();
+                }
+            ?>
         </section>
         <!-- ======= Preloader ======= -->
         <div id="preloader"></div>   

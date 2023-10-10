@@ -61,35 +61,35 @@
 /*--------------------------------------------------------------
   # Back to top button
   --------------------------------------------------------------*/
-  .back-to-top {
-    position: fixed;
-    visibility: hidden;
-    opacity: 0;
-    right: 15px;
-    bottom: 15px;
-    z-index: 10;
-    background: #c3a22c;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    transition: all 0.4s;
-  }
-  
-  .back-to-top i {
-    font-size: 28px;
-    color: #eef0ef;
-    line-height: 0;
-  }
-  
-  .back-to-top:hover {
-    background: #0a0037;
-    color: #eef0ef;
-  }
-  
-  .back-to-top.active {
-    visibility: visible;
-    opacity: 1;
-  }
+.back-to-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 10;
+  background: #c3a22c;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.back-to-top i {
+  font-size: 28px;
+  color: #eef0ef;
+  line-height: 0;
+}
+
+.back-to-top:hover {
+  background: #0a0037;
+  color: #eef0ef;
+}
+
+.back-to-top.active {
+  visibility: visible;
+  opacity: 1;
+}
 
 /*--------------------------------------------------------------
   # General
@@ -157,13 +157,24 @@ table {
   font-size: 14px;
 }
 
+.table .tb-cell {
+  background: #0a0037;
+  color: #eef0ef;
+}
+
+.table td,
+.table th {
+  text-align: center;
+  vertical-align: middle;
+}
+
 .section-bg {
   background-color: #0a0037;
   color: #eef0ef;
 }
 
 .section-bg-img {
-  background: url("../img/breadcrumbs.jpg") no-repeat center / cover;
+  background: url("../img/section-bg.jpg") no-repeat center / cover;
   background-attachment: fixed;
 }
 
@@ -196,7 +207,7 @@ table {
   --------------------------------------------------------------*/
 
 /* Style the header */
-#header .header-nav{
+#header .header-nav {
   height: 87px;
   position: fixed;
   top: 0;
@@ -205,8 +216,9 @@ table {
 
 /* The translucent class is added to the header with JS when it reaches its scroll position */
 .header-onscroll {
-  background-color: rgba(255,255,255, 0.9);
-  border-bottom: 1px solid #e0dbdc; /* 2px width, solid style, and #756e6e color */
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #e0dbdc;
+  /* 2px width, solid style, and #756e6e color */
 }
 
 #header .desktop-nav,
@@ -450,39 +462,40 @@ table {
   # Breadcrumbs
   --------------------------------------------------------------*/
 
-  #breadcrumbs {
-    margin-top: 87px; /* size of #header .header-nav */
-    background: url("../img/breadcrumbs.jpg") no-repeat center / cover;
-  }
-  
-  #breadcrumbs ol {
-    display: flex;
-    flex-wrap: wrap;
-    list-style: none;
-    padding: 0 0 10px 0;
-    margin: 0;
-    color: #c3a22c;
-    font-size: 14px;
-  }
-  
-  #breadcrumbs ol a {
-    color: #c3a22c;
-  }
-  
-  #breadcrumbs ol a:hover {
-    color: #d4d448;
-  }
-  
-  #breadcrumbs ol li+li {
-    padding-left: 10px;
-  }
-  
-  #breadcrumbs ol li+li::before {
-    display: inline-block;
-    padding-right: 10px;
-    color: #635551;
-    content: "/";
-  }
+#breadcrumbs {
+  margin-top: 87px;
+  /* size of #header .header-nav */
+  background: url("../img/breadcrumbs-bg.jpg") no-repeat center / cover;
+}
+
+#breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0 0 10px 0;
+  margin: 0;
+  color: #c3a22c;
+  font-size: 14px;
+}
+
+#breadcrumbs ol a {
+  color: #c3a22c;
+}
+
+#breadcrumbs ol a:hover {
+  color: #d4d448;
+}
+
+#breadcrumbs ol li+li {
+  padding-left: 10px;
+}
+
+#breadcrumbs ol li+li::before {
+  display: inline-block;
+  padding-right: 10px;
+  color: #635551;
+  content: "/";
+}
 
 /*
  *
@@ -495,7 +508,8 @@ table {
 --------------------------------------------------------------*/
 
 #hero {
-  margin-top: 87px; /* size of #header .header-nav */
+  margin-top: 87px;
+  /* size of #header .header-nav */
   position: relative;
 }
 
@@ -559,13 +573,25 @@ table {
 }
 
 #hero #herocarousel .carousel-item.slide-1 {
-  background: url("../img/hero/slide_1.png") center center;
+  background: url("../img/hero_slide_1.png") center center;
   background-size: cover;
 }
 
 #hero #herocarousel .carousel-item.slide-2 {
-  background: url("../img/hero/slide_2.png") center center;
+  background: url("../img/hero_slide_2.png") center center;
   background-size: cover;
+}
+
+@media (max-width: 768px) {
+  #hero #herocarousel .carousel-item.slide-1 {
+    background: url("../img/hero_slide_1_sm.png") center center;
+    background-size: cover;
+  }
+
+  #hero #herocarousel .carousel-item.slide-2 {
+    background: url("../img/hero_slide_2_sm.png") center center;
+    background-size: cover;
+  }
 }
 
 #hero #herocarousel .carousel-item:before {
@@ -626,18 +652,6 @@ table {
   #hero .hero-caption {
     font-size: 18px;
     left: 40px;
-  }
-}
-
-@media (max-width: 768px) {
-  #hero #herocarousel .carousel-item.slide-1 {
-    background: url("../img/hero/slide_1_sm.png") center center;
-    background-size: cover;
-  }
-
-  #hero #herocarousel .carousel-item.slide-2 {
-    background: url("../img/hero/slide_2_sm.png") center center;
-    background-size: cover;
   }
 }
 
@@ -922,27 +936,13 @@ table {
  */
 
 /*--------------------------------------------------------------
-# Benefits-table
---------------------------------------------------------------*/
-
-#benefits-table .table .tb-cell {
-  background: #0a0037;
-  color: #eef0ef;
-}
-
-#benefits-table .table td,
-#benefits-table .table th {
-  text-align: center;
-  vertical-align: middle;
-}
-
-/*--------------------------------------------------------------
 # Benefits-structure
 --------------------------------------------------------------*/
 
 #benefits-structure .benefits-bar {
   position: sticky;
-  top: 87px; /* size of #header .header-nav */
+  top: 87px;
+  /* size of #header .header-nav */
 }
 
 #benefits-structure .benefits-bar li {
