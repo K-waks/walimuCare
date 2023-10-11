@@ -723,6 +723,9 @@
                         echo "<th>Type</th>";
                         echo "<th>Access</th>";
                         echo "<th>Facility Name</th>";
+                        echo "<th>County</th>";
+                        echo "<th>SubCounty</th>";
+                        echo "<th>Town</th>";
                         echo "</tr>";
                         echo "</thead>";
                         echo "<tbody>";
@@ -731,6 +734,9 @@
                             echo "<td>" . $row['Type'] . "</td>";
                             echo "<td>" . $row['Access'] . "</td>";
                             echo "<td>" . $row['FacilityName'] . "</td>";
+                            echo "<td>" . $row['County'] . "</td>";
+                            echo "<td>" . $row['SubCounty'] . "</td>";
+                            echo "<td>" . $row['Town'] . "</td>";
                             echo "</tr>";
                         }
                         echo "</tbody>";
