@@ -597,156 +597,158 @@
         <section id="providers-table" class="d-none">
             <a href="#providers-table" class="glightbox d-none"></a>
             <?php
-                // Set up database connection
-                $user = "mariadb";
-                $password = "mariadb";
-                $database = "minetkedb";
-        
-                try {
-                    $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
-        
-                    // Retrieve search query from form submit GET request
-                    $county = $_GET['County'];
-                    $subcounty = $_GET['SubCounty'];
-                    $town = $_GET['Town'];
-                    $service = $_GET['Service'];
+                if (!empty($_GET)) {
+                    // Set up database connection
+                    $user = "mariadb";
+                    $password = "mariadb";
+                    $database = "minetkedb";
+            
+                    try {
+                        $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
+            
+                        // Retrieve search query from form submit GET request
+                        $county = $_GET['County'];
+                        $subcounty = $_GET['SubCounty'];
+                        $town = $_GET['Town'];
+                        $service = $_GET['Service'];
 
-                    // if only Service is selected
-                    if ($county == "" && $subcounty == "" && $town == "" && $service != "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE Services LIKE :Services AND Active != 'NO'";
-                    }
-                    // else if only Town is selected
-                    else if ($county == "" && $subcounty == "" && $town != "" && $service == "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE Town LIKE :Town AND Active != 'NO'";
-                    }
-                    // else if only SubCounty is selected
-                    else if ($county == "" && $subcounty != "" && $town == "" && $service == "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE SubCounty LIKE :SubCounty AND Active != 'NO'";
-                    }
-                    // else if only County is selected
-                    else if ($county != "" && $subcounty == "" && $town == "" && $service == "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND Active != 'NO'";
-                    }
-                    // else if only Town and Service are selected
-                    else if ($county == "" && $subcounty == "" && $town != "" && $service != "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE Town LIKE :Town AND Services LIKE :Services AND Active != 'NO'";
-                    }
-                    // else if only SubCounty and Service are selected
-                    else if ($county == "" && $subcounty != "" && $town == "" && $service != "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE SubCounty LIKE :SubCounty AND Services LIKE :Services AND Active != 'NO'";
-                    }
-                    // else if only County and Service are selected
-                    else if ($county != "" && $subcounty == "" && $town == "" && $service != "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND Services LIKE :Services AND Active != 'NO'";
-                    }
-                    // else if only SubCounty and Town are selected
-                    else if ($county == "" && $subcounty != "" && $town != "" && $service == "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE SubCounty LIKE :SubCounty AND Town LIKE :Town AND Active != 'NO'";
-                    }
-                    // else if only County and Town are selected
-                    else if ($county != "" && $subcounty == "" && $town != "" && $service == "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND Town LIKE :Town AND Active != 'NO'";
-                    }
-                    // else if only County and SubCounty are selected
-                    else if ($county != "" && $subcounty != "" && $town == "" && $service == "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND SubCounty LIKE :SubCounty AND Active != 'NO'";
-                    }
-                    // else if only SubCounty, Town and Service are selected
-                    else if ($county == "" && $subcounty != "" && $town != "" && $service != "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE SubCounty LIKE :SubCounty AND Town LIKE :Town AND Services LIKE :Services AND Active != 'NO'";
-                    }
-                    // else if only County, Town and Service are selected
-                    else if ($county != "" && $subcounty == "" && $town != "" && $service != "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND Town LIKE :Town AND Services LIKE :Services AND Active != 'NO'";
-                    }
-                    // else if only County, SubCounty and Service are selected
-                    else if ($county != "" && $subcounty != "" && $town == "" && $service != "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND SubCounty LIKE :SubCounty AND Services LIKE :Services AND Active != 'NO'";
-                    }
-                    // else if only County, SubCounty and Town are selected
-                    else if ($county != "" && $subcounty != "" && $town != "" && $service == "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND SubCounty LIKE :SubCounty AND Town LIKE :Town AND Active != 'NO'";
-                    }
-                    // if County, Sub County, Town and Service are all selected
-                    else if ($county != "" && $subcounty != "" && $town != "" && $service != "") {
-                        $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND SubCounty LIKE :SubCounty AND Town LIKE :Town AND Services LIKE :Services AND Active != 'NO'";
-                    }
-                    // else if all are None return all service providers
-                    else {
-                        $sql = "SELECT * FROM serviceprovider WHERE Active != 'NO'";
-                    }
-
-                    // Prepare statement
-                    $stmt = $conn->prepare($sql);
-
-                    echo "<h2>Service Providers</h2>";
-                    echo "<h3>Showing results for:</h3>";
-                    echo "<ul>";
-
-                    // Bind parameters
-                    if ($county != "") {
-                        $stmt->bindParam(":County", $county);
-                        echo "<li class='text-capitalize'>" . $county . " County</li>";
-                    }
-                    if ($subcounty != "") {
-                        $stmt->bindParam(":SubCounty", $subcounty);
-                        echo " <li class='text-capitalize'>" . $subcounty . " Sub-County</li>";
-                    }
-                    if ($town != "") {
-                        $stmt->bindParam(":Town", $town);
-                        echo "<li class='text-capitalize'>" . $town . " Town</li>";
-                    }
-                    if ($service != "") {
-                        $stmt->bindParam(":Services", $service);
-                        echo "<li class='text-capitalize'>" . $service . " Service</li>";
-                    }
-                    if ($county == "" && $subcounty == "" && $town == "" && $service == "") {
-                        echo "<li class='text-capitalize'>All service locations</li>";
-                    }
-                    echo "</ul>";
-
-                    // Execute statement
-                    $stmt->execute();
-        
-                    // Fetch results
-                    $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-                    if (count($results) == 0) {
-                        echo "<h3>No results found.</h3>";
-                    }
-                    else {
-                        // Output table
-                        echo "<div class='table-responsive'>";
-                        echo "<table class='table table-dark table-bordered table-striped table-hover w-100'>";
-                        echo "<thead>";
-                        echo "<tr>";
-                        echo "<th>Type</th>";
-                        echo "<th>Access</th>";
-                        echo "<th>Facility Name</th>";
-                        echo "<th>County</th>";
-                        echo "<th>SubCounty</th>";
-                        echo "<th>Town</th>";
-                        echo "</tr>";
-                        echo "</thead>";
-                        echo "<tbody>";
-                        foreach ($results as $row) {
-                            echo "<tr>";
-                            echo "<td>" . $row['Type'] . "</td>";
-                            echo "<td>" . $row['Access'] . "</td>";
-                            echo "<td>" . $row['FacilityName'] . "</td>";
-                            echo "<td>" . $row['County'] . "</td>";
-                            echo "<td>" . $row['SubCounty'] . "</td>";
-                            echo "<td>" . $row['Town'] . "</td>";
-                            echo "</tr>";
+                        // if only Service is selected
+                        if ($county == "" && $subcounty == "" && $town == "" && $service != "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE Services LIKE :Services AND Active != 'NO'";
                         }
-                        echo "</tbody>";
-                        echo "</table>";
-                        echo "</div>";
+                        // else if only Town is selected
+                        else if ($county == "" && $subcounty == "" && $town != "" && $service == "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE Town LIKE :Town AND Active != 'NO'";
+                        }
+                        // else if only SubCounty is selected
+                        else if ($county == "" && $subcounty != "" && $town == "" && $service == "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE SubCounty LIKE :SubCounty AND Active != 'NO'";
+                        }
+                        // else if only County is selected
+                        else if ($county != "" && $subcounty == "" && $town == "" && $service == "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND Active != 'NO'";
+                        }
+                        // else if only Town and Service are selected
+                        else if ($county == "" && $subcounty == "" && $town != "" && $service != "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE Town LIKE :Town AND Services LIKE :Services AND Active != 'NO'";
+                        }
+                        // else if only SubCounty and Service are selected
+                        else if ($county == "" && $subcounty != "" && $town == "" && $service != "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE SubCounty LIKE :SubCounty AND Services LIKE :Services AND Active != 'NO'";
+                        }
+                        // else if only County and Service are selected
+                        else if ($county != "" && $subcounty == "" && $town == "" && $service != "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND Services LIKE :Services AND Active != 'NO'";
+                        }
+                        // else if only SubCounty and Town are selected
+                        else if ($county == "" && $subcounty != "" && $town != "" && $service == "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE SubCounty LIKE :SubCounty AND Town LIKE :Town AND Active != 'NO'";
+                        }
+                        // else if only County and Town are selected
+                        else if ($county != "" && $subcounty == "" && $town != "" && $service == "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND Town LIKE :Town AND Active != 'NO'";
+                        }
+                        // else if only County and SubCounty are selected
+                        else if ($county != "" && $subcounty != "" && $town == "" && $service == "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND SubCounty LIKE :SubCounty AND Active != 'NO'";
+                        }
+                        // else if only SubCounty, Town and Service are selected
+                        else if ($county == "" && $subcounty != "" && $town != "" && $service != "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE SubCounty LIKE :SubCounty AND Town LIKE :Town AND Services LIKE :Services AND Active != 'NO'";
+                        }
+                        // else if only County, Town and Service are selected
+                        else if ($county != "" && $subcounty == "" && $town != "" && $service != "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND Town LIKE :Town AND Services LIKE :Services AND Active != 'NO'";
+                        }
+                        // else if only County, SubCounty and Service are selected
+                        else if ($county != "" && $subcounty != "" && $town == "" && $service != "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND SubCounty LIKE :SubCounty AND Services LIKE :Services AND Active != 'NO'";
+                        }
+                        // else if only County, SubCounty and Town are selected
+                        else if ($county != "" && $subcounty != "" && $town != "" && $service == "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND SubCounty LIKE :SubCounty AND Town LIKE :Town AND Active != 'NO'";
+                        }
+                        // if County, Sub County, Town and Service are all selected
+                        else if ($county != "" && $subcounty != "" && $town != "" && $service != "") {
+                            $sql = "SELECT * FROM serviceprovider WHERE County LIKE :County AND SubCounty LIKE :SubCounty AND Town LIKE :Town AND Services LIKE :Services AND Active != 'NO'";
+                        }
+                        // else if all are None return all service providers
+                        else {
+                            $sql = "SELECT * FROM serviceprovider WHERE Active != 'NO'";
+                        }
+
+                        // Prepare statement
+                        $stmt = $conn->prepare($sql);
+
+                        echo "<h2>Service Providers</h2>";
+                        echo "<h3>Showing results for:</h3>";
+                        echo "<ul>";
+
+                        // Bind parameters
+                        if ($county != "") {
+                            $stmt->bindParam(":County", $county);
+                            echo "<li class='text-capitalize'>" . $county . " County</li>";
+                        }
+                        if ($subcounty != "") {
+                            $stmt->bindParam(":SubCounty", $subcounty);
+                            echo " <li class='text-capitalize'>" . $subcounty . " Sub-County</li>";
+                        }
+                        if ($town != "") {
+                            $stmt->bindParam(":Town", $town);
+                            echo "<li class='text-capitalize'>" . $town . " Town</li>";
+                        }
+                        if ($service != "") {
+                            $stmt->bindParam(":Services", $service);
+                            echo "<li class='text-capitalize'>" . $service . " Service</li>";
+                        }
+                        if ($county == "" && $subcounty == "" && $town == "" && $service == "") {
+                            echo "<li class='text-capitalize'>All service locations</li>";
+                        }
+                        echo "</ul>";
+
+                        // Execute statement
+                        $stmt->execute();
+            
+                        // Fetch results
+                        $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                        if (count($results) == 0) {
+                            echo "<h3>No results found.</h3>";
+                        }
+                        else {
+                            // Output table
+                            echo "<div class='table-responsive'>";
+                            echo "<table class='table table-dark table-bordered table-striped table-hover w-100'>";
+                            echo "<thead>";
+                            echo "<tr>";
+                            echo "<th>Type</th>";
+                            echo "<th>Access</th>";
+                            echo "<th>Facility Name</th>";
+                            echo "<th>County</th>";
+                            echo "<th>SubCounty</th>";
+                            echo "<th>Town</th>";
+                            echo "</tr>";
+                            echo "</thead>";
+                            echo "<tbody>";
+                            foreach ($results as $row) {
+                                echo "<tr>";
+                                echo "<td>" . $row['Type'] . "</td>";
+                                echo "<td>" . $row['Access'] . "</td>";
+                                echo "<td>" . $row['FacilityName'] . "</td>";
+                                echo "<td>" . $row['County'] . "</td>";
+                                echo "<td>" . $row['SubCounty'] . "</td>";
+                                echo "<td>" . $row['Town'] . "</td>";
+                                echo "</tr>";
+                            }
+                            echo "</tbody>";
+                            echo "</table>";
+                            echo "</div>";
+                        }
+                    } 
+                    catch (PDOException $e) {
+                        echo 'Connection failed: ' . $e->getMessage();
+                        die();
                     }
-                } 
-                catch (PDOException $e) {
-                    echo 'Connection failed: ' . $e->getMessage();
-                    die();
                 }
             ?>
         </section>
