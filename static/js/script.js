@@ -65,7 +65,20 @@
   /**
    * Service Provider Search Form
    */
-  if (window.location.pathname === "/index.php" || window.location.pathname === "/") {
+
+
+
+  /* *
+     *
+     * NOTE: Ensure that the correct url path is used
+     *     : eg. If files are in the folders MinetKe/tsc then use "MinetKe/tsc/index.php"
+     * 
+     * 
+     */
+
+  console.log(window.location.pathname);
+
+  if (window.location.pathname === "/MinetKe/tsc/index.php" || window.location.pathname === "/MinetKe/tsc/") {
     document.addEventListener("DOMContentLoaded", function () {
       const countySelect = document.getElementById("County");
       const subCountySelect = document.getElementById("SubCounty");
@@ -170,7 +183,7 @@
   /**
   * Providers Table
   */
-  if (window.location.pathname === "/index.php" || window.location.pathname === "/") {
+  if (window.location.pathname === "/MinetKe/tsc/index.php" || window.location.pathname === "/MinetKe/tsc/") {
     const button = document.querySelector('#providers-table .glightbox');
     const searchProvidersFormParams = new URLSearchParams(window.location.search);
     const county = searchProvidersFormParams.get('County');
@@ -184,7 +197,7 @@
   /**
    * Clients Slider
    */
-  if (window.location.pathname === "/index.php" || window.location.pathname === "/") {
+  if (window.location.pathname === "/MinetKe/tsc/index.php" || window.location.pathname === "/MinetKe/tsc/") {
     new Swiper(".swiper", {
       speed: 400,
       loop: true,
@@ -222,7 +235,7 @@
   /**
    * Benefits Structure
    */
-  if (window.location.pathname === "/benefits-structure.html") {
+  if (window.location.pathname === "/MinetKe/tsc/benefits-structure.html") {
     const benefitsParams = new URLSearchParams(window.location.search);
     if (benefitsParams.has("benefits")) {
       const benefitsContainer = document.querySelector("#benefits");
