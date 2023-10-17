@@ -65,9 +65,6 @@
   /**
    * Service Provider Search Form
    */
-
-
-
   /* *
      *
      * NOTE: Ensure that the correct url path is used
@@ -75,8 +72,6 @@
      * 
      * 
      */
-
-  console.log(window.location.pathname);
 
   if (window.location.pathname === "/MinetKe/tsc/index.php" || window.location.pathname === "/MinetKe/tsc/") {
     document.addEventListener("DOMContentLoaded", function () {
@@ -187,7 +182,6 @@
     const button = document.querySelector('#providers-table .glightbox');
     const searchProvidersFormParams = new URLSearchParams(window.location.search);
     const county = searchProvidersFormParams.get('County');
-    console.log(county);
     if (county || county === "") {
       button.click();
       history.replaceState(null, null, window.location.pathname);
@@ -268,6 +262,41 @@
         window.location.hash = "#benefits-structure";
       }
     }
+  }
+
+  /**
+  * Contacts Form
+  */
+  if (window.location.pathname === "/MinetKe/tsc/county-offices.php") {
+    document.addEventListener("DOMContentLoaded", function () {
+      const countySelect = document.getElementById("County");
+
+      // Initially populate the County dropdown
+      async function populateCountyDropdown() {
+        fetch("api/county.php")
+          .then((response) => response.json())
+          .then((jsonData) => {
+            jsonData.forEach(function (county) {
+              const county_name = county.county;
+              countySelect.innerHTML += `<option value="${county_name}">${county_name}</option>`;
+            });
+          });
+      }
+      populateCountyDropdown();
+    });
+  }
+
+  /**
+  * Contacts Table
+  */
+  if (window.location.pathname === "/MinetKe/tsc/county-offices.php") {
+    const button = document.querySelector('#contacts-table .glightbox');
+    const searchProvidersFormParams = new URLSearchParams(window.location.search);
+    const county = searchProvidersFormParams.get('County');
+    if (county || county === "") {
+      button.click();
+      history.replaceState(null, null, window.location.pathname);
+    };
   }
 
 })();

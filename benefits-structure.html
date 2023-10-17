@@ -15,7 +15,7 @@
     <meta property="og:type" content="" />
     <meta property="og:image" content="" />
     <meta property="og:locale" content="" />
-    <title>Walimu Care | Home</title>
+    <title>Walimu Care | Benefits Structure</title>
 
     <!-- Favicons & Webmanifest -->
     <link rel="icon" href="static/img/icon/favicon.png" />
@@ -50,14 +50,14 @@
 <body>
     <!-- ======= Header ======= -->
     <header id="header">
-        <!-- Desktop Navigation -->
         <div class="container-fluid header-nav">
             <div class="clearfix position-relative h-100">
                 <a href="index.php">
                     <img src="static/img/icon/Afya-kwa-walimu.png" width="" height="90%" alt="" class="float-start">
                 </a>
                 <img src="static/img/icon/TSC.png" width="" height="90%" alt="" class="float-end">
-                <div class="d-none d-md-flex desktop-nav">
+                <!-- Desktop Navigation -->
+                <div class="d-none d-lg-flex desktop-nav">
                     <div class="nav d-table text-uppercase">
                         <div class="d-table-row">
                             <div class="d-table-cell border-end border-secondary nav-item">
@@ -69,8 +69,18 @@
                             <div class="d-table-cell border-end border-secondary nav-item">
                                 <a class="nav-link active py-0" href="benefits-structure.html">Benefits Structure</a>
                             </div>
-                            <div class="d-table-cell nav-item">
+                            <div class="d-table-cell border-end border-secondary nav-item">
+                                <a class="nav-link py-0" href="county-offices.php">County Offices</a>
+                            </div>
+                            <div class="d-table-cell border-end border-secondary nav-item">
                                 <a class="nav-link py-0" href="register.html">Registration</a>
+                            </div>
+                            <div class="d-table-cell border-end border-secondary nav-item">
+                                <a class="nav-link py-0" href="downloads.html">Downloads</a>
+                            </div>
+                            <div class="d-table-cell nav-item">
+                                <a class="nav-link py-0" href="https://collaborationkenya.minet.com/consents?page=/TSC"
+                                    target="_blank">Documents Uploads</a>
                             </div>
                         </div>
                     </div>
@@ -78,15 +88,15 @@
                         Emergency hot line <i class="bi bi-telephone-fill"></i> <span>1528</span>
                     </div>
                 </div>
-                <div class="d-flex d-md-none mobile-nav-btn">
-                    <button type="button" class="btn btn-primary d-md-none d-inline-block" data-bs-toggle="modal"
+                <div class="d-flex d-lg-none mobile-nav-btn">
+                    <button type="button" class="btn btn-primary d-lg-none d-inline-block" data-bs-toggle="modal"
                         data-bs-target="#mobilenavModal">
                         <i class="bi bi-list text-light"></i>
                     </button>
                 </div>
             </div>
         </div>
-        <!-- Mobile Modal Navigation -->
+        <!-- Mobile Navigation -->
         <div id="mobilenavModal" class=" mobile-nav modal fade" tabindex="-1">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
@@ -106,12 +116,24 @@
                                     Kwa Walimu</a>
                             </li>
                             <li class="nav-item">
-                                <a href="benefits-structure.html" class="nav-link"><i
+                                <a href="benefits-structure.html" class="nav-link active"><i
                                         class="bi bi-caret-right-fill"></i> Benefits Structure</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="county-offices.php" class="nav-link"><i class="bi bi-caret-right-fill"></i>
+                                    County Offices</a>
                             </li>
                             <li class="nav-item">
                                 <a href="register.html" class="nav-link"><i class="bi bi-caret-right-fill"></i>
                                     Registration</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="downloads.html" class="nav-link"><i class="bi bi-caret-right-fill"></i>
+                                    Downloads</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://collaborationkenya.minet.com/consents?page=/TSC" class="nav-link"
+                                    target="_blank"><i class="bi bi-caret-right-fill"></i> Documents Uploads</a>
                             </li>
                         </ul>
                     </div>
@@ -404,6 +426,22 @@
                 </div>
             </div>
         </section>
+        <section id="TSC-bronchure">
+            <div class="container-fluid section-padding pt-0">
+                <div class="card w-100">
+                    <img class="card-img img-fluid" style="filter: brightness(90%);" src="static/img/bronchure-bg.png"
+                        alt="Dolores">
+                    <div class="card-img-overlay text-white">
+                        <!-- <h2 class="card-title" style="color: #c3a22c;">TSC Medical Scheme Brochure</h2> -->
+                        <!-- <p class="card-text lh-sm"> Click the button below to download the TSC Medical Scheme Brochure.</p> -->
+                        <a href="static/pdf/TSC Medical Scheme Brochure.pdf" target="_blank"
+                            class="card-link btn btn-light mt-auto stretched-link">Download TSC Medical Scheme Brochure
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End TSC-Bronchure Section -->
     </main>
     <!-- ======= Footer ======= -->
     <footer id="footer">
