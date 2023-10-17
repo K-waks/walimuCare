@@ -275,10 +275,10 @@
                                     <a href="https://minet.com/Kenya" target="_blank"><i class="bi bi-globe"></i><span>minet.com/Kenya</span></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="bi bi-phone-landscape"></i><span>WalimuCare App</span></a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.healthierkenya.minet&pli=1" target="_blank"><i class="bi bi-phone-landscape"></i><span>WalimuCare App</span></a>
                                 </li>
                                 <li>
-                                    <a href="#"><i class="bi bi-file-earmark-text"></i><span>Teachers medical
+                                    <a href="static/pdf/TSC Medical Scheme Brochure.pdf" target="blank"><i class="bi bi-file-earmark-text"></i><span>Teachers medical
                                             scheme</span></a>
                                 </li>
                             </ul>
