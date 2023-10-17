@@ -149,27 +149,23 @@
             </div>
         </section>
         <!-- End Breadcrumbs -->
-        <!-- <div class="row">
-            <div class="col-12 col-md-8">
-
-            </div>
-            <div class="col-12 col-md-4">
-                
-            </div>
-        </div> -->
         <section id="county-offices">
             <div class="container-fluid section-padding">
-                <form id="search-provider-form" role="form" action="" method="get">
-                    <h3>Search Contact Details.</h3>
-                    <div class="form-group mt-3">
-                        <select id="County" name="County" class="form-select">
-                            <option value="" selected>Select county</option>
-                        </select>
-                    </div>
-                    <div class="form-group text-center mt-3">
-                        <button type="submit" class="btn btn-primary rounded-0">Search <i class="bi bi-caret-right-fill"></i></button>
-                    </div>
-                </form>
+                <h3>Search Contact Details.</h3>
+                <p>Select County from the drop down list below then click on search to load details of the selected County</p>
+                <div class="d-flex justify-content-center">
+                    <form id="search-provider-form" role="form" action="" method="get" class="w-75">
+                        <div class="form-floating form-group mt-3">
+                            <select id="County" name="County" class="form-select">
+                                <option value="" selected>All counties</option>
+                            </select>
+                            <label for="County">Select county</label>
+                        </div>
+                        <div class="contact-btn form-group text-center mt-3">
+                            <button type="submit" class="btn rounded-0">Search <i class="bi bi-caret-right-fill"></i></button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </section>
         <!-- End County-Offices Section -->
@@ -397,7 +393,7 @@
     <div id="preloader"></div>
     <!-- ======= Back To Top Arrow ======= -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-        <i class="bi bi-arrow-up-short"></i>
+        <i class="bi bi-chevron-up fs-5"></i>
     </a>
 </body>
 
