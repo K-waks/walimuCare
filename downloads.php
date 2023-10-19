@@ -1,3 +1,9 @@
+<?php
+require_once("api/db-conn.php");
+require_once("api/contacts.php");
+require_once("api/service-providers-list.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -23,8 +29,7 @@
     <link rel="manifest" href="static/manifest.webmanifest" />
 
     <!-- Google Fonts -->
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" />
 
     <!-- Vendor CSS Files -->
     <link rel="stylesheet" href="static/vendor/aos/aos.css" />
@@ -76,11 +81,10 @@
                                 <a class="nav-link py-0" href="register.html">Registration</a>
                             </div>
                             <div class="d-table-cell border-end border-secondary nav-item">
-                                <a class="nav-link active py-0" href="downloads.html">Downloads</a>
+                                <a class="nav-link active py-0" href="downloads.php">Downloads</a>
                             </div>
                             <div class="d-table-cell nav-item">
-                                <a class="nav-link py-0" href="https://collaborationkenya.minet.com/consents?page=/TSC"
-                                    target="_blank">Documents Uploads</a>
+                                <a class="nav-link py-0" href="https://collaborationkenya.minet.com/consents?page=/TSC" target="_blank">Documents Uploads</a>
                             </div>
                         </div>
                     </div>
@@ -89,8 +93,7 @@
                     </div>
                 </div>
                 <div class="d-flex d-lg-none mobile-nav-btn">
-                    <button type="button" class="btn btn-primary d-lg-none d-inline-block" data-bs-toggle="modal"
-                        data-bs-target="#mobilenavModal">
+                    <button type="button" class="btn btn-primary d-lg-none d-inline-block" data-bs-toggle="modal" data-bs-target="#mobilenavModal">
                         <i class="bi bi-list text-light"></i>
                     </button>
                 </div>
@@ -116,8 +119,7 @@
                                     About Afya Kwa Walimu</a>
                             </li>
                             <li class="nav-item">
-                                <a href="benefits-structure.html" class="nav-link"><i
-                                        class="bi bi-caret-right-fill"></i> Benefits Structure</a>
+                                <a href="benefits-structure.html" class="nav-link"><i class="bi bi-caret-right-fill"></i> Benefits Structure</a>
                             </li>
                             <li class="nav-item">
                                 <a href="county-offices.php" class="nav-link"><i class="bi bi-caret-right-fill"></i>
@@ -128,12 +130,11 @@
                                     Registration</a>
                             </li>
                             <li class="nav-item">
-                                <a href="downloads.html" class="nav-link"><i class="bi bi-caret-right-fill"></i>
+                                <a href="downloads.php" class="nav-link"><i class="bi bi-caret-right-fill"></i>
                                     Downloads</a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://collaborationkenya.minet.com/consents?page=/TSC" class="nav-link"
-                                    target="_blank"><i class="bi bi-caret-right-fill"></i> Documents Uploads</a>
+                                <a href="https://collaborationkenya.minet.com/consents?page=/TSC" class="nav-link" target="_blank"><i class="bi bi-caret-right-fill"></i> Documents Uploads</a>
                             </li>
                         </ul>
                     </div>
@@ -166,15 +167,14 @@
                         <h5 class="mb-4">Download/View</h5>
                         <p>Change of details Form</p>
                     </a>
-                    <a class="shadow d-block" href="media/county-offices-contacts.php" target="_blank">
+                    <a class="shadow d-block" href="static/pdf/county-offices-contacts.pdf" target="_blank">
                         <div class="icon">
                             <i class="bi bi-file-pdf"></i>
                         </div>
                         <h5 class="mb-4">Download/View</h5>
                         <p>County Offices Contact list</p>
                     </a>
-                    <a class="shadow d-block" href="media/service-providers-list.php"
-                        target="_blank">
+                    <a class="shadow d-block" href="static/pdf/service-providers-list.pdf" target="_blank">
                         <div class="icon">
                             <i class="bi bi-file-pdf"></i>
                         </div>
@@ -187,13 +187,11 @@
         <section id="TSC-bronchure">
             <div class="container-fluid section-padding pt-0">
                 <div class="card w-100">
-                    <img class="card-img img-fluid" style="filter: brightness(90%);" src="static/img/bronchure-bg.png"
-                        alt="Dolores">
+                    <img class="card-img img-fluid" style="filter: brightness(90%);" src="static/img/bronchure-bg.png" alt="Dolores">
                     <div class="card-img-overlay text-white">
                         <!-- <h2 class="card-title" style="color: #c3a22c;">TSC Medical Scheme Brochure</h2> -->
                         <!-- <p class="card-text lh-sm"> Click the button below to download the TSC Medical Scheme Brochure.</p> -->
-                        <a href="static/pdf/TSC Medical Scheme Brochure.pdf" target="_blank"
-                            class="card-link btn btn-light mt-auto stretched-link">Download TSC Medical Scheme Brochure
+                        <a href="static/pdf/TSC Medical Scheme Brochure.pdf" target="_blank" class="card-link btn btn-light mt-auto stretched-link">Download TSC Medical Scheme Brochure
                         </a>
                     </div>
                 </div>
@@ -218,16 +216,13 @@
                                         Structure</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html#eligibility"><i
-                                        class="bi bi-caret-right-fill"></i><span>Eligibility</span></a>
+                                <a href="benefits-structure.html#eligibility"><i class="bi bi-caret-right-fill"></i><span>Eligibility</span></a>
                             </li>
                             <li>
-                                <a href="register.html"><i
-                                        class="bi bi-caret-right-fill"></i><span>Registration</span></a>
+                                <a href="register.html"><i class="bi bi-caret-right-fill"></i><span>Registration</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html#scheme-exclusions"><i
-                                        class="bi bi-caret-right-fill"></i><span>Exclusions</span></a>
+                                <a href="benefits-structure.html#scheme-exclusions"><i class="bi bi-caret-right-fill"></i><span>Exclusions</span></a>
                             </li>
                         </ul>
                     </div>
@@ -237,45 +232,35 @@
                         <h3>Benefits</h3>
                         <ul class="text-uppercase">
                             <li>
-                                <a href="benefits-structure.html?benefits=inpatient"><i
-                                        class="bi bi-caret-right-fill"></i><span>Inpatient</span></a>
+                                <a href="benefits-structure.html?benefits=inpatient"><i class="bi bi-caret-right-fill"></i><span>Inpatient</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html?benefits=outpatient"><i
-                                        class="bi bi-caret-right-fill"></i><span>Outpatient</span></a>
+                                <a href="benefits-structure.html?benefits=outpatient"><i class="bi bi-caret-right-fill"></i><span>Outpatient</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html?benefits=additional-cover"><i
-                                        class="bi bi-caret-right-fill"></i><span>Additional cover</span></a>
+                                <a href="benefits-structure.html?benefits=additional-cover"><i class="bi bi-caret-right-fill"></i><span>Additional cover</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html?benefits=wellness&category=maternity"><i
-                                        class="bi bi-caret-right-fill"></i><span>Maternity</span></a>
+                                <a href="benefits-structure.html?benefits=wellness&category=maternity"><i class="bi bi-caret-right-fill"></i><span>Maternity</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html?benefits=wellness&category=optical"><i
-                                        class="bi bi-caret-right-fill"></i><span>Optical</span></a>
+                                <a href="benefits-structure.html?benefits=wellness&category=optical"><i class="bi bi-caret-right-fill"></i><span>Optical</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html?benefits=wellness&category=dental"><i
-                                        class="bi bi-caret-right-fill"></i><span>Dental</span></a>
+                                <a href="benefits-structure.html?benefits=wellness&category=dental"><i class="bi bi-caret-right-fill"></i><span>Dental</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html?benefits=wellness&category=evacuation"><i
-                                        class="bi bi-caret-right-fill"></i><span>Local Road and Air
+                                <a href="benefits-structure.html?benefits=wellness&category=evacuation"><i class="bi bi-caret-right-fill"></i><span>Local Road and Air
                                         Evacuation</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html?benefits=wellness&category=international-treatment"><i
-                                        class="bi bi-caret-right-fill"></i><span>International Treatment</span></a>
+                                <a href="benefits-structure.html?benefits=wellness&category=international-treatment"><i class="bi bi-caret-right-fill"></i><span>International Treatment</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html?benefits=wellness&category=psychiatric-counsellings"><i
-                                        class="bi bi-caret-right-fill"></i><span>Psychiatric and Counsellings</span></a>
+                                <a href="benefits-structure.html?benefits=wellness&category=psychiatric-counsellings"><i class="bi bi-caret-right-fill"></i><span>Psychiatric and Counsellings</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html?benefits=wellness&category=last-respects"><i
-                                        class="bi bi-caret-right-fill"></i><span>Funeral and Last Respects</span></a>
+                                <a href="benefits-structure.html?benefits=wellness&category=last-respects"><i class="bi bi-caret-right-fill"></i><span>Funeral and Last Respects</span></a>
                             </li>
                         </ul>
                     </div>
@@ -286,38 +271,32 @@
                         <div class="d-flex flex-column flex-sm-row flex-md-column">
                             <ul class="flex-grow-1">
                                 <li>
-                                    <a href="tel:+254 (730) 604 000"><i
-                                            class="bi bi-telephone"></i><span>1528</span></a>
+                                    <a href="tel:+254 (730) 604 000"><i class="bi bi-telephone"></i><span>1528</span></a>
                                 </li>
                                 <li>
                                     <a href="tel:+254 (730) 604 000"><i class="bi bi-phone"></i><span>+254 (730) 604
                                             000</span></a>
                                 </li>
                                 <li>
-                                    <a href="mailto:afya@minet.com"><i
-                                            class="bi bi-envelope"></i><span>afya@minet.com</span></a>
+                                    <a href="mailto:afya@minet.com"><i class="bi bi-envelope"></i><span>afya@minet.com</span></a>
                                 </li>
                                 <li>
                                     <a href="tel:*202*07#"><i class="bi bi-hash"></i><span>USSD *202*07#</span></a>
                                 </li>
                                 <li>
-                                    <a href="https://minet.com/Kenya" target="_blank"><i
-                                            class="bi bi-globe"></i><span>minet.com/Kenya</span></a>
+                                    <a href="https://minet.com/Kenya" target="_blank"><i class="bi bi-globe"></i><span>minet.com/Kenya</span></a>
                                 </li>
                                 <li>
-                                    <a href="https://play.google.com/store/apps/details?id=com.healthierkenya.minet&pli=1"
-                                        target="_blank"><i class="bi bi-phone-landscape"></i><span>WalimuCare
+                                    <a href="https://play.google.com/store/apps/details?id=com.healthierkenya.minet&pli=1" target="_blank"><i class="bi bi-phone-landscape"></i><span>WalimuCare
                                             App</span></a>
                                 </li>
                                 <li>
-                                    <a href="static/pdf/TSC Medical Scheme Brochure.pdf" target="blank"><i
-                                            class="bi bi-file-earmark-text"></i><span>Teachers medical
+                                    <a href="static/pdf/TSC Medical Scheme Brochure.pdf" target="blank"><i class="bi bi-file-earmark-text"></i><span>Teachers medical
                                             scheme</span></a>
                                 </li>
                             </ul>
                             <div class="register-btn flex-grow-1" data-aos="fade-in">
-                                <a class="text-uppercase" href="register.html"><span>Register</span><i
-                                        class="bi bi-caret-right-fill"></i></a>
+                                <a class="text-uppercase" href="register.html"><span>Register</span><i class="bi bi-caret-right-fill"></i></a>
                             </div>
                         </div>
                     </div>

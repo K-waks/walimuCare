@@ -75,7 +75,7 @@
                                 <a class="nav-link py-0" href="register.html">Registration</a>
                             </div>
                             <div class="d-table-cell border-end border-secondary nav-item">
-                                <a class="nav-link py-0" href="downloads.html">Downloads</a>
+                                <a class="nav-link py-0" href="downloads.php">Downloads</a>
                             </div>
                             <div class="d-table-cell nav-item">
                                 <a class="nav-link py-0" href="https://collaborationkenya.minet.com/consents?page=/TSC" target="_blank">Documents Uploads</a>
@@ -121,7 +121,7 @@
                                 <a href="register.html" class="nav-link"><i class="bi bi-caret-right-fill"></i> Registration</a>
                             </li>
                             <li class="nav-item">
-                                <a href="downloads.html" class="nav-link"><i class="bi bi-caret-right-fill"></i>
+                                <a href="downloads.php" class="nav-link"><i class="bi bi-caret-right-fill"></i>
                                     Downloads</a>
                             </li>
                             <li class="nav-item">
@@ -508,10 +508,7 @@
         <a href="#providers-table" class="glightbox d-none"></a>
         <?php
         if (!empty($_GET)) {
-            // Set up database connection
-            $user = "mariadb";
-            $password = "mariadb";
-            $database = "minetkedb";
+            require_once("api/db-conn.php");
 
             try {
                 $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
