@@ -9,7 +9,7 @@
         $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
 
         // Prepare SQL statement
-        $stmt = $conn->prepare("SELECT * FROM serviceprovider WHERE Active != 'NO'");
+        $stmt = $conn->prepare("SELECT * FROM serviceprovider WHERE Active != 'NO' LIMIT 1000");
        
         // Execute statement
         $stmt->execute();
