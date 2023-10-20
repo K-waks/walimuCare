@@ -26,7 +26,7 @@ try {
     // Output table with simplified inline styles
     $html = <<<EOD
             <table style="border-collapse: collapse; width: 100%;">
-                <thead style="background-color: #343a40; color: #ffffff;">
+                <thead style="background-color: #0a0037; color: #ffffff;">
                     <tr>
                         <th style="border: 1px solid #dee2e6;">Type</th>
                         <th style="border: 1px solid #dee2e6;">Access</th>
@@ -63,7 +63,7 @@ try {
     $pdf->writeHTML($html, true, false, true, false, "");
 
     // Open the PDF in the browser
-    $pdf->Output("/home/wakskevin/Repositories/WalimuCare/MinetKe/tsc/static/pdf/service-providers-list.pdf", "F");
+    $pdf->Output(dirname(dirname(__FILE__)) . "/static/pdf/service-providers-list.pdf", "F");
 
     // echo "PDF created successfully.";
 } catch (PDOException $e) {

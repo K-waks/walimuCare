@@ -460,8 +460,7 @@
                                     <a href="https://play.google.com/store/apps/details?id=com.healthierkenya.minet&pli=1" target="_blank"><i class="bi bi-phone-landscape"></i><span>WalimuCare App</span></a>
                                 </li>
                                 <li>
-                                    <a href="static/pdf/TSC Medical Scheme Brochure.pdf" target="blank"><i class="bi bi-file-earmark-text"></i><span>Teachers medical
-                                            scheme</span></a>
+                                    <a href="static/pdf/TSC Medical Scheme Brochure.pdf" target="blank"><i class="bi bi-file-earmark-text"></i><span>Teachers medical scheme</span></a>
                                 </li>
                             </ul>
                             <div class="register-btn flex-grow-1" data-aos="fade-in">

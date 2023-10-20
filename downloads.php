@@ -208,12 +208,10 @@ require_once("api/service-providers-list.php");
                         <h3>Quick links</h3>
                         <ul class="text-uppercase ">
                             <li>
-                                <a href="about.html"><i class="bi bi-caret-right-fill"></i><span>Afya Kwa Walimu
-                                        explained</span></a>
+                                <a href="about.html"><i class="bi bi-caret-right-fill"></i><span>Afya Kwa Walimu explained</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html"><i class="bi bi-caret-right-fill"></i><span>Benefits
-                                        Structure</span></a>
+                                <a href="benefits-structure.html"><i class="bi bi-caret-right-fill"></i><span>Benefits Structure</span></a>
                             </li>
                             <li>
                                 <a href="benefits-structure.html#eligibility"><i class="bi bi-caret-right-fill"></i><span>Eligibility</span></a>
@@ -250,8 +248,7 @@ require_once("api/service-providers-list.php");
                                 <a href="benefits-structure.html?benefits=wellness&category=dental"><i class="bi bi-caret-right-fill"></i><span>Dental</span></a>
                             </li>
                             <li>
-                                <a href="benefits-structure.html?benefits=wellness&category=evacuation"><i class="bi bi-caret-right-fill"></i><span>Local Road and Air
-                                        Evacuation</span></a>
+                                <a href="benefits-structure.html?benefits=wellness&category=evacuation"><i class="bi bi-caret-right-fill"></i><span>Local Road and Air Evacuation</span></a>
                             </li>
                             <li>
                                 <a href="benefits-structure.html?benefits=wellness&category=international-treatment"><i class="bi bi-caret-right-fill"></i><span>International Treatment</span></a>
@@ -274,8 +271,7 @@ require_once("api/service-providers-list.php");
                                     <a href="tel:+254 (730) 604 000"><i class="bi bi-telephone"></i><span>1528</span></a>
                                 </li>
                                 <li>
-                                    <a href="tel:+254 (730) 604 000"><i class="bi bi-phone"></i><span>+254 (730) 604
-                                            000</span></a>
+                                    <a href="tel:+254 (730) 604 000"><i class="bi bi-phone"></i><span>+254 (730) 604000</span></a>
                                 </li>
                                 <li>
                                     <a href="mailto:afya@minet.com"><i class="bi bi-envelope"></i><span>afya@minet.com</span></a>
@@ -287,12 +283,10 @@ require_once("api/service-providers-list.php");
                                     <a href="https://minet.com/Kenya" target="_blank"><i class="bi bi-globe"></i><span>minet.com/Kenya</span></a>
                                 </li>
                                 <li>
-                                    <a href="https://play.google.com/store/apps/details?id=com.healthierkenya.minet&pli=1" target="_blank"><i class="bi bi-phone-landscape"></i><span>WalimuCare
-                                            App</span></a>
+                                    <a href="https://play.google.com/store/apps/details?id=com.healthierkenya.minet&pli=1" target="_blank"><i class="bi bi-phone-landscape"></i><span>WalimuCare App</span></a>
                                 </li>
                                 <li>
-                                    <a href="static/pdf/TSC Medical Scheme Brochure.pdf" target="blank"><i class="bi bi-file-earmark-text"></i><span>Teachers medical
-                                            scheme</span></a>
+                                    <a href="static/pdf/TSC Medical Scheme Brochure.pdf" target="blank"><i class="bi bi-file-earmark-text"></i><span>Teachers medical scheme</span></a>
                                 </li>
                             </ul>
                             <div class="register-btn flex-grow-1" data-aos="fade-in">
