@@ -16,58 +16,54 @@ try {
 
     class MYPDF extends TCPDF
     {
-
         //Page header
         public function Header()
         {
-            // Set the timezone to Africa/Nairobi
-            date_default_timezone_set('Africa/Nairobi');
-
-            // Logo
-            $this->Image(dirname(dirname(__FILE__)) . "/static/img/icon/Afya-kwa-walimu.png", 10, 5, 27, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
-
-            // Set font for the title
-            $this->setFont('helvetica', 'B', 20);
-
-            // Title
-            $this->Ln(3); // Move down 10 units
-            $this->Cell(0, 15, "Teachers Medical Scheme County Contacts List", 0, false, 'C', 0, '', 0, false, 'M', 'M');
-
-            // Set font for the subheading
-            $this->setFont('helvetica', 'I', 14);
-
             // Get current date and time in the specified timezone
             $currentDateTime = date_create('now', new DateTimeZone('Africa/Nairobi'));
             $formattedDateTime = $currentDateTime->format('d/m/Y H:i');
 
+            // Logo
+            $this->Image(dirname(dirname(__FILE__)) . "/static/img/icon/Afya-kwa-walimu.png", 10, 5, 27, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+
+            // Title
+            $this->Ln(10);
+            $this->setFont('times', 'B', 20);
+            $this->Cell(0, 15, "Teachers Medical Scheme County Contacts List", 0, false, 'C', 0, '', 0, false, 'M', 'M');
+
             // Subheading with formatted date and time
             $this->Ln(10); // Move down 10 units
+            $this->setFont('times', '', 12);
             $this->Cell(0, 10, "Status as at {$formattedDateTime} EAT", 0, false, 'C', 0, '', 0, false, 'M', 'M');
+        }
 
-            // Set font for the subheading
-            $this->setFont('helvetica', 'I', 10);
-
-            // Subheading
-            $this->Ln(10); // Move down 10 units
+        // Page footer
+        public function Footer()
+        {
+            // Position at 15 mm from bottom
+            $this->setY(-15);
+            
+            // Footer text
+            $this->setFont('times', 'I', 10);
             $this->Cell(0, 10, "For more information, contact us on +254719049799,+254719044000 or email us on mmc.customerservice@minet.co.ke", 0, false, 'C', 0, '', 0, false, 'M', 'M');
+
+            // Page number
+            $this->Cell(0, 10, 'Page ' . $this->getAliasNumPage() . '/' . $this->getAliasNbPages(), 0, false, 'C', 0, '', 0, false, 'T', 'M');
         }
     }
 
     // create new PDF document
     $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, "A3", true, 'UTF-8', false);
+
     // set document information
     $pdf->setCreator(PDF_CREATOR);
     $pdf->setAuthor('Minet Kenya');
-    $pdf->setTitle('Afya Kwa Walimu');
+    $pdf->setTitle('County Offices Contacts');
     $pdf->setSubject('County Offices Contacts');
     $pdf->setKeywords('Minet, Afya Kwa Walimu, County Offices, Contacts');
 
-    // remove default header/footer
-    $pdf->setPrintFooter(false);
-    // the logo image is located in tcpdf/examples/images/ folder
-
     // set margins
-    $pdf->setMargins(4, 33, 4);
+    $pdf->setMargins(5, 35, 5); // left, top, right
     $pdf->setFooterMargin(PDF_MARGIN_FOOTER);
 
     // set auto page breaks
@@ -77,7 +73,7 @@ try {
     $pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
 
     // Set font to a UTF-8 compatible font
-    $pdf->SetFont("times", "I", 10);
+    $pdf->SetFont("times", "", 11);
 
     // Add a page
     $pdf->AddPage();
@@ -88,6 +84,7 @@ try {
             table {
                 border-collapse: collapse;
                 text-align: center;
+                line-height: 1.5;
             }
 
             th{
@@ -129,7 +126,7 @@ try {
 
         $html .= <<<EOD
             <tr>
-                <td  style="background-color: #0a0037; color: #ffffff; font-weight: bold; font-size: 13px;">{$row["county"]}</td>
+                <td style="background-color: #0a0037; color: #ffffff; font-style: italic; font-weight: bold;">{$row["county"]}</td>
                 <td style="$alternate">{$row["name"]}</td>
                 <td style="$alternate">{$row["Designation"]}</td>
                 <td style="$alternate">{$row["contacts"]}</td>
@@ -148,10 +145,7 @@ try {
     // Output the HTML content and save the PDF file to a directory
     $pdf->writeHTML($html, true, false, true, false, "");
     $pdf->Output(dirname(dirname(__FILE__)) . "/static/pdf/county-offices-contacts.pdf", "F");
-
-
-
-    // echo "PDF created successfully.";
+    
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
     die();
