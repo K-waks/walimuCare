@@ -24,12 +24,12 @@ try {
             $formattedDateTime = $currentDateTime->format('d/m/Y H:i');
 
             // Logo
-            $this->Image(dirname(dirname(__FILE__)) . "/static/img/icon/Afya-kwa-walimu.png", 10, 5, 27, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
+            $this->Image(dirname(dirname(__FILE__)) . "/static/img/icon/Afya-kwa-walimu.png", 5, 5, 27, '', 'PNG', '', 'T', false, 300, '', false, false, 0, false, false, false);
 
             // Title
             $this->Ln(10);
             $this->setFont('times', 'B', 20);
-            $this->Cell(0, 15, "Teachers Medical Scheme County Contacts List", 0, false, 'C', 0, '', 0, false, 'M', 'M');
+            $this->Cell(0, 15, "TEACHERS MEDICAL SCHEME COUNTY CONTACTS LIST", 0, false, 'C', 0, '', 0, false, 'M', 'M');
 
             // Subheading with formatted date and time
             $this->Ln(10); // Move down 10 units

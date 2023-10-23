@@ -6,7 +6,7 @@ try {
     $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
 
     // Prepare SQL statement
-    $stmt = $conn->prepare("SELECT * FROM serviceprovider ORDER BY Services LIMIT 1500");
+    $stmt = $conn->prepare("SELECT * FROM serviceprovider ORDER BY `Type`, `County`");
 
     // Execute statement
     $stmt->execute();
@@ -29,7 +29,7 @@ try {
             // Title
             $this->Ln(10);
             $this->setFont('times', 'B', 20);
-            $this->Cell(0, 15, "Teachers Medical Scheme Service Providers", 0, false, 'C', 0, '', 0, false, 'M', 'M');
+            $this->Cell(0, 15, "TEACHERS MEDICAL SCHEME SERVICE PROVIDERS", 0, false, 'C', 0, '', 0, false, 'M', 'M');
 
             // Subheading with formatted date and time
             $this->Ln(10); // Move down 10 units
@@ -53,7 +53,7 @@ try {
     }
 
     // create new PDF document
-    $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, "A4", true, 'UTF-8', false);
+    $pdf = new MYPDF(PDF_PAGE_ORIENTATION, PDF_UNIT, "A3", true, 'UTF-8', false);
 
     // set document information
     $pdf->setCreator(PDF_CREATOR);
@@ -114,7 +114,8 @@ try {
             <tbody>
     EOD;
 
-    $lastService = null;
+    $lastServiceType = null;
+    $lastCounty = null;
 
     foreach ($results as $index => $row) {
         $evenOddClass = ($index % 2 == 0) ? 'even' : 'odd';
@@ -125,19 +126,35 @@ try {
             $alternate = "";
         }
 
-        // Check if the service type has changed
-        if ($row["Services"] !== $lastService) {
-            // Add a row to indicate the change
+        // Sort by Service Type: Subheadings for Type
+        if ($row["Type"] !== $lastServiceType) {
+            if (($lastServiceType == "Gynacologist" || $lastServiceType == "Gynaecologist") && ($row["Type"] == "Gynacologist" || $row["Type"] == "Gynaecologist")) {
+                // rows with Gynacologist Type and those with Gynaecologist will be both under the same subheading
+            } else {
+                $html .= <<<EOD
+                <tr>
+                    <td colspan="6" style="background-color: #c3a22c; color:#fff; text-align: center; font-size: 18px; font-weight: bold; line-height: 2;">
+                        {$row["Type"]}
+                    </td>
+                </tr>
+            EOD;
+                // Update the last service
+                $lastServiceType = $row["Type"];
+            }
+        }
+
+        // Further Sorting by County: Subheadings for County
+        if ($row["County"] !== $lastCounty) {
+
             $html .= <<<EOD
                 <tr>
-                    <td colspan="6" style="background-color: #ccc; text-align: center; font-weight: bold;">
-                        {$row["Services"]}
+                    <td colspan="6" style="background-color: #ccc; text-align: center; font-size: 14px; font-weight: bold;">
+                        {$row["County"]}
                     </td>
                 </tr>
             EOD;
             // Update the last service
-            $lastService = $row["Services"];
-            echo $lastService;
+            $lastCounty = $row["County"];
         }
 
         // Add the regular data row

@@ -1,6 +1,6 @@
 <?php
 require_once("api/contacts-list.php");
-// require_once("api/serviceprovider-list.php");
+require_once("api/serviceprovider-list.php");
 ?>
 
 <!DOCTYPE html>
