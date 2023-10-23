@@ -785,21 +785,21 @@ table {
   # About
   --------------------------------------------------------------*/
 
-#about .downloads aes h4 {
+#about .icon-boxes h4 {
   font-size: 18px;
   color: #7f7d68;
   margin-bottom: 15px;
 }
 
-#about .downloads aes h3 {
+#about .icon-boxes h3 {
   color: #7f7d68;
 }
 
-#about .downloads a {
+#about .icon-box {
   margin-top: 40px;
 }
 
-#about .downloads a .icon {
+#about .icon-box .icon {
   float: left;
   display: flex;
   align-items: center;
@@ -812,37 +812,37 @@ table {
   background: #eef0ef;
 }
 
-#about .downloads a .icon i {
+#about .icon-box .icon i {
   color: #c3a22c;
   font-size: 32px;
 }
 
-#about .downloads a:hover .icon {
+#about .icon-box:hover .icon {
   background: #c3a22c;
   border-color: #c3a22c;
 }
 
-#about .downloads a:hover .icon i {
+#about .icon-box:hover .icon i {
   color: #eef0ef;
 }
 
-#about .downloads a .title {
+#about .icon-box .title {
   margin-left: 85px;
   font-weight: 700;
   margin-bottom: 10px;
   font-size: 18px;
 }
 
-#about .downloads a .title h4 {
+#about .icon-box .title h4 {
   color: #343a40;
   transition: 0.3s;
 }
 
-#about .downloads a .title h4:hover {
+#about .icon-box .title h4:hover {
   color: #c3a22c;
 }
 
-#about .downloads a .description {
+#about .icon-box .description {
   margin-left: 85px;
   line-height: 24px;
   font-size: 14px;
@@ -1105,4 +1105,48 @@ table {
 
 #downloads .downloads a:hover h4 a {
   color: #0678e3;
+}
+
+/*--------------------------------------------------------------
+# Cta
+--------------------------------------------------------------*/
+#cta {
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0)), url("../img/section-bg.jpg") center center;
+  background-size: cover;
+  padding: 60px 0;
+}
+
+#cta h3 {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#cta p {
+  color: #fff;
+}
+
+#cta .cta-btn {
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 28px;
+  border-radius: 25px;
+  transition: 0.5s;
+  margin-top: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#cta .cta-btn:hover {
+  background: #c3a22c;
+  border: 2px solid #c3a22c;
+}
+
+@media (min-width: 1024px) {
+  #cta {
+    background-attachment: fixed;
+  }
 }

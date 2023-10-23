@@ -587,30 +587,33 @@
                 $stmt = $conn->prepare($sql);
 
                 echo "<h2>Service Providers</h2>";
-                echo "<h3>Showing results for:</h3>";
-                echo "<ul>";
+
+                $display = "<h3>Showing results for: ";
 
                 // Bind parameters
                 if ($county != "") {
                     $stmt->bindParam(":County", $county);
-                    echo "<li class='text-capitalize'>" . $county . " County</li>";
+                    $display .= $county . " County | ";
                 }
                 if ($subcounty != "") {
                     $stmt->bindParam(":SubCounty", $subcounty);
-                    echo " <li class='text-capitalize'>" . $subcounty . " Sub-County</li>";
+                    $display .= $subcounty . " Sub-County | ";
                 }
                 if ($town != "") {
                     $stmt->bindParam(":Town", $town);
-                    echo "<li class='text-capitalize'>" . $town . " Town</li>";
+                    $display .= $town . " Town | ";
                 }
                 if ($service != "") {
                     $stmt->bindParam(":Services", $service);
-                    echo "<li class='text-capitalize'>" . $service . " Service</li>";
+                    $display .= $service . " Service";
                 }
                 if ($county == "" && $subcounty == "" && $town == "" && $service == "") {
-                    echo "<li class='text-capitalize'>All service locations</li>";
+                    $display .= "All service locations";
                 }
-                echo "</ul>";
+
+                $display .= "</h3>";
+
+                echo $display;
 
                 // Execute statement
                 $stmt->execute();
@@ -660,7 +663,7 @@
     <div id="preloader"></div>
     <!-- ======= Back To Top Arrow ======= -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-        <i class="bi bi-chevron-up fs-5"></i>
+        <i class="bi bi-arrow-up-short"></i>
     </a>
 </body>
 

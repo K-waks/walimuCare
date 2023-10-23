@@ -143,6 +143,7 @@ require_once("api/serviceprovider-list.php");
     </header>
     <!-- ======= Main ======= -->
     <main id="main">
+        <!-- Breadcrumbs -->
         <section id="breadcrumbs" class="breadcrumbs">
             <div class="container-fluid breadcrumbs-padding">
                 <ol>
@@ -154,7 +155,7 @@ require_once("api/serviceprovider-list.php");
                 <h2>Downloads</h2>
             </div>
         </section>
-        <!-- End Breadcrumbs -->
+        <!-- Downloads Section -->
         <section id="downloads">
             <div class="container-fluid section-padding">
 
@@ -182,21 +183,16 @@ require_once("api/serviceprovider-list.php");
                     </a>
                 </div>
         </section>
-        <!-- End Downloads Section -->
-        <section id="TSC-bronchure">
-            <div class="container-fluid section-padding pt-0">
-                <div class="card w-100">
-                    <img class="card-img img-fluid" style="filter: brightness(90%);" src="static/img/bronchure-bg.png" alt="Dolores">
-                    <div class="card-img-overlay text-white">
-                        <!-- <h2 class="card-title" style="color: #c3a22c;">TSC Medical Scheme Brochure</h2> -->
-                        <!-- <p class="card-text lh-sm"> Click the button below to download the TSC Medical Scheme Brochure.</p> -->
-                        <a href="static/pdf/TSC Medical Scheme Brochure.pdf" target="_blank" class="card-link btn btn-light mt-auto stretched-link">Download TSC Medical Scheme Brochure
-                        </a>
-                    </div>
+        <!-- Cta Section -->
+        <section id="cta">
+            <div class="container">
+                <div class="text-center">
+                    <h3>TSC Medical Scheme Brochure</h3>
+                    <p> Learn more about the Teachers' Medical Scheme, a comprehensive health insurance plan for TSC-employed teachers and their dependents, by downloading the brochure below.</p>
+                    <a class="cta-btn" href="static/pdf/TSC Medical Scheme Brochure.pdf" target="_blank">Download <i class="bi bi-file-pdf"></i></a>
                 </div>
             </div>
         </section>
-        <!-- End TSC-Bronchure Section -->
     </main>
     <!-- ======= Footer ======= -->
     <footer id="footer">
@@ -331,7 +327,7 @@ require_once("api/serviceprovider-list.php");
     <div id="preloader"></div>
     <!-- ======= Back To Top Arrow ======= -->
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
-        <i class="bi bi-chevron-up fs-5"></i>
+        <i class="bi bi-arrow-up-short"></i>
     </a>
 </body>
 
