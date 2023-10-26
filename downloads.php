@@ -306,7 +306,7 @@ require_once("api/serviceprovider-list.php");
                     <div class="social-links d-flex justify-content-evenly">
                         <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
                         <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
-                        <a href="" target="_blank"><i class="bi bi-twitter"></i></a>
+                        <a href="" target="_blank"><i class="bi bi-twitter-x"></i></a>
                         <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                         <a href="" target="_blank"><i class="bi bi-youtube"></i></a>
                         <a href="" target="_blank"><i class="bi bi-telegram"></i></a>
