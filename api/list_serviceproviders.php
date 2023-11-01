@@ -178,7 +178,7 @@ try {
 
     // Output the HTML content and save the PDF file to a directory
     $pdf->writeHTML($html, true, false, true, false, "");
-    $pdf->Output(dirname(dirname(__FILE__)) . "/static/pdf/service-providers-list.pdf", "FI");
+    $pdf->Output(dirname(dirname(__FILE__)) . "/static/pdf/service-providers-list.pdf", "F");
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
     die();
