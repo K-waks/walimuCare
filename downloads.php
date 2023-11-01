@@ -1,6 +1,6 @@
 <?php
-require_once("api/contacts-list.php");
-require_once("api/serviceprovider-list.php");
+require_once("api/list_contacts.php");
+require_once("api/list_serviceproviders.php");
 ?>
 
 <!DOCTYPE html>
@@ -263,7 +263,7 @@ require_once("api/serviceprovider-list.php");
                         <div class="d-flex flex-column flex-sm-row flex-md-column">
                             <ul class="flex-grow-1">
                                 <li>
-                                    <a href="tel:+254 (730) 604 000"><i class="bi bi-telephone"></i><span>1528</span></a>
+                                    <a href="tel:1528"><i class="bi bi-telephone"></i><span>1528</span></a>
                                 </li>
                                 <li>
                                     <a href="tel:+254 (730) 604 000"><i class="bi bi-phone"></i><span>+254 (730) 604000</span></a>
@@ -304,7 +304,7 @@ require_once("api/serviceprovider-list.php");
                 </div>
                 <div class="col">
                     <div class="social-links d-flex justify-content-evenly">
-                        <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.facebook.com/afyakwawalimuke" target="_blank"><i class="bi bi-facebook"></i></a>
                         <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
                         <a href="" target="_blank"><i class="bi bi-twitter-x"></i></a>
                         <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>

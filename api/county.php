@@ -1,5 +1,5 @@
 <?php
-require_once("db-conn.php");
+require_once("db_conn.php");
 
 try {
     $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);

@@ -252,7 +252,7 @@
                         <div class="d-flex flex-column flex-sm-row flex-md-column">
                             <ul class="flex-grow-1">
                                 <li>
-                                    <a href="tel:+254 (730) 604 000"><i class="bi bi-telephone"></i><span>1528</span></a>
+                                    <a href="tel:1528"><i class="bi bi-telephone"></i><span>1528</span></a>
                                 </li>
                                 <li>
                                     <a href="tel:+254 (730) 604 000"><i class="bi bi-phone"></i><span>+254 (730) 604
@@ -295,7 +295,7 @@
                 </div>
                 <div class="col">
                     <div class="social-links d-flex justify-content-evenly">
-                        <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.facebook.com/afyakwawalimuke" target="_blank"><i class="bi bi-facebook"></i></a>
                         <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
                         <a href="" target="_blank"><i class="bi bi-twitter-x"></i></a>
                         <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -319,7 +319,7 @@
         <a href="#contacts-table" class="glightbox d-none"></a>
         <?php
         if (!empty($_GET)) {
-            require_once("api/db-conn.php");
+            require_once("api/db_conn.php");
 
             try {
                 $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
@@ -330,7 +330,7 @@
                 echo "<h2>Contacts</h2>";
 
                 $display = "<h3>Showing results for: ";
-                
+
 
                 // Prepare SQL statement
                 if ($county != "") {
@@ -342,7 +342,7 @@
                     $display .= "All contacts";
                 }
                 $display .= "</h3>";
-                
+
                 echo $display;
 
                 // Execute statement

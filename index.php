@@ -1,3 +1,7 @@
+<?php
+include "api/generate_manifest.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
@@ -10,7 +14,6 @@
     <meta name="theme-color" content="#c3a22c" />
     <meta name="author" content="" />
     <meta property="og:url" content="" />
-    <meta property="og:site_name" content="" />
     <meta property="og:title" content="" />
     <meta property="og:type" content="" />
     <meta property="og:image" content="" />
@@ -20,7 +23,7 @@
     <!-- Favicons & Webmanifest -->
     <link rel="icon" href="static/img/icon/favicon.png" />
     <link rel="apple-touch-icon" href="static/img/icon/apple-touch-icon.png" />
-    <link rel="manifest" href="static/manifest.webmanifest" />
+    <link rel="manifest" href="static/manifest-old.webmanifest" />
 
     <!-- Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" />
@@ -441,7 +444,7 @@
                         <div class="d-flex flex-column flex-sm-row flex-md-column">
                             <ul class="flex-grow-1">
                                 <li>
-                                    <a href="tel:+254 (730) 604 000"><i class="bi bi-telephone"></i><span>1528</span></a>
+                                    <a href="tel:1528"><i class="bi bi-telephone"></i><span>1528</span></a>
                                 </li>
                                 <li>
                                     <a href="tel:+254 (730) 604 000"><i class="bi bi-phone"></i><span>+254 (730) 604
@@ -483,7 +486,7 @@
                 </div>
                 <div class="col">
                     <div class="social-links d-flex justify-content-evenly">
-                        <a href="" target="_blank"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.facebook.com/afyakwawalimuke" target="_blank"><i class="bi bi-facebook"></i></a>
                         <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
                         <a href="" target="_blank"><i class="bi bi-twitter-x"></i></a>
                         <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
@@ -507,7 +510,7 @@
         <a href="#providers-table" class="glightbox d-none"></a>
         <?php
         if (!empty($_GET)) {
-            require_once("api/db-conn.php");
+            require_once("api/db_conn.php");
 
             try {
                 $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
