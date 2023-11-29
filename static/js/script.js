@@ -49,18 +49,18 @@
   }
 
   /**
-   * Scroll making header translucent
+   * Apply .scrolled class to the body as the page is scrolled down
    */
-  const header = document.querySelector("#header .header-nav");
-  const offset = header.offsetTop;
-  const toggleTranslucentHeader = () => {
-    if (window.scrollY > offset) {
-      header.classList.add("header-onscroll");
-    } else {
-      header.classList.remove("header-onscroll");
-    };
+  const selectBody = document.querySelector('body');
+  const selectHeader = document.querySelector('#header');
+
+  function toggleScrolled() {
+    if (!selectHeader.classList.contains('sticky-top')) return;
+    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
   }
-  window.addEventListener("scroll", toggleTranslucentHeader);
+
+  document.addEventListener('scroll', toggleScrolled);
+  window.addEventListener('load', toggleScrolled);
 
   /**
    * Service Provider Search Form

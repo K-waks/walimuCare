@@ -51,53 +51,51 @@ include "api/generate_manifest.php";
 
 <body>
     <!-- ======= Header ======= -->
-    <header id="header">
-        <div class="container-fluid header-nav">
-            <div class="clearfix position-relative h-100">
-                <a href="index.php">
-                    <img src="static/img/icon/Afya-kwa-walimu.png" width="" height="90%" alt="" class="float-start">
-                </a>
-                <img src="static/img/icon/TSC.png" width="" height="90%" alt="" class="float-end">
-                <!-- Desktop Navigation -->
-                <div class="d-none d-lg-flex desktop-nav">
-                    <div class="nav d-table text-uppercase">
-                        <div class="d-table-row">
-                            <div class="d-table-cell border-end border-secondary nav-item">
-                                <a class="nav-link active py-0" aria-current="page" href="index.php">Home</a>
-                            </div>
-                            <div class="d-table-cell border-end border-secondary nav-item">
-                                <a class="nav-link py-0" href="about.html">About Afya Kwa Walimu</a>
-                            </div>
-                            <div class="d-table-cell border-end border-secondary nav-item">
-                                <a class="nav-link py-0" href="benefits-structure.html">Benefits Structure</a>
-                            </div>
-                            <div class="d-table-cell border-end border-secondary nav-item">
-                                <a class="nav-link py-0" href="county-offices.php">County Offices</a>
-                            </div>
-                            <div class="d-table-cell border-end border-secondary nav-item">
-                                <a class="nav-link py-0" href="register.html">Registration</a>
-                            </div>
-                            <div class="d-table-cell border-end border-secondary nav-item">
-                                <a class="nav-link py-0" href="downloads.php">Downloads</a>
-                            </div>
-                            <div class="d-table-cell nav-item">
-                                <a class="nav-link py-0" href="https://collaborationkenya.minet.com/consents?page=/TSC" target="_blank">Documents Uploads</a>
-                            </div>
+    <header id="header" class="sticky-top">
+        <div class="clearfix position-relative h-100">
+            <a href="index.php">
+                <img src="static/img/icon/Afya-kwa-walimu.png" width="" height="90%" alt="" class="float-start">
+            </a>
+            <img src="static/img/icon/TSC.png" width="" height="90%" alt="" class="float-end">
+            <!-- Desktop Navigation -->
+            <div class="d-none d-lg-flex desktop-nav">
+                <div class="nav d-table text-uppercase">
+                    <div class="d-table-row">
+                        <div class="d-table-cell border-end border-secondary nav-item">
+                            <a class="nav-link active py-0" aria-current="page" href="index.php">Home</a>
+                        </div>
+                        <div class="d-table-cell border-end border-secondary nav-item">
+                            <a class="nav-link py-0" href="about.html">About Afya Kwa Walimu</a>
+                        </div>
+                        <div class="d-table-cell border-end border-secondary nav-item">
+                            <a class="nav-link py-0" href="benefits-structure.html">Benefits Structure</a>
+                        </div>
+                        <div class="d-table-cell border-end border-secondary nav-item">
+                            <a class="nav-link py-0" href="county-offices.php">County Offices</a>
+                        </div>
+                        <div class="d-table-cell border-end border-secondary nav-item">
+                            <a class="nav-link py-0" href="register.html">Registration</a>
+                        </div>
+                        <div class="d-table-cell border-end border-secondary nav-item">
+                            <a class="nav-link py-0" href="downloads.php">Downloads</a>
+                        </div>
+                        <div class="d-table-cell nav-item">
+                            <a class="nav-link py-0" href="https://collaborationkenya.minet.com/consents?page=/TSC" target="_blank">Documents Uploads</a>
                         </div>
                     </div>
-                    <div class="hot-line">
-                        Emergency hot line <i class="bi bi-telephone-fill"></i> <span>1528</span>
-                    </div>
                 </div>
-                <div class="d-flex d-lg-none mobile-nav-btn">
-                    <button type="button" class="btn btn-primary d-lg-none d-inline-block" data-bs-toggle="modal" data-bs-target="#mobilenavModal">
-                        <i class="bi bi-list text-light"></i>
-                    </button>
+                <div class="hot-line">
+                    Emergency hot line <i class="bi bi-telephone-fill"></i> <span>1528</span>
                 </div>
+            </div>
+            <div class="d-flex d-lg-none mobile-nav-btn">
+                <button type="button" class="btn btn-primary d-lg-none d-inline-block" data-bs-toggle="modal" data-bs-target="#mobilenavModal">
+                    <i class="bi bi-list text-light"></i>
+                </button>
             </div>
         </div>
         <!-- Mobile Navigation -->
-        <div id="mobilenavModal" class=" mobile-nav modal fade" tabindex="-1">
+        <div id="mobilenavModal" class="mobile-nav modal fade" tabindex="-1">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -487,8 +485,8 @@ include "api/generate_manifest.php";
                 <div class="col">
                     <div class="social-links d-flex justify-content-evenly">
                         <a href="https://www.facebook.com/afyakwawalimuke" target="_blank"><i class="bi bi-facebook"></i></a>
-                        <a href="" target="_blank"><i class="bi bi-instagram"></i></a>
-                        <a href="" target="_blank"><i class="bi bi-twitter-x"></i></a>
+                        <a href="https://www.instagram.com/afyakwawalimu/" target="_blank"><i class="bi bi-instagram"></i></a>
+                        <a href="https://twitter.com/AfyaKwaWalimu" target="_blank"><i class="bi bi-twitter-x"></i></a>
                         <a href="" target="_blank"><i class="bi bi-linkedin"></i></a>
                         <a href="" target="_blank"><i class="bi bi-youtube"></i></a>
                         <a href="" target="_blank"><i class="bi bi-telegram"></i></a>

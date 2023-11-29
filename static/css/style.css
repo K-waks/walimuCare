@@ -202,23 +202,22 @@ table {
   }
 }
 
+/* Header on page scroll
+------------------------------*/
+.scrolled #header {
+  box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #e0dbdc;
+}
+
 /*--------------------------------------------------------------
   # Header
   --------------------------------------------------------------*/
 
 /* Style the header */
-#header .header-nav {
+#header {
   height: 80px;
-  position: fixed;
-  top: 0;
-  z-index: 20;
-}
-
-/* The translucent class is added to the header with JS when it reaches its scroll position */
-.header-onscroll {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-bottom: 1px solid #e0dbdc;
-  /* 2px width, solid style, and #756e6e color */
+  background: #fff;
 }
 
 #header .desktop-nav,
@@ -232,12 +231,6 @@ table {
 /**
   * Desktop Navigation 
   */
-
-/* #header .desktop-nav{
-  width: 80%;
-  text-align: center;
-} */
-
 #header .desktop-nav .nav {
   font-size: 12px;
   font-weight: 650;
@@ -467,7 +460,7 @@ table {
   --------------------------------------------------------------*/
 
 #breadcrumbs {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   /* size of #header .header-nav */
   background: url("../img/breadcrumbs-bg.jpg") no-repeat center / cover;
 }
@@ -512,7 +505,7 @@ table {
 --------------------------------------------------------------*/
 
 #hero {
-  margin-top: 80px;
+  /* margin-top: 80px; */
   /* size of #header .header-nav */
   position: relative;
 }
