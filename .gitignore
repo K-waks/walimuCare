@@ -1,6 +1,5 @@
 .vscode
-~
-api.http
-test.php
+assets
 county-offices-contacts.pdf
 service-providers-list.pdf
+vendors/tcpdf/examples

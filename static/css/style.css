@@ -59,6 +59,58 @@
 }
 
 /*--------------------------------------------------------------
+  # Chat
+  --------------------------------------------------------------*/
+  .chat {
+    position: fixed;
+    right: 15px;
+    bottom: 125px;
+    z-index: 10;
+    background: #c3a22c;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    transition: all 0.4s;
+  }
+  
+  .chat i {
+    font-size: 24px;
+    color: #eef0ef;
+    line-height: 0;
+  }
+  
+  .chat:hover {
+    background: #0a0037;
+    color: #eef0ef;
+  }
+
+/*--------------------------------------------------------------
+  # Other Products button
+  --------------------------------------------------------------*/
+.other-products {
+  position: fixed;
+  right: 15px;
+  bottom: 70px;
+  z-index: 10;
+  background: #c3a22c;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.other-products i {
+  font-size: 24px;
+  color: #eef0ef;
+  line-height: 0;
+}
+
+.other-products:hover {
+  background: #0a0037;
+  color: #eef0ef;
+}
+
+/*--------------------------------------------------------------
   # Back to top button
   --------------------------------------------------------------*/
 .back-to-top {
@@ -206,7 +258,7 @@ table {
 ------------------------------*/
 .scrolled #header {
   box-shadow: 0 0 30px 10px rgba(0, 0, 0, 0.1);
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: rgba(255, 255, 255, 1.0);
   border-bottom: 1px solid #e0dbdc;
 }
 
@@ -770,7 +822,7 @@ table {
 
 /*
  *
- * about.html
+ * about.php
  *
  */
 
@@ -982,7 +1034,7 @@ table {
 
 /*
  *
- * register.html
+ * register.php
  *
  */
 

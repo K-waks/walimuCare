@@ -6,8 +6,7 @@ try {
     $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
 
     // Prepare SQL statement
-    $stmt = $conn->prepare("SELECT * FROM serviceprovider WHERE Type IN ('Dental Service Providers', 'Inpatient Service Providers', 'Maternity Service Providers', 'Optical Service Providers', 'OutPatient Service Providers', 'Rehabilitation Service Providers') AND Town != '' ORDER BY `Type`, `County`");
-
+    $stmt = $conn->prepare("SELECT * FROM contacts WHERE Active != 'NO' ORDER BY county ASC");
 
     // Execute statement
     $stmt->execute();
@@ -62,9 +61,9 @@ try {
     // set document information
     $pdf->setCreator(PDF_CREATOR);
     $pdf->setAuthor('Minet Kenya');
-    $pdf->setTitle('Service Providers');
-    $pdf->setSubject('Service Providers');
-    $pdf->setKeywords('Minet, Afya Kwa Walimu, Services, Service Providers');
+    $pdf->setTitle('County Offices Contacts');
+    $pdf->setSubject('County Offices Contacts');
+    $pdf->setKeywords('Minet, Afya Kwa Walimu, County Offices, Contacts');
 
     // set margins
     $pdf->setMargins(5, 35, 5); // left, top, right
@@ -88,7 +87,7 @@ try {
             table {
                 border-collapse: collapse;
                 text-align: center;
-                line-height: 2;
+                line-height: 1.5;
             }
 
             th{
@@ -107,19 +106,17 @@ try {
         <table>
             <thead>
                 <tr>
-                    <th>Type</th>
                     <th>County</th>
-                    <th>Sub County</th>
-                    <th>Town</th>
-                    <th>Access</th>
-                    <th>Facility Name</th>
+                    <th>Name</th>
+                    <th>Designation</th>
+                    <th>Contacts</th>
+                    <th>Email</th>
+                    <th>Office</th>
+                    <th>Physical Location</th>
                 </tr>
             </thead>
             <tbody>
     EOD;
-
-    $lastServiceType = null;
-    $lastCounty = null;
 
     foreach ($results as $index => $row) {
         $evenOddClass = ($index % 2 == 0) ? 'even' : 'odd';
@@ -130,42 +127,15 @@ try {
             $alternate = "";
         }
 
-        // Sort by Service Type: Subheadings for Type
-        if ($row["Type"] !== $lastServiceType) {
-            $html .= <<<EOD
-                <tr>
-                    <td colspan="6" style="background-color: #c3a22c; color:#fff; text-align: center; font-size: 18px; font-weight: bold; line-height: 2;">
-                        {$row["Type"]}
-                    </td>
-                </tr>
-            EOD;
-            // Update the last service
-            $lastServiceType = $row["Type"];
-        }
-
-        // Further Sorting by County: Subheadings for County
-        if ($row["County"] !== $lastCounty) {
-
-            $html .= <<<EOD
-                <tr>
-                    <td colspan="6" style="background-color: #FFF; text-align: center; font-size: 16px; font-weight: bold;">
-                        {$row["County"]}
-                    </td>
-                </tr>
-            EOD;
-            // Update the last service
-            $lastCounty = $row["County"];
-        }
-
-        // Add the regular data row
         $html .= <<<EOD
             <tr>
-                <td style="background-color: #0a0037; color: #ffffff; font-style: italic; font-weight: bold;">{$row["Type"]}</td>
-                <td style="$alternate">{$row["County"]}</td>
-                <td style="$alternate">{$row["SubCounty"]}</td>
-                <td style="$alternate">{$row["Town"]}</td>
-                <td style="$alternate">{$row["Access"]}</td>
-                <td style="$alternate">{$row["FacilityName"]}</td>
+                <td style="background-color: #0a0037; color: #ffffff; font-style: italic; font-weight: bold;">{$row["county"]}</td>
+                <td style="$alternate">{$row["name"]}</td>
+                <td style="$alternate">{$row["Designation"]}</td>
+                <td style="$alternate">{$row["contacts"]}</td>
+                <td style="$alternate">{$row["email"]}</td>
+                <td style="$alternate">{$row["Office"]}</td>
+                <td style="$alternate">{$row["location"]}</td>
             </tr>
         EOD;
     }
@@ -175,10 +145,9 @@ try {
         </table>
     EOD;
 
-
     // Output the HTML content and save the PDF file to a directory
     $pdf->writeHTML($html, true, false, true, false, "");
-    $pdf->Output(dirname(dirname(__FILE__)) . "/documents/service-providers-list.pdf", "F");
+    $pdf->Output(dirname(dirname(__FILE__)) . "/documents/county-offices-contacts.pdf", "F");
 } catch (PDOException $e) {
     echo "Connection failed: " . $e->getMessage();
     die();

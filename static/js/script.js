@@ -229,7 +229,7 @@
   /**
    * Benefits Structure
    */
-  if (window.location.pathname === "/MinetKe/tsc/benefits-structure.html") {
+  if (window.location.pathname === "/MinetKe/tsc/benefits-structure.php") {
     const benefitsParams = new URLSearchParams(window.location.search);
     if (benefitsParams.has("benefits")) {
       const benefitsContainer = document.querySelector("#benefits");
