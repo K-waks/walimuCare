@@ -32,32 +32,46 @@
     });
   }
 
-    /**
-   * Chat button
-   */
-    const chat = document.querySelector(".chat");
-    const chattext = document.querySelector(".chat span");
-  
-    if (chat) {
-      chat.addEventListener("mouseenter", () => {
-        chattext.classList.remove("d-none");
-        chat.addEventListener("mouseleave", () => {
-          chattext.classList.add("d-none");
-        });
+  /**
+ * Chat button
+ */
+  const chat = document.querySelector(".chat");
+  const chattext = document.querySelector(".chat span");
+  let chattimeoutid;
+
+  if (chat) {
+    chat.addEventListener("mouseenter", () => {
+      chattext.classList.remove("d-none");
+      chattimeoutid = setTimeout(() => {
+        chattext.classList.remove("invisible");
+      }, 200);
+
+      chat.addEventListener("mouseleave", () => {
+        clearTimeout(chattimeoutid);
+        chattext.classList.add("d-none");
+        chattext.classList.add("invisible");
       });
-    }
+    });
+  }
 
   /**
    * Other-Products button
    */
   const otherproducts = document.querySelector(".other-products");
   const otherproductstext = document.querySelector(".other-products span");
+  let otherproductstimeoutid;
 
   if (otherproducts) {
     otherproducts.addEventListener("mouseenter", () => {
-        otherproductstext.classList.remove("d-none");
+      otherproductstext.classList.remove("d-none");
+      otherproductstimeoutid = setTimeout(() => {
+        otherproductstext.classList.remove("invisible");
+      }, 200);
+
       otherproducts.addEventListener("mouseleave", () => {
+        clearTimeout(otherproductstimeoutid);
         otherproductstext.classList.add("d-none");
+        otherproductstext.classList.add("invisible");
       });
     });
   }
