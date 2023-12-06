@@ -6,7 +6,7 @@ try {
     $conn = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
 
     // Prepare SQL statement
-    $stmt = $conn->prepare("SELECT * FROM serviceprovider WHERE Type IN ('Dental Service Providers', 'Inpatient Service Providers', 'Maternity Service Providers', 'Optical Service Providers', 'OutPatient Service Providers', 'Rehabilitation Service Providers') AND Town != '' ORDER BY `Type`, `County`");
+    $stmt = $conn->prepare("SELECT * FROM serviceprovider WHERE Type IN ('Dental Service Providers', 'Inpatient Service Providers', 'Maternity Service Providers', 'Optical Service Providers', 'OutPatient Service Providers', 'Rehabilitation Service Providers') AND Town != '' AND Active != 'NO' ORDER BY `Type`, `County`");
 
 
     // Execute statement
