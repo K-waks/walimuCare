@@ -327,25 +327,24 @@ table {
   background-color: #0a0037;
 }
 
-#header .mobile-nav ul {
+#mobilenavmenu {
   text-transform: uppercase;
   font-size: 14px;
 }
 
-#header .mobile-nav ul li {
+#mobilenavmenu li {
   margin: 30px 0;
 }
 
-#header .mobile-nav ul li a {
+#mobilenavmenu li a {
   transition: 0.3s;
   color: #0a0037;
 }
 
-#header .mobile-nav ul li a:hover {
+#mobilenavmenu li a:hover {
   color: #c3a22c;
 }
 
-#header .mobile-nav .mobilenav-hot-line,
 #header .hot-line {
   color: #0a0037;
   position: absolute;
@@ -353,7 +352,7 @@ table {
   font-size: 14px;
 }
 
-#header .mobile-nav .mobilenav-hot-line i,
+#mobilenav-hot-line i,
 #header .hot-line i {
   display: inline-block;
   width: 36px;
@@ -365,7 +364,7 @@ table {
   color: #eef0ef;
 }
 
-#header .mobile-nav .mobilenav-hot-line span,
+#mobilenav-hot-line span,
 #header .hot-line span {
   color: #c3a22c;
   font-weight: 800;

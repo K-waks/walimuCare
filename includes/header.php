@@ -89,47 +89,36 @@
                 </div>
             </div>
             <div class="d-flex d-lg-none mobile-nav-btn">
-                <button type="button" class="btn btn-primary d-lg-none d-inline-block" data-bs-toggle="modal" data-bs-target="#mobilenavModal">
-                    <i class="bi bi-list text-light"></i>
-                </button>
+                <a href="#mobilenavModal" class="glightbox btn btn-primary d-lg-none d-inline-block"><i class="bi bi-list text-light"></i></a>
             </div>
         </div>
         <!-- Mobile Navigation -->
-        <div id="mobilenavModal" class="mobile-nav modal fade" tabindex="-1">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <div class="mobilenav-hot-line">
-                            Emergency hot line <i class="bi bi-telephone-fill"></i> <span>1528</span>
-                        </div>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        <ul class="list-unstyled">
-                            <li class="nav-item">
-                                <a href="index.php" class="nav-link <?php echo ($currentPage === 'index.php') ? 'active' : ''; ?>"><i class="bi bi-caret-right-fill"></i> Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="about.php" class="nav-link <?php echo ($currentPage === 'about.php') ? 'active' : ''; ?>"><i class="bi bi-caret-right-fill"></i> About Afya Kwa Walimu</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="benefits-structure.php" class="nav-link <?php echo ($currentPage === 'benefits-structure.php') ? 'active' : ''; ?>"><i class="bi bi-caret-right-fill"></i> Benefits Structure</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="county-offices.php" class="nav-link <?php echo ($currentPage === 'county-offices.php') ? 'active' : ''; ?>"><i class="bi bi-caret-right-fill"></i> County Offices</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="register.php" class="nav-link <?php echo ($currentPage === 'register.php') ? 'active' : ''; ?>"><i class="bi bi-caret-right-fill"></i> Registration</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="downloads.php" class="nav-link <?php echo ($currentPage === 'downloads.php') ? 'active' : ''; ?>"><i class="bi bi-caret-right-fill"></i> Downloads</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://collaborationkenya.minet.com/consents?page=/TSC" class="nav-link" target="_blank"><i class="bi bi-caret-right-fill"></i> Documents Uploads</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+        <div id="mobilenavModal" class="mobile-nav d-none">
+            <div id="mobilenav-hot-line">
+                Emergency hot line <i class="bi bi-telephone-fill"></i> <span>1528</span>
             </div>
+            <ul id="mobilenavmenu" class="navmenu list-unstyled">
+                <li>
+                    <a href="index.php" class="<?php echo ($currentPage === 'index.php') ? 'active' : ''; ?>"><i class="bi bi-caret-right-fill"></i> Home</a>
+                </li>
+                <li>
+                    <a href="about.php" class="<?php echo ($currentPage === 'about.php') ? 'active' : ''; ?>"><i class="bi bi-caret-right-fill"></i> About Afya Kwa Walimu</a>
+                </li>
+                <li>
+                    <a href="benefits-structure.php" class="<?php echo ($currentPage === 'benefits-structure.php') ? 'active' : ''; ?>"><i class="bi bi-caret-right-fill"></i> Benefits Structure</a>
+                </li>
+                <li>
+                    <a href="county-offices.php" class="<?php echo ($currentPage === 'county-offices.php') ? 'active' : ''; ?>"><i class="bi bi-caret-right-fill"></i> County Offices</a>
+                </li>
+                <li>
+                    <a href="register.php" class="<?php echo ($currentPage === 'register.php') ? 'active' : ''; ?>"><i class="bi bi-caret-right-fill"></i> Registration</a>
+                </li>
+                <li>
+                    <a href="downloads.php" class="<?php echo ($currentPage === 'downloads.php') ? 'active' : ''; ?>"><i class="bi bi-caret-right-fill"></i> Downloads</a>
+                </li>
+                <li>
+                    <a href="https://collaborationkenya.minet.com/consents?page=/TSC" class="nav-link" target="_blank"><i class="bi bi-caret-right-fill"></i> Documents Uploads</a>
+                </li>
+            </ul>
         </div>
     </header>
