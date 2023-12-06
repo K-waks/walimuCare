@@ -32,6 +32,36 @@
     });
   }
 
+    /**
+   * Chat button
+   */
+    const chat = document.querySelector(".chat");
+    const chattext = document.querySelector(".chat span");
+  
+    if (chat) {
+      chat.addEventListener("mouseenter", () => {
+        chattext.classList.remove("d-none");
+        chat.addEventListener("mouseleave", () => {
+          chattext.classList.add("d-none");
+        });
+      });
+    }
+
+  /**
+   * Other-Products button
+   */
+  const otherproducts = document.querySelector(".other-products");
+  const otherproductstext = document.querySelector(".other-products span");
+
+  if (otherproducts) {
+    otherproducts.addEventListener("mouseenter", () => {
+        otherproductstext.classList.remove("d-none");
+      otherproducts.addEventListener("mouseleave", () => {
+        otherproductstext.classList.add("d-none");
+      });
+    });
+  }
+
   /**
    * Back to top button
    */

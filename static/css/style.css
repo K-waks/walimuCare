@@ -61,28 +61,30 @@
 /*--------------------------------------------------------------
   # Chat
   --------------------------------------------------------------*/
-  .chat {
-    position: fixed;
-    right: 15px;
-    bottom: 125px;
-    z-index: 10;
-    background: #c3a22c;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    transition: all 0.4s;
-  }
-  
-  .chat i {
-    font-size: 24px;
-    color: #eef0ef;
-    line-height: 0;
-  }
-  
-  .chat:hover {
-    background: #0a0037;
-    color: #eef0ef;
-  }
+.chat {
+  position: fixed;
+  right: 15px;
+  bottom: 125px;
+  z-index: 10;
+  background: #c3a22c;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  transition: all 0.4s;
+}
+
+.chat i {
+  font-size: 24px;
+  color: #eef0ef;
+  line-height: 0;
+}
+
+.chat:hover {
+  background: #0a0037;
+  color: #eef0ef;
+  border: solid #c3a22c 2px;
+  width: 300px;
+}
 
 /*--------------------------------------------------------------
   # Other Products button
@@ -107,6 +109,8 @@
 
 .other-products:hover {
   background: #0a0037;
+  border: solid #c3a22c 2px;
+  width: 300px;
   color: #eef0ef;
 }
 

@@ -132,11 +132,11 @@
 </section>
 <!-- ======= Chat ======= -->
 <a href="#" class="chat d-flex align-items-center justify-content-center">
-    <i class="bi bi-chat-dots"></i>
+    <i class="bi bi-chat-dots"></i> <span class='ms-2 d-none'>Chat with us on WhatsApp</span>
 </a>
 <!-- ======= Other-Products ======= -->
-<a href="#" class="other-products d-flex align-items-center justify-content-center">
-    <i class="bi bi-cart-plus"></i>
+<a href="https://retail.minet.co.ke/" target="_blank" class="other-products d-flex align-items-center justify-content-center">
+    <i class="bi bi-cart-plus"></i> <span class='ms-2 d-none'>Visit our Ecommerce Portal</span>
 </a>
 <!-- ======= Back To Top Arrow ======= -->
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
