@@ -117,7 +117,7 @@
 	   * 
 	   */
 
-	if (window.location.pathname === "/MinetKe/tsc/index.php" || window.location.pathname === "/MinetKe/tsc/") {
+	if (window.location.pathname === "/TSC/index.php" || window.location.pathname === "/TSC/") {
 		document.addEventListener("DOMContentLoaded", function () {
 			const countySelect = document.getElementById("County");
 			const subCountySelect = document.getElementById("SubCounty");
@@ -222,7 +222,7 @@
 	/**
 	* Providers Table
 	*/
-	if (window.location.pathname === "/MinetKe/tsc/index.php" || window.location.pathname === "/MinetKe/tsc/") {
+	if (window.location.pathname === "/TSC/index.php" || window.location.pathname === "/TSC/") {
 		const button = document.querySelector('#providers-table .glightbox');
 		const searchProvidersFormParams = new URLSearchParams(window.location.search);
 		const county = searchProvidersFormParams.get('County');
@@ -235,7 +235,7 @@
 	/**
 	 * Clients Slider
 	 */
-	if (window.location.pathname === "/MinetKe/tsc/index.php" || window.location.pathname === "/MinetKe/tsc/") {
+	if (window.location.pathname === "/TSC/index.php" || window.location.pathname === "/TSC/") {
 		new Swiper(".swiper", {
 			speed: 400,
 			loop: true,
@@ -273,7 +273,7 @@
 	/**
 	 * Benefits Structure
 	 */
-	if (window.location.pathname === "/MinetKe/tsc/benefits-structure.php") {
+	if (window.location.pathname === "/TSC/benefits-structure.php") {
 		const benefitsParams = new URLSearchParams(window.location.search);
 		if (benefitsParams.has("benefits")) {
 			const benefitsContainer = document.querySelector("#benefits");
@@ -311,7 +311,7 @@
 	/**
 	* Contacts Form
 	*/
-	if (window.location.pathname === "/MinetKe/tsc/county-offices.php") {
+	if (window.location.pathname === "/TSC/county-offices.php") {
 		document.addEventListener("DOMContentLoaded", function () {
 			const countySelect = document.getElementById("County");
 
@@ -333,7 +333,7 @@
 	/**
 	* Contacts Table
 	*/
-	if (window.location.pathname === "/MinetKe/tsc/county-offices.php") {
+	if (window.location.pathname === "/TSC/county-offices.php") {
 		const button = document.querySelector('#contacts-table .glightbox');
 		const searchProvidersFormParams = new URLSearchParams(window.location.search);
 		const county = searchProvidersFormParams.get('County');
