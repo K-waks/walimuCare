@@ -1,5 +1,5 @@
 <?php
 // Set up database connection
-$user = "mariadb";
-$password = "mariadb";
+$user = "admin1";
+$password = "admin1@minetke";
 $database = "minetkedb";
